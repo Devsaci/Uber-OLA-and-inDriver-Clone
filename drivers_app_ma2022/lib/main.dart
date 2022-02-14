@@ -31,7 +31,7 @@ class MyApp extends StatefulWidget {
   MyApp({Key? key, required this.child}) : super(key: key);
 
   static void restartApp(BuildContext context) {
-    context.findAncestorStateOfType();
+    context.findAncestorStateOfType<_MyAppState>();
   }
 
   @override
