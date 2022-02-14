@@ -26,9 +26,10 @@ void main() async {
 }
 
 class MyApp extends StatefulWidget {
-  final Widget child;
+   final Widget? child;
 
-  MyApp({Key? key, required this.child}) : super(key: key);
+   MyApp({Key? key, this.child}) : super(key: key);
+
 
   static void restartApp(BuildContext context) {
     context.findAncestorStateOfType<_MyAppState>()!.restartApp();
