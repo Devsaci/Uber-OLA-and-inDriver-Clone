@@ -49,8 +49,9 @@ class _MyAppState extends State<MyApp> {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      color: Colors.deepOrange,
+    return KeyedSubtree(
+      key: key,
+      child: widget.child,
     );
   }
 }
