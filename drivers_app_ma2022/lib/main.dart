@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors
+// ignore_for_file: prefer_const_constructors, prefer_const_constructors_in_immutables
 
 import 'package:flutter/material.dart';
 
@@ -27,7 +27,7 @@ void main() async {
 
 class MyApp extends StatefulWidget {
   final Widget child;
-  MyApp({required this.child});
+  MyApp({Key? key, required this.child}) : super(key: key);
 
   @override
   _MyAppState createState() => _MyAppState();
