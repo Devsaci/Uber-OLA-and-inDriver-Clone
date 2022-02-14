@@ -27,10 +27,11 @@ void main() async {
 
 class MyApp extends StatefulWidget {
   final Widget child;
+
   MyApp({Key? key, required this.child}) : super(key: key);
 
-  static void restartApp(BuildContext context){
-
+  static void restartApp(BuildContext context) {
+    context.findAncestorStateOfType();
   }
 
   @override
@@ -40,7 +41,8 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
-    return Container(color: Colors.deepOrange,);
+    return Container(
+      color: Colors.deepOrange,
+    );
   }
 }
-
