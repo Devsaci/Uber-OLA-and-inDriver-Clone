@@ -1,4 +1,4 @@
-
+// ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
 
@@ -10,7 +10,6 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -27,11 +26,14 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home:Scaffold(appBar: AppBar(title: const Text("Welcome to Drivers App"),),),
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text("Welcome to Drivers App"),
+        ),
+        body: Center(
+          child: Text("body App"),
+        ),
+      ),
     );
   }
 }
-
-
-
-
