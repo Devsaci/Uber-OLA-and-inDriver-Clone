@@ -51,7 +51,7 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return KeyedSubtree(
       key: key,
-      child: widget.child,
+      child: widget.child!,
     );
   }
 }
