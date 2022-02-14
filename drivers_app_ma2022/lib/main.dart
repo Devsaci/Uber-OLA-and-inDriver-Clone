@@ -43,7 +43,7 @@ class _MyAppState extends State<MyApp> {
 
   void restartApp() {
     setState(() {
-
+      key = UniqueKey();
     });
   }
 
