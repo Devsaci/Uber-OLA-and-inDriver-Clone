@@ -29,6 +29,10 @@ class MyApp extends StatefulWidget {
   final Widget child;
   MyApp({Key? key, required this.child}) : super(key: key);
 
+  static void restartApp(BuildContext context){
+
+  }
+
   @override
   _MyAppState createState() => _MyAppState();
 }
