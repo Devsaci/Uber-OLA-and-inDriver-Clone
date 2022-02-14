@@ -20,13 +20,14 @@ void main() async {
             child: Text("body App"),
           ),
         ),
-      ), //Error
+      ),
     ),
   );
 }
 
 class MyApp extends StatefulWidget {
-  final Widget child; //Error
+  final Widget child;
+  MyApp({required this.child});
 
   @override
   _MyAppState createState() => _MyAppState();
