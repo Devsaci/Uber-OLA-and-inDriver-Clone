@@ -39,6 +39,10 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
+  Key key = UniqueKey();
+
+
+
   @override
   Widget build(BuildContext context) {
     return Container(
