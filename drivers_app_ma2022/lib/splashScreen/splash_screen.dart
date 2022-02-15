@@ -18,9 +18,14 @@ class _MySplashScreenState extends State<MySplashScreen> {
           context,
           MaterialPageRoute(
             builder: (c) => MainScreen(),
-
           ));
     });
+  }
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
   }
 
   @override
@@ -28,5 +33,3 @@ class _MySplashScreenState extends State<MySplashScreen> {
     return Container();
   }
 }
-
-
