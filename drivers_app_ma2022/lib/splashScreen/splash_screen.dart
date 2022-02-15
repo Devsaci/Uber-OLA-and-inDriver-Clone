@@ -26,6 +26,7 @@ class _MySplashScreenState extends State<MySplashScreen> {
   void initState() {
     // TODO: implement initState
     super.initState();
+    startTimer();
   }
 
   @override
