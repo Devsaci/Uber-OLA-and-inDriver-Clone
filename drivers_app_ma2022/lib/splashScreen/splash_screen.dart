@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_literals_to_create_immutables
+
 import 'dart:async';
 
 import 'package:drivers_app_ma2022/mainScreens/main_screen.dart';
@@ -31,6 +33,27 @@ class _MySplashScreenState extends State<MySplashScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Container(
+      color: Colors.black,
+      child: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Image.asset("images/logo1.png"),
+            const SizedBox(
+              height: 10,
+            ),
+            const Text(
+              "Uber & inDriver Clone App",
+              style: TextStyle(
+                  fontSize: 24,
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
   }
 }
