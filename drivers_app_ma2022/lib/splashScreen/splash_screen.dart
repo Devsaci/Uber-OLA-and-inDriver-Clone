@@ -10,7 +10,9 @@ class MySplashScreen extends StatefulWidget {
 }
 
 class _MySplashScreenState extends State<MySplashScreen> {
-  startTimer() {}
+  startTimer() {
+    Timer(const Duration(seconds: 3), () {},);
+  }
 
   @override
   Widget build(BuildContext context) {
