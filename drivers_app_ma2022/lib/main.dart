@@ -1,5 +1,6 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_constructors_in_immutables
 
+import 'package:drivers_app_ma2022/splashScreen/splash_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() async {
@@ -16,9 +17,7 @@ void main() async {
           appBar: AppBar(
             title: Text("Welcome to Drivers App"),
           ),
-          body: Center(
-            child: Text("body App"),
-          ),
+          body: MySplashScreen(),
         ),
       ),
     ),
