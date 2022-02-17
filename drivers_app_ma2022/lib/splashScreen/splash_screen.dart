@@ -33,25 +33,27 @@ class _MySplashScreenState extends State<MySplashScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      color: Colors.black,
-      child: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Image.asset("images/logo1.png"),
-            const SizedBox(
-              height: 10,
-            ),
-            const Text(
-              "Uber & inDriver Clone App",
-              style: TextStyle(
-                  fontSize: 20,
-                  color: Colors.white,
-                  fontWeight: FontWeight.bold
+    return Material(
+      child: Container(
+        color: Colors.black,
+        child: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Image.asset("images/logo1.png"),
+              const SizedBox(
+                height: 10,
               ),
-            ),
-          ],
+              const Text(
+                "Uber & inDriver Clone App",
+                style: TextStyle(
+                    fontSize: 20,
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );
