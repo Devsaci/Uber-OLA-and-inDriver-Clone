@@ -11,6 +11,12 @@ class _MainScreenState extends State<MainScreen> {
   TabController? tabController;
 
   @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return  Scaffold(
       body: TabBarView(
