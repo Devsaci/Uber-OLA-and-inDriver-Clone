@@ -67,6 +67,7 @@ class _MainScreenState extends State<MainScreen>
         type: BottomNavigationBarType.fixed,
         selectedLabelStyle: const TextStyle(fontSize: 14),
         showUnselectedLabels: true,
+        currentIndex: selectedIndex,
 
 
       ),
