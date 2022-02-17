@@ -64,6 +64,7 @@ class _MainScreenState extends State<MainScreen>
         unselectedItemColor: Colors.white54,
         selectedItemColor: Colors.white,
         backgroundColor: Colors.black,
+        type: BottomNavigationBarType.fixed,
       ),
     );
   }
