@@ -9,8 +9,8 @@ class _MainScreenState extends State<MainScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text("Welcome"),
+      body: TabBarView(
+        children: [],
       ),
     );
   }
