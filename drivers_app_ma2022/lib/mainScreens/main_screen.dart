@@ -14,7 +14,7 @@ class _MainScreenState extends State<MainScreen>
 
   onItemClicked(int index) {
     setState(() {
-
+      selectedIndex = index;
     });
   }
 
