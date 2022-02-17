@@ -43,8 +43,23 @@ class _MainScreenState extends State<MainScreen>
         ],
       ),
       bottomNavigationBar: BottomNavigationBar(
-        items: [
-
+        items: const [
+          BottomNavigationBarItem(
+            icon: Icon(Icons.home),
+            label: "Home",
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.credit_card),
+            label: "Earnings",
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.star),
+            label: "Ratings",
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.person),
+            label: "Account",
+          ),
         ],
       ),
     );
