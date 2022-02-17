@@ -1,5 +1,9 @@
 // ignore_for_file: prefer_const_literals_to_create_immutables
 
+import 'package:drivers_app_ma2022/tabPages/earning_tab.dart';
+import 'package:drivers_app_ma2022/tabPages/home_tab.dart';
+import 'package:drivers_app_ma2022/tabPages/profile_tab.dart';
+import 'package:drivers_app_ma2022/tabPages/ratings_tab.dart';
 import 'package:flutter/material.dart';
 
 class MainScreen extends StatefulWidget {
@@ -31,9 +35,11 @@ class _MainScreenState extends State<MainScreen>
       body: TabBarView(
         physics: const NeverScrollableScrollPhysics(),
         controller: tabController,
-        children: [
-
-
+        children: const[
+          EarningsTabPage(),
+          HomeTabPage(),
+          ProfileTabPage(),
+          RatingsTabPage(),
         ],
       ),
     );
