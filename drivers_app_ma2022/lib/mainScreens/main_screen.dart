@@ -61,6 +61,7 @@ class _MainScreenState extends State<MainScreen>
             label: "Account",
           ),
         ],
+        unselectedItemColor: Colors.white54,
       ),
     );
   }
