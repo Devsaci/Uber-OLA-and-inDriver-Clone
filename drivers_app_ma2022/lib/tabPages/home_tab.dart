@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/cupertino.dart';
 
 class HomeTabPage extends StatefulWidget {
@@ -10,6 +12,10 @@ class HomeTabPage extends StatefulWidget {
 class _HomeTabPageState extends State<HomeTabPage> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return   Center(
+      child: Text(
+        'HomeTabPage',
+      ),
+    );
   }
 }

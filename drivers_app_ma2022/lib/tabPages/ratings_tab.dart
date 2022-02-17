@@ -1,3 +1,7 @@
+// ignore_for_file: prefer_const_constructors
+
+import 'dart:html';
+
 import 'package:flutter/cupertino.dart';
 
 class RatingsTabPage extends StatefulWidget {
@@ -10,6 +14,8 @@ class RatingsTabPage extends StatefulWidget {
 class _RatingsTabPageState extends State<RatingsTabPage> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Center(
+      child: Text('RatingsTabPage'),
+    );
   }
 }

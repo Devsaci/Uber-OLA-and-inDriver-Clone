@@ -1,15 +1,21 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/cupertino.dart';
 
-class ProfilTabPage extends StatefulWidget {
-  const ProfilTabPage({Key? key}) : super(key: key);
+class ProfileTabPage extends StatefulWidget {
+  const ProfileTabPage({Key? key}) : super(key: key);
 
   @override
-  _ProfilTabPageState createState() => _ProfilTabPageState();
+  _ProfileTabPageState createState() => _ProfileTabPageState();
 }
 
-class _ProfilTabPageState extends State<ProfilTabPage> {
+class _ProfileTabPageState extends State<ProfileTabPage> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Center(
+      child: Text(
+        'ProfileTabPage',
+      ),
+    );
   }
 }
