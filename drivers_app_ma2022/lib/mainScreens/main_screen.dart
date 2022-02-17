@@ -9,6 +9,7 @@ class MainScreen extends StatefulWidget {
 
 class _MainScreenState extends State<MainScreen> {
   TabController? tabController;
+  int selectedIndex = 0;
 
   @override
   void initState() {
@@ -18,13 +19,11 @@ class _MainScreenState extends State<MainScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return  Scaffold(
+    return Scaffold(
       body: TabBarView(
         physics: const NeverScrollableScrollPhysics(),
         controller: tabController,
-        children: [
-
-        ],
+        children: [],
       ),
     );
   }
