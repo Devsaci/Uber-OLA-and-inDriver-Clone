@@ -7,9 +7,16 @@ class MainScreen extends StatefulWidget {
   _MainScreenState createState() => _MainScreenState();
 }
 
-class _MainScreenState extends State<MainScreen>  with SingleTickerProviderStateMixin{
+class _MainScreenState extends State<MainScreen>
+    with SingleTickerProviderStateMixin {
   TabController? tabController;
   int selectedIndex = 0;
+
+  onItemClicked(int index) {
+    setState(() {
+
+    });
+  }
 
   @override
   void initState() {
