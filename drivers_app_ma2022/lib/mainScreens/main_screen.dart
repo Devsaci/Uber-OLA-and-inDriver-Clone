@@ -66,6 +66,8 @@ class _MainScreenState extends State<MainScreen>
         backgroundColor: Colors.black,
         type: BottomNavigationBarType.fixed,
         selectedLabelStyle: const TextStyle(fontSize: 14),
+        showUnselectedLabels: true,
+
 
       ),
     );
