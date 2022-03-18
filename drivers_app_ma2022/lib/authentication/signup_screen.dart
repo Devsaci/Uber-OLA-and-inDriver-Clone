@@ -37,6 +37,9 @@ class _SignUpScreenState extends State<SignUpScreen> {
             ),
             TextField(
               controller: nameTextEditingController,
+              decoration: InputDecoration(
+
+              ),
             ),
           ],
         ),
