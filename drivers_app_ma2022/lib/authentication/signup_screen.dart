@@ -39,6 +39,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
               controller: nameTextEditingController,
               decoration: const InputDecoration(
                 labelText: "Name",
+                hintText: "Name",
                 enabledBorder: UnderlineInputBorder(
                   borderSide: BorderSide(color: Colors.grey),
                 ),
