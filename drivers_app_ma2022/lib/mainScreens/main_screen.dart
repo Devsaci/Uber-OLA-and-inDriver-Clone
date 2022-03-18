@@ -1,7 +1,5 @@
 // ignore_for_file: prefer_const_literals_to_create_immutables
 
-
-
 import 'package:drivers_app_ma2022/tabPages/earning_tab.dart';
 import 'package:drivers_app_ma2022/tabPages/home_tab.dart';
 import 'package:drivers_app_ma2022/tabPages/profile_tab.dart';
@@ -34,7 +32,9 @@ class _MainScreenState extends State<MainScreen>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text("MainScreen"),),
+      appBar: AppBar(
+        title: const Text("MainScreen"),
+      ),
       body: TabBarView(
         physics: const NeverScrollableScrollPhysics(),
         controller: tabController,
