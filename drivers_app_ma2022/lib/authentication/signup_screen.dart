@@ -21,6 +21,14 @@ class _SignUpScreenState extends State<SignUpScreen> {
               child: Image.asset("images/logo1.png"),
             ),
             const SizedBox(height: 10,),
+            const Text(
+              "Register as a Driver",
+              style: TextStyle(
+                fontSize: 26,
+                color: Colors.grey,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
           ],
         ),
       ),
