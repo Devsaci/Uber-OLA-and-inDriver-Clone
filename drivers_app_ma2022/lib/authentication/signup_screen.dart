@@ -38,7 +38,10 @@ class _SignUpScreenState extends State<SignUpScreen> {
             TextField(
               controller: nameTextEditingController,
               decoration: InputDecoration(
-                  labelText:"Name",
+                labelText: "Name",
+                enabledBorder: UnderlineInputBorder(
+                  borderSide: BorderSide(color: Colors.grey),
+                ),
               ),
             ),
           ],
