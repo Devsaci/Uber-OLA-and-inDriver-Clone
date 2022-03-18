@@ -49,6 +49,10 @@ class _SignUpScreenState extends State<SignUpScreen> {
                   color: Colors.grey,
                   fontSize: 10,
                 ),
+                labelStyle: TextStyle(
+                  color: Colors.grey,
+                  fontSize: 14,
+                ),
               ),
             ),
           ],
