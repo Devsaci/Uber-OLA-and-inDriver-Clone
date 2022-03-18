@@ -15,7 +15,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            Image.asset('name'),
+            Image.asset("images/logo1.png"),
           ],
         ),
       ),
