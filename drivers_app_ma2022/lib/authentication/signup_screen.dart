@@ -15,12 +15,16 @@ class _SignUpScreenState extends State<SignUpScreen> {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            const SizedBox(height: 10,),
+            const SizedBox(
+              height: 10,
+            ),
             Padding(
               padding: const EdgeInsets.all(20.0),
               child: Image.asset("images/logo1.png"),
             ),
-            const SizedBox(height: 10,),
+            const SizedBox(
+              height: 10,
+            ),
             const Text(
               "Register as a Driver",
               style: TextStyle(
@@ -29,6 +33,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 fontWeight: FontWeight.bold,
               ),
             ),
+            TextField(),
           ],
         ),
       ),
