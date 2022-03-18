@@ -8,6 +8,8 @@ class SignUpScreen extends StatefulWidget {
 }
 
 class _SignUpScreenState extends State<SignUpScreen> {
+  TextEditingController nameTextEditingController = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -33,7 +35,9 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 fontWeight: FontWeight.bold,
               ),
             ),
-            TextField(),
+            TextField(
+              controller: nameTextEditingController,
+            ),
           ],
         ),
       ),
