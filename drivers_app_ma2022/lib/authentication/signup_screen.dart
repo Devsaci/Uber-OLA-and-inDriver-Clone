@@ -37,10 +37,17 @@ class _SignUpScreenState extends State<SignUpScreen> {
             ),
             TextField(
               controller: nameTextEditingController,
-              decoration: InputDecoration(
+              decoration: const InputDecoration(
                 labelText: "Name",
                 enabledBorder: UnderlineInputBorder(
                   borderSide: BorderSide(color: Colors.grey),
+                ),
+                focusedBorder: UnderlineInputBorder(
+                  borderSide: BorderSide(color: Colors.grey),
+                ),
+                hintStyle: TextStyle(
+                  color: Colors.grey,
+                  fontSize: 10,
                 ),
               ),
             ),
