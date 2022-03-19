@@ -12,6 +12,8 @@ class _SignUpScreenState extends State<SignUpScreen> {
 
   TextEditingController emailTextEditingController = TextEditingController();
 
+  TextEditingController passwordTextEditingController = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -41,9 +43,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
               ),
               TextField(
                 controller: nameTextEditingController,
-                style: const TextStyle(
-                    color: Colors.grey
-                ),
+                style: const TextStyle(color: Colors.grey),
                 decoration: const InputDecoration(
                   labelText: "Name",
                   hintText: "Name",
@@ -65,12 +65,32 @@ class _SignUpScreenState extends State<SignUpScreen> {
               ),
               TextField(
                 controller: emailTextEditingController,
-                style: const TextStyle(
-                    color: Colors.grey
-                ),
+                style: const TextStyle(color: Colors.grey),
                 decoration: const InputDecoration(
                   labelText: "email",
                   hintText: "email",
+                  enabledBorder: UnderlineInputBorder(
+                    borderSide: BorderSide(color: Colors.white),
+                  ),
+                  focusedBorder: UnderlineInputBorder(
+                    borderSide: BorderSide(color: Colors.grey),
+                  ),
+                  hintStyle: TextStyle(
+                    color: Colors.grey,
+                    fontSize: 10,
+                  ),
+                  labelStyle: TextStyle(
+                    color: Colors.grey,
+                    fontSize: 14,
+                  ),
+                ),
+              ),
+              TextField(
+                controller: passwordTextEditingController,
+                style: const TextStyle(color: Colors.grey),
+                decoration: const InputDecoration(
+                  labelText: "password",
+                  hintText: "password",
                   enabledBorder: UnderlineInputBorder(
                     borderSide: BorderSide(color: Colors.white),
                   ),
