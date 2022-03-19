@@ -10,6 +10,8 @@ class SignUpScreen extends StatefulWidget {
 class _SignUpScreenState extends State<SignUpScreen> {
   TextEditingController nameTextEditingController = TextEditingController();
 
+  TextEditingController emailTextEditingController = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -45,6 +47,30 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 decoration: const InputDecoration(
                   labelText: "Name",
                   hintText: "Name",
+                  enabledBorder: UnderlineInputBorder(
+                    borderSide: BorderSide(color: Colors.white),
+                  ),
+                  focusedBorder: UnderlineInputBorder(
+                    borderSide: BorderSide(color: Colors.grey),
+                  ),
+                  hintStyle: TextStyle(
+                    color: Colors.grey,
+                    fontSize: 10,
+                  ),
+                  labelStyle: TextStyle(
+                    color: Colors.grey,
+                    fontSize: 14,
+                  ),
+                ),
+              ),
+              TextField(
+                controller: emailTextEditingController,
+                style: const TextStyle(
+                    color: Colors.grey
+                ),
+                decoration: const InputDecoration(
+                  labelText: "email",
+                  hintText: "email",
                   enabledBorder: UnderlineInputBorder(
                     borderSide: BorderSide(color: Colors.white),
                   ),
