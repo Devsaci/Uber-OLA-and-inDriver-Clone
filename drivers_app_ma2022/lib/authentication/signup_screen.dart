@@ -88,6 +88,8 @@ class _SignUpScreenState extends State<SignUpScreen> {
               ),
               TextField(
                 controller: passwordTextEditingController,
+                keyboardType: TextInputType.text,
+                obscureText: true,
                 style: const TextStyle(color: Colors.grey),
                 decoration: const InputDecoration(
                   labelText: "password",
