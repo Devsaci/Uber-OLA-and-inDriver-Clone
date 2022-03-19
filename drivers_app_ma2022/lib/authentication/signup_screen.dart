@@ -31,12 +31,15 @@ class _SignUpScreenState extends State<SignUpScreen> {
               "Register as a Driver",
               style: TextStyle(
                 fontSize: 26,
-                color: Colors.grey,
+                color: Colors.white,
                 fontWeight: FontWeight.bold,
               ),
             ),
             TextField(
               controller: nameTextEditingController,
+              style: const TextStyle(
+                  color: Colors.grey
+              ),
               decoration: const InputDecoration(
                 labelText: "Name",
                 hintText: "Name",
