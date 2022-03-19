@@ -117,8 +117,8 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 keyboardType: TextInputType.phone,
                 style: const TextStyle(color: Colors.grey),
                 decoration: const InputDecoration(
-                  labelText: "password",
-                  hintText: "password",
+                  labelText: "phone",
+                  hintText: "phone",
                   enabledBorder: UnderlineInputBorder(
                     borderSide: BorderSide(color: Colors.white),
                   ),
