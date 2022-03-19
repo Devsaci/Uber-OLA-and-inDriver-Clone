@@ -12,8 +12,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
 
   TextEditingController emailTextEditingController = TextEditingController();
 
-
-  TextEditingController phoneTextEditingController= TextEditingController();
+  TextEditingController phoneTextEditingController = TextEditingController();
   TextEditingController passwordTextEditingController = TextEditingController();
 
   @override
@@ -135,9 +134,10 @@ class _SignUpScreenState extends State<SignUpScreen> {
                   ),
                 ),
               ),
-              const SizedBox(height: 20,),
-
-
+              const SizedBox(
+                height: 20,
+              ),
+              
             ],
           ),
         ),
