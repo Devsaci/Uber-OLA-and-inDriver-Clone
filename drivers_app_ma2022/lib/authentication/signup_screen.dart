@@ -65,10 +65,33 @@ class _SignUpScreenState extends State<SignUpScreen> {
               ),
               TextField(
                 controller: emailTextEditingController,
+                keyboardType: TextInputType.emailAddress,
                 style: const TextStyle(color: Colors.grey),
                 decoration: const InputDecoration(
                   labelText: "email",
                   hintText: "email",
+                  enabledBorder: UnderlineInputBorder(
+                    borderSide: BorderSide(color: Colors.white),
+                  ),
+                  focusedBorder: UnderlineInputBorder(
+                    borderSide: BorderSide(color: Colors.grey),
+                  ),
+                  hintStyle: TextStyle(
+                    color: Colors.grey,
+                    fontSize: 10,
+                  ),
+                  labelStyle: TextStyle(
+                    color: Colors.grey,
+                    fontSize: 14,
+                  ),
+                ),
+              ),
+              TextField(
+                controller: passwordTextEditingController,
+                style: const TextStyle(color: Colors.grey),
+                decoration: const InputDecoration(
+                  labelText: "password",
+                  hintText: "password",
                   enabledBorder: UnderlineInputBorder(
                     borderSide: BorderSide(color: Colors.white),
                   ),
