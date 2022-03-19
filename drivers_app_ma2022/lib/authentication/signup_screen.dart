@@ -14,6 +14,8 @@ class _SignUpScreenState extends State<SignUpScreen> {
 
   TextEditingController passwordTextEditingController = TextEditingController();
 
+  TextEditingController phoneTextEditingController= TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -111,7 +113,8 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 ),
               ),
               TextField(
-                controller: passwordTextEditingController,
+                controller: phoneTextEditingController,
+                keyboardType: TextInputType.phone,
                 style: const TextStyle(color: Colors.grey),
                 decoration: const InputDecoration(
                   labelText: "password",
