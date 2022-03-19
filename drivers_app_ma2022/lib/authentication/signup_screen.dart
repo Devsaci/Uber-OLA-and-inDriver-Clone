@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 
 class SignUpScreen extends StatefulWidget {
@@ -139,12 +138,16 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 height: 20,
               ),
               ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  primary: Colors.lightGreenAccent,
+                ),
                 onPressed: () {},
                 child: const Text(
-                  "Create Account", style: TextStyle(
-                  color: Colors.black54,
-                  fontSize: 18,
-                ),
+                  "Create Account",
+                  style: TextStyle(
+                    color: Colors.black54,
+                    fontSize: 18,
+                  ),
                 ),
               )
             ],
