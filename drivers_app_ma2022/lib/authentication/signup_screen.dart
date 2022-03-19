@@ -12,9 +12,9 @@ class _SignUpScreenState extends State<SignUpScreen> {
 
   TextEditingController emailTextEditingController = TextEditingController();
 
-  TextEditingController passwordTextEditingController = TextEditingController();
 
   TextEditingController phoneTextEditingController= TextEditingController();
+  TextEditingController passwordTextEditingController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -89,6 +89,29 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 ),
               ),
               TextField(
+                controller: phoneTextEditingController,
+                keyboardType: TextInputType.phone,
+                style: const TextStyle(color: Colors.grey),
+                decoration: const InputDecoration(
+                  labelText: "phone",
+                  hintText: "phone",
+                  enabledBorder: UnderlineInputBorder(
+                    borderSide: BorderSide(color: Colors.white),
+                  ),
+                  focusedBorder: UnderlineInputBorder(
+                    borderSide: BorderSide(color: Colors.grey),
+                  ),
+                  hintStyle: TextStyle(
+                    color: Colors.grey,
+                    fontSize: 10,
+                  ),
+                  labelStyle: TextStyle(
+                    color: Colors.grey,
+                    fontSize: 14,
+                  ),
+                ),
+              ),
+              TextField(
                 controller: passwordTextEditingController,
                 keyboardType: TextInputType.text,
                 obscureText: true,
@@ -112,29 +135,9 @@ class _SignUpScreenState extends State<SignUpScreen> {
                   ),
                 ),
               ),
-              TextField(
-                controller: phoneTextEditingController,
-                keyboardType: TextInputType.phone,
-                style: const TextStyle(color: Colors.grey),
-                decoration: const InputDecoration(
-                  labelText: "phone",
-                  hintText: "phone",
-                  enabledBorder: UnderlineInputBorder(
-                    borderSide: BorderSide(color: Colors.white),
-                  ),
-                  focusedBorder: UnderlineInputBorder(
-                    borderSide: BorderSide(color: Colors.grey),
-                  ),
-                  hintStyle: TextStyle(
-                    color: Colors.grey,
-                    fontSize: 10,
-                  ),
-                  labelStyle: TextStyle(
-                    color: Colors.grey,
-                    fontSize: 14,
-                  ),
-                ),
-              ),
+              const SizedBox(height: 20,),
+
+
             ],
           ),
         ),
