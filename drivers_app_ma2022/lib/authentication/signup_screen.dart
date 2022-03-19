@@ -1,4 +1,3 @@
-import 'dart:html';
 
 import 'package:flutter/material.dart';
 
@@ -141,7 +140,12 @@ class _SignUpScreenState extends State<SignUpScreen> {
               ),
               ElevatedButton(
                 onPressed: () {},
-                child: const Text('data'),
+                child: const Text(
+                  "Create Account", style: TextStyle(
+                  color: Colors.black54,
+                  fontSize: 18,
+                ),
+                ),
               )
             ],
           ),
