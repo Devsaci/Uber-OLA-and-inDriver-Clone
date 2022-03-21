@@ -12,7 +12,12 @@ class _CarInfoScreenState extends State<CarInfoScreen> {
       backgroundColor: Colors.black87,
       body: SingleChildScrollView(
         child: Column(
-          children: [],
+          children: [
+            Padding(
+              padding: const EdgeInsets.all(20.0),
+              child: Image.asset("images/logo1.png"),
+            ),
+          ],
         ),
       ),
     );
