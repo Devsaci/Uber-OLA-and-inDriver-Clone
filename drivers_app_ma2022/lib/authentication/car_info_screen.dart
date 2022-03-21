@@ -13,6 +13,7 @@ class _CarInfoScreenState extends State<CarInfoScreen> {
       body: SingleChildScrollView(
         child: Column(
           children: [
+            const SizedBox(height: 24,),
             Padding(
               padding: const EdgeInsets.all(20.0),
               child: Image.asset("images/logo1.png"),
