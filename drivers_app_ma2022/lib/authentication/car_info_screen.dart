@@ -8,6 +8,8 @@ class CarInfoScreen extends StatefulWidget {
 class _CarInfoScreenState extends State<CarInfoScreen> {
   TextEditingController carModelTextEditingController = TextEditingController();
 
+  TextEditingController carNumberTextEditingController = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -39,6 +41,30 @@ class _CarInfoScreenState extends State<CarInfoScreen> {
               decoration: const InputDecoration(
                 labelText: "Car Model",
                 hintText: "Car Model",
+                enabledBorder: UnderlineInputBorder(
+                  borderSide: BorderSide(color: Colors.grey),
+                ),
+                focusedBorder: UnderlineInputBorder(
+                  borderSide: BorderSide(color: Colors.grey),
+                ),
+                hintStyle: TextStyle(
+                  color: Colors.grey,
+                  fontSize: 10,
+                ),
+                labelStyle: TextStyle(
+                  color: Colors.grey,
+                  fontSize: 14,
+                ),
+              ),
+            ),
+            TextField(
+              controller: carNumberTextEditingController,
+              style: const TextStyle(
+                  color: Colors.grey
+              ),
+              decoration: const InputDecoration(
+                labelText: "Car Number",
+                hintText: "Car Number",
                 enabledBorder: UnderlineInputBorder(
                   borderSide: BorderSide(color: Colors.grey),
                 ),
