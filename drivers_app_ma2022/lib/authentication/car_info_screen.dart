@@ -110,7 +110,7 @@ class _CarInfoScreenState extends State<CarInfoScreen> {
                 ),
               ),
               DropdownButton(
-                dropdownColor: Colors.black,
+                dropdownColor: Colors.white30,
                 hint: const Text(
                   "Please choose Car Type",
                   style: TextStyle(
