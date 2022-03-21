@@ -8,9 +8,13 @@ class CarInfoScreen extends StatefulWidget {
 class _CarInfoScreenState extends State<CarInfoScreen> {
   TextEditingController carModelTextEditingController = TextEditingController();
 
-  TextEditingController carNumberTextEditingController = TextEditingController();
+  TextEditingController carNumberTextEditingController =
+      TextEditingController();
 
   TextEditingController carColorTextEditingController = TextEditingController();
+
+  List<String> carTypesList = ["uber-x", "uber-go", "bike"];
+  String? selectedCarType;
 
   @override
   Widget build(BuildContext context) {
@@ -63,9 +67,7 @@ class _CarInfoScreenState extends State<CarInfoScreen> {
               ),
               TextField(
                 controller: carNumberTextEditingController,
-                style: const TextStyle(
-                    color: Colors.grey
-                ),
+                style: const TextStyle(color: Colors.grey),
                 decoration: const InputDecoration(
                   labelText: "Car Number",
                   hintText: "Car Number",
@@ -87,9 +89,7 @@ class _CarInfoScreenState extends State<CarInfoScreen> {
               ),
               TextField(
                 controller: carColorTextEditingController,
-                style: const TextStyle(
-                    color: Colors.grey
-                ),
+                style: const TextStyle(color: Colors.grey),
                 decoration: const InputDecoration(
                   labelText: "Car Color",
                   hintText: "Car Color",
@@ -108,6 +108,30 @@ class _CarInfoScreenState extends State<CarInfoScreen> {
                     fontSize: 14,
                   ),
                 ),
+              ),
+              DropdownButton(
+                hint: const Text(
+                  "Please choose Car Type",
+                  style: TextStyle(
+                    fontSize: 14.0,
+                    color: Colors.grey,
+                  ),
+                ),
+                value: selectedCarType,
+                onChanged: (newValue) {
+                  setState(() {
+                    selectedCarType = newValue.toString();
+                  });
+                },
+                items: carTypesList.map((car) {
+                  return DropdownMenuItem(
+                    child: Text(
+                      car,
+                      style: const TextStyle(color: Colors.grey),
+                    ),
+                    value: car,
+                  );
+                }).toList(),
               ),
             ],
           ),
