@@ -1,3 +1,4 @@
+import 'package:drivers_app_ma2022/authentication/car_info_screen.dart';
 import 'package:flutter/material.dart';
 
 class SignUpScreen extends StatefulWidget {
@@ -142,7 +143,14 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 style: ElevatedButton.styleFrom(
                   primary: Colors.lightGreenAccent,
                 ),
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (c) => CarInfoScreen(),
+                    ),
+                  );
+                },
                 child: const Text(
                   "Create Account",
                   style: TextStyle(
