@@ -1,8 +1,6 @@
-
 import 'package:flutter/material.dart';
 
 class CarInfoScreen extends StatefulWidget {
-
   @override
   State<CarInfoScreen> createState() => _CarInfoScreenState();
 }
@@ -13,7 +11,9 @@ class _CarInfoScreenState extends State<CarInfoScreen> {
     return Scaffold(
       backgroundColor: Colors.black87,
       body: SingleChildScrollView(
-
+        child: Column(
+          children: [],
+        ),
       ),
     );
   }
