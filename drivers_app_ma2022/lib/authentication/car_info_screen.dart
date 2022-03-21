@@ -10,6 +10,8 @@ class CarInfoScreen extends StatefulWidget {
 class _CarInfoScreenState extends State<CarInfoScreen> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+      backgroundColor: Colors.black87,
+    );
   }
 }
