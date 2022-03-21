@@ -12,6 +12,9 @@ class _CarInfoScreenState extends State<CarInfoScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.black87,
+      body: SingleChildScrollView(
+
+      ),
     );
   }
 }
