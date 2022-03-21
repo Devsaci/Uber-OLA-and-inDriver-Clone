@@ -6,7 +6,7 @@ class CarInfoScreen extends StatefulWidget {
 }
 
 class _CarInfoScreenState extends State<CarInfoScreen> {
-  TextEditingController  carModelTextEditingController = TextEditingController();
+  TextEditingController carModelTextEditingController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -15,13 +15,16 @@ class _CarInfoScreenState extends State<CarInfoScreen> {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            const SizedBox(height: 24,),
+            const SizedBox(
+              height: 24,
+            ),
             Padding(
               padding: const EdgeInsets.all(20.0),
               child: Image.asset("images/logo1.png"),
             ),
-            const SizedBox(height: 10,),
-
+            const SizedBox(
+              height: 10,
+            ),
             const Text(
               "Write Car Details",
               style: TextStyle(
@@ -32,9 +35,7 @@ class _CarInfoScreenState extends State<CarInfoScreen> {
             ),
             TextField(
               controller: carModelTextEditingController,
-              style: const TextStyle(
-                  color: Colors.grey
-              ),
+              style: const TextStyle(color: Colors.grey),
               decoration: const InputDecoration(
                 labelText: "Car Model",
                 hintText: "Car Model",
