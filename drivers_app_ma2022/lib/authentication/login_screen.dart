@@ -36,6 +36,9 @@ class _LoginScreenState extends State<LoginScreen> {
             TextField(
               controller: emailTextEditingController,
               keyboardType: TextInputType.emailAddress,
+              style: const TextStyle(color: Colors.grey),
+              decoration: InputDecoration(
+              ),
             ),
           ],
         ),
