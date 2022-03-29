@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -11,7 +10,6 @@ class LoginScreen extends StatefulWidget {
 class _LoginScreenState extends State<LoginScreen> {
   TextEditingController emailTextEditingController = TextEditingController();
   TextEditingController passwordTextEditingController = TextEditingController();
-
 
   @override
   Widget build(BuildContext context) {
@@ -32,10 +30,10 @@ class _LoginScreenState extends State<LoginScreen> {
             ),
             const Text(
               "Login as a Driver",
-              style: TextStyle(
-                fontSize: 26,
-                color: Colors.grey
-              ),
+              style: TextStyle(fontSize: 26, color: Colors.grey),
+            ),
+            TextField(
+              controller: emailTextEditingController,
             ),
           ],
         ),
