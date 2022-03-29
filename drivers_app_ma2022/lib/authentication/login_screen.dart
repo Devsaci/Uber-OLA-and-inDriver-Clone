@@ -40,6 +40,9 @@ class _LoginScreenState extends State<LoginScreen> {
               decoration: const InputDecoration(
                 labelText: "Email",
                 hintText: "Email",
+                enabledBorder: UnderlineInputBorder(
+                  borderSide: BorderSide(color: Colors.grey),
+                ),
               ),
             ),
           ],
