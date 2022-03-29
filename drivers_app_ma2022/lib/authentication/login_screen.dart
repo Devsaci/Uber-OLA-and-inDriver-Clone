@@ -50,6 +50,10 @@ class _LoginScreenState extends State<LoginScreen> {
                   color: Colors.grey,
                   fontSize: 10,
                 ),
+                labelStyle: TextStyle(
+                  color: Colors.grey,
+                  fontSize: 14,
+                ),
               ),
             ),
           ],
