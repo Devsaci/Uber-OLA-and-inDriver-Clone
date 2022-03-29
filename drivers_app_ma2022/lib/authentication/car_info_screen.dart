@@ -139,6 +139,29 @@ class _CarInfoScreenState extends State<CarInfoScreen> {
                   );
                 }).toList(),
               ),
+              const SizedBox(
+                height: 20,
+              ),
+              ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  primary: Colors.lightGreenAccent,
+                ),
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (c) => CarInfoScreen(),
+                    ),
+                  );
+                },
+                child: const Text(
+                  "Save Now",
+                  style: TextStyle(
+                    color: Colors.black54,
+                    fontSize: 18,
+                  ),
+                ),
+              )
             ],
           ),
         ),
