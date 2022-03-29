@@ -1,4 +1,3 @@
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -86,7 +85,13 @@ class _LoginScreenState extends State<LoginScreen> {
             ),
             ElevatedButton(
               onPressed: () {},
-              child: const Text('data'),
+              child: const Text(
+                'Login',
+                style: TextStyle(
+                  color: Colors.black54,
+                  fontSize: 18,
+                ),
+              ),
             )
           ],
         ),
