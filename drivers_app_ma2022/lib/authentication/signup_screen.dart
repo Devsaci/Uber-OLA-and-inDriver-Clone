@@ -1,4 +1,5 @@
 import 'package:drivers_app_ma2022/authentication/car_info_screen.dart';
+import 'package:drivers_app_ma2022/authentication/login_screen.dart';
 import 'package:flutter/material.dart';
 
 class SignUpScreen extends StatefulWidget {
@@ -158,7 +159,24 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     fontSize: 18,
                   ),
                 ),
-              )
+              ),
+              TextButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (c) => const LoginScreen(),
+                    ),
+                  );
+                },
+                child: const Text(
+                  "Do not have an Account? SignUp Here",
+                  style: TextStyle(
+                    color: Colors.grey,
+                    fontSize: 12,
+                  ),
+                ),
+              ),
             ],
           ),
         ),

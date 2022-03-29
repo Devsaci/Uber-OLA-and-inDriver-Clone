@@ -114,7 +114,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     fontSize: 12,
                   ),
                 ),
-              )
+              ),
             ],
           ),
         ),
