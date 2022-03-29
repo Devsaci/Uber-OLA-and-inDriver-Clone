@@ -1,4 +1,5 @@
 
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class LoginScreen  extends StatefulWidget {
@@ -15,6 +16,10 @@ class _LoginScreenState extends State<LoginScreen> {
       backgroundColor: Colors.black,
       body: SingleChildScrollView(
         child: Column(
+          children:  [
+            const SizedBox(width: 10,),
+            Image.asset("images/logo1.png"),
+          ],
 
         ),
       ),
