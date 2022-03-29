@@ -46,6 +46,10 @@ class _LoginScreenState extends State<LoginScreen> {
                 focusedBorder: UnderlineInputBorder(
                   borderSide: BorderSide(color: Colors.grey),
                 ),
+                hintStyle: TextStyle(
+                  color: Colors.grey,
+                  fontSize: 10,
+                ),
               ),
             ),
           ],
