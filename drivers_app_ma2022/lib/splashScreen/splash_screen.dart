@@ -2,6 +2,7 @@
 
 import 'dart:async';
 
+import 'package:drivers_app_ma2022/authentication/login_screen.dart';
 import 'package:drivers_app_ma2022/mainScreens/main_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -21,7 +22,7 @@ class _MySplashScreenState extends State<MySplashScreen> {
       Navigator.push(
           context,
           MaterialPageRoute(
-            builder: (c) => const SignUpScreen(),
+            builder: (c) => const LoginScreen(),
           ));
     });
   }
