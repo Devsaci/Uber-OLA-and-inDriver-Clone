@@ -109,7 +109,12 @@ class _CarInfoScreenState extends State<CarInfoScreen> {
                   ),
                 ),
               ),
+              const SizedBox(
+                height: 10,
+              ),
               DropdownButton(
+                iconSize: 25,
+                icon: const Icon(Icons.map),
                 dropdownColor: Colors.white30,
                 hint: const Text(
                   "Please choose Car Type",
