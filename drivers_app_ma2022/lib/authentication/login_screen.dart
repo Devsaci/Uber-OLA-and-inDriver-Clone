@@ -60,8 +60,11 @@ class _LoginScreenState extends State<LoginScreen> {
               controller: passwordTextEditingController,
               keyboardType: TextInputType.text,
               obscureText: true,
-              style: const TextStyle(
-                  color: Colors.grey
+              style: const TextStyle(color: Colors.grey),
+              decoration: const InputDecoration(
+                labelText: "Password",
+                labelText: "Password",
+
               ),
             ),
           ],
