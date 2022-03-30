@@ -1,9 +1,11 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_constructors_in_immutables
 
 import 'package:drivers_app_ma2022/splashScreen/splash_screen.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 
 void main() async {
+  await Firebase.initializeApp();
   WidgetsFlutterBinding.ensureInitialized();
   runApp(
     MyApp(
