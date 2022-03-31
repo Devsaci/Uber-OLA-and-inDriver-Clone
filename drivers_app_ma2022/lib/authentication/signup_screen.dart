@@ -17,7 +17,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
   TextEditingController phoneTextEditingController = TextEditingController();
 
   TextEditingController passwordTextEditingController = TextEditingController();
-
+//Method (inside class) for Validation not Function (outside class)
   validateForm(){
 
   }
