@@ -21,8 +21,16 @@ class _SignUpScreenState extends State<SignUpScreen> {
 
 //Method (inside class) for Validation not Function (outside class)
   validateForm() {
-    if (nameTextEditingController.text.length < 3) {
-      Fluttertoast.showToast(msg: "name must be at least 3 Characters.");
+    if (nameTextEditingController.text.length < 5) {
+      Fluttertoast.showToast(
+        msg: "name must be at least 3 Characters.",
+        backgroundColor: Colors.redAccent,
+      );
+    } else if (!emailTextEditingController.text.contains("@")){
+      Fluttertoast.showToast(msg: "Email address is not Valid.",
+        backgroundColor: Colors.redAccent,
+      );
+
     }
   }
 
@@ -154,12 +162,12 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 ),
                 onPressed: () {
                   validateForm();
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (c) => CarInfoScreen(),
-                    ),
-                  );
+                  // Navigator.push(
+                  //   context,
+                  //   MaterialPageRoute(
+                  //     builder: (c) => CarInfoScreen(),
+                  //   ),
+                  // );
                 },
                 child: const Text(
                   "Create Account",
