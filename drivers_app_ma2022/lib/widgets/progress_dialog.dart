@@ -1,4 +1,5 @@
-import 'package:flutter/cupertino.dart';
+import 'dart:html';
+
 import 'package:flutter/material.dart';
 
 class ProgressDialog extends StatelessWidget {
@@ -10,22 +11,31 @@ class ProgressDialog extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  Dialog(
+    return Dialog(
       backgroundColor: Colors.black54,
       child: Container(
         margin: const EdgeInsets.all(15.0),
-        decoration:  BoxDecoration(
+        decoration: BoxDecoration(
           color: Colors.white,
           borderRadius: BorderRadius.circular(6),
         ),
         child: Padding(
           padding: const EdgeInsets.all(16.0),
           child: Row(
-            children: const [
-              SizedBox(width: 6.0,),
-              CircularProgressIndicator(
-                valueColor:  AlwaysStoppedAnimation<Color>(Colors.green),
+            children:
+            [
+              SizedBox(
+                width: 6.0,
               ),
+              CircularProgressIndicator(
+                valueColor: AlwaysStoppedAnimation<Color>(Colors.green),
+              ),
+              SizedBox(
+                width: 6.0,
+              ),
+              Text(
+                message!,
+              )
             ],
           ),
         ),
