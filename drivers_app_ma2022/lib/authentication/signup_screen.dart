@@ -1,6 +1,7 @@
 import 'package:drivers_app_ma2022/authentication/car_info_screen.dart';
 import 'package:drivers_app_ma2022/authentication/login_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 
 class SignUpScreen extends StatefulWidget {
   const SignUpScreen({Key? key}) : super(key: key);
@@ -17,11 +18,13 @@ class _SignUpScreenState extends State<SignUpScreen> {
   TextEditingController phoneTextEditingController = TextEditingController();
 
   TextEditingController passwordTextEditingController = TextEditingController();
+
 //Method (inside class) for Validation not Function (outside class)
-  validateForm(){
-
+  validateForm() {
+    if (nameTextEditingController.text.length < 3) {
+      Fluttertoast.showToast(msg: "msg");
+    }
   }
-
 
   @override
   Widget build(BuildContext context) {
