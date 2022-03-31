@@ -1,5 +1,6 @@
 import 'package:drivers_app_ma2022/authentication/car_info_screen.dart';
 import 'package:drivers_app_ma2022/authentication/login_screen.dart';
+import 'package:drivers_app_ma2022/widgets/progress_dialog.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 
@@ -40,6 +41,14 @@ class _SignUpScreenState extends State<SignUpScreen> {
       Fluttertoast.showToast(
         msg: "Password must be at least 6 Characters.",
         backgroundColor: Colors.lightGreenAccent,
+      );
+    } else {
+      showDialog(
+        barrierDismissible: false,
+        context: context,
+        builder: (BuildContext context){
+          return  ProgressDialog("Processing, Please wait...");
+        },
       );
     }
   }
