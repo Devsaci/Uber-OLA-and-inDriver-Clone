@@ -22,7 +22,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
 //Method (inside class) for Validation not Function (outside class)
   validateForm() {
     if (nameTextEditingController.text.length < 3) {
-      Fluttertoast.showToast(msg: "msg");
+      Fluttertoast.showToast(msg: "name must be at least 3 Characters.");
     }
   }
 
