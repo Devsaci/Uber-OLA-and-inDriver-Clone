@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class ProgressDialog extends StatelessWidget {
@@ -11,7 +12,9 @@ class ProgressDialog extends StatelessWidget {
   Widget build(BuildContext context) {
     return  Dialog(
       backgroundColor: Colors.black54,
-      child: Container(),
+      child: Container(
+        margin: const EdgeInsets.all(15.0),
+      ),
     );
   }
 }
