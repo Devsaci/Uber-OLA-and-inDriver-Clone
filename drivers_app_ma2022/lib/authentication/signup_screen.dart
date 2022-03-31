@@ -18,7 +18,9 @@ class _SignUpScreenState extends State<SignUpScreen> {
 
   TextEditingController passwordTextEditingController = TextEditingController();
 
+  validateForm(){
 
+  }
 
 
   @override
