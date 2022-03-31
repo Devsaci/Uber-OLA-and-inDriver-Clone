@@ -26,11 +26,22 @@ class _SignUpScreenState extends State<SignUpScreen> {
         msg: "name must be at least 3 Characters.",
         backgroundColor: Colors.redAccent,
       );
-    } else if (!emailTextEditingController.text.contains("@")){
-      Fluttertoast.showToast(msg: "Email address is not Valid.",
+    } else if (!emailTextEditingController.text.contains("@")) {
+      Fluttertoast.showToast(
+        msg: "Email address is not Valid.",
         backgroundColor: Colors.greenAccent,
       );
+    } else if (phoneTextEditingController.text.isEmpty) {
+      Fluttertoast.showToast(
+        msg: "Phone Number is required.",
+        backgroundColor: Colors.limeAccent,
+      );
+    } else if (passwordTextEditingController.text.length < 6) {
+      Fluttertoast.showToast(
+        msg: "Password must be at least 6 Characters.",
+        backgroundColor: Colors.lightGreenAccent,
 
+      );
     }
   }
 
