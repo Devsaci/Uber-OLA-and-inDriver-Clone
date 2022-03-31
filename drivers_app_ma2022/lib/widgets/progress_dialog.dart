@@ -1,4 +1,3 @@
-import 'dart:html';
 
 import 'package:flutter/material.dart';
 
@@ -22,19 +21,19 @@ class ProgressDialog extends StatelessWidget {
         child: Padding(
           padding: const EdgeInsets.all(16.0),
           child: Row(
-            children:
-            [
-              SizedBox(
+            children: [
+              const SizedBox(
                 width: 6.0,
               ),
-              CircularProgressIndicator(
+              const CircularProgressIndicator(
                 valueColor: AlwaysStoppedAnimation<Color>(Colors.green),
               ),
-              SizedBox(
+              const SizedBox(
                 width: 6.0,
               ),
               Text(
                 message!,
+                style: const TextStyle(color: Colors.grey, fontSize: 12),
               )
             ],
           ),
