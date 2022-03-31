@@ -28,7 +28,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
       );
     } else if (!emailTextEditingController.text.contains("@")){
       Fluttertoast.showToast(msg: "Email address is not Valid.",
-        backgroundColor: Colors.redAccent,
+        backgroundColor: Colors.greenAccent,
       );
 
     }
