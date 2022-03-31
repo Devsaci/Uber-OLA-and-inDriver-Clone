@@ -9,9 +9,9 @@ class ProgressDialog extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Dialog(
+    return  Dialog(
       backgroundColor: Colors.black54,
-
+      child: Container(),
     );
   }
 }
