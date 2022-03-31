@@ -40,7 +40,6 @@ class _SignUpScreenState extends State<SignUpScreen> {
       Fluttertoast.showToast(
         msg: "Password must be at least 6 Characters.",
         backgroundColor: Colors.lightGreenAccent,
-
       );
     }
   }
