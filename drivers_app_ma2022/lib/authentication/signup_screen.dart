@@ -153,6 +153,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                   primary: Colors.lightGreenAccent,
                 ),
                 onPressed: () {
+                  validateForm();
                   Navigator.push(
                     context,
                     MaterialPageRoute(
