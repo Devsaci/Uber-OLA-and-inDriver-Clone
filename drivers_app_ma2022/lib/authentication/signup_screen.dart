@@ -75,8 +75,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
       Map driverMap = {
         "id": firebaseUser.uid,
         "name": nameTextEditingController.text.trim(),
-
-
+        "phone": phoneTextEditingController.text.trim(),
       };
 
     } else {
