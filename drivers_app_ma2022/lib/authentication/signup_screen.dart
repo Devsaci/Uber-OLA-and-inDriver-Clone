@@ -80,7 +80,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
       };
       DatabaseReference driversRef =  FirebaseDatabase.instance.ref().child("drivers");
       driversRef.child(firebaseUser.uid).set(driverMap);
-
+      currentFirebaseUser = firebaseUser;
     } else {
       Navigator.pop(context);
       Fluttertoast.showToast(msg: "Account has not been Created.");
