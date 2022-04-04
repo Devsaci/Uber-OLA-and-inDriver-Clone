@@ -51,7 +51,9 @@ class _SignUpScreenState extends State<SignUpScreen> {
     showDialog(
       barrierDismissible: false,
       context: context,
-      builder: (context) => ProgressDialog("Processing, Please wait..."),
+      builder: (context) {
+        return ProgressDialog("Processing, Please wait...");
+      },
     );
   }
 
