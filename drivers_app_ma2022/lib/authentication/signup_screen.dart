@@ -74,7 +74,8 @@ class _SignUpScreenState extends State<SignUpScreen> {
     if (firebaseUser != null) {
 
     } else {
-
+      Navigator.pop(context);
+      Fluttertoast.showToast(msg: "Account has not been Created.");
     }
   }
 
