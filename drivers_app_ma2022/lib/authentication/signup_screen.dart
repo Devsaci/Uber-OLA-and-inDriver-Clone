@@ -57,16 +57,16 @@ class _SignUpScreenState extends State<SignUpScreen> {
         return ProgressDialog("Processing, Please wait...");
       },
     );
-    final User? firebaseUser = (await fAuth
-            .createUserWithEmailAndPassword(
+    final User? firebaseUser = (
+        await fAuth.createUserWithEmailAndPassword(
       email: emailTextEditingController.text.trim(),
       password: passwordTextEditingController.text.trim(),
-    )
-            .catchError((msg) {
-      Navigator.pop(context);
-      Fluttertoast.showToast(msg: "Error: " + msg.toString());
-    }))
-        .user;
+    ).catchError((msg) {
+        Navigator.pop(context);
+        Fluttertoast.showToast(msg: "Error: " + msg.toString(),
+        );
+      },
+    )).user;
   }
 
   @override
