@@ -61,7 +61,9 @@ class _SignUpScreenState extends State<SignUpScreen> {
         await fAuth.createUserWithEmailAndPassword(
               email: emailTextEditingController.text.trim(),
               password: passwordTextEditingController.text.trim(),
-            ).catchError((msg) {})).user;
+            ).catchError((msg) {
+          Navigator.pop(context);
+        })).user;
   }
 
   @override
