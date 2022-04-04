@@ -72,6 +72,9 @@ class _SignUpScreenState extends State<SignUpScreen> {
     )).user;
 
     if (firebaseUser != null) {
+      Map driverMap = {
+
+      };
 
     } else {
       Navigator.pop(context);
