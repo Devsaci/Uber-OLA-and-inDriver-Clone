@@ -43,16 +43,16 @@ class _SignUpScreenState extends State<SignUpScreen> {
         backgroundColor: Colors.lightGreenAccent,
       );
     } else {
-      showDialog(
-        barrierDismissible: false,
-        context: context,
-        builder: (context) => ProgressDialog("Processing, Please wait..."),
-      );
+      saveDriverInfoNow();
     }
   }
 
   saveDriverInfoNow(){
-
+    showDialog(
+      barrierDismissible: false,
+      context: context,
+      builder: (context) => ProgressDialog("Processing, Please wait..."),
+    );
   }
 
   @override
