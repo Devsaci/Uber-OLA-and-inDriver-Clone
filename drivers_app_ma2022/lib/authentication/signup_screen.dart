@@ -3,6 +3,7 @@ import 'package:drivers_app_ma2022/authentication/login_screen.dart';
 import 'package:drivers_app_ma2022/global/global.dart';
 import 'package:drivers_app_ma2022/widgets/progress_dialog.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 
@@ -77,7 +78,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
         "name": nameTextEditingController.text.trim(),
         "phone": phoneTextEditingController.text.trim(),
       };
-
+      FirebaseDatabase.instance.ref().child("drivers");
     } else {
       Navigator.pop(context);
       Fluttertoast.showToast(msg: "Account has not been Created.");
