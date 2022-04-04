@@ -1,4 +1,3 @@
-import 'dart:html';
 
 import 'package:drivers_app_ma2022/authentication/car_info_screen.dart';
 import 'package:drivers_app_ma2022/authentication/login_screen.dart';
@@ -86,7 +85,6 @@ class _SignUpScreenState extends State<SignUpScreen> {
     } else {
       Navigator.pop(context);
       Fluttertoast.showToast(msg: "Account has not been Created.");
-      //  Navigator.push(context, MaterialPageRoute(builder: (c)=> CarInfoScreen()));
       Navigator.push(context, MaterialPageRoute(builder: (c)=> CarInfoScreen()));
     }
   }
