@@ -51,6 +51,10 @@ class _SignUpScreenState extends State<SignUpScreen> {
     }
   }
 
+  saveDriverInfoNow(){
+
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
