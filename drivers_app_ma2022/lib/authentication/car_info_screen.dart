@@ -16,9 +16,13 @@ class _CarInfoScreenState extends State<CarInfoScreen> {
   List<String> carTypesList = ["uber-x", "uber-go", "bike"];
   String? selectedCarType;
 
-
-  saveCarInfo(){
-
+  saveCarInfo() {
+    Map driverCarInfoMap = {
+      "car_color": carColorTextEditingController.text.trim(),
+      "car_number": carNumberTextEditingController.text.trim(),
+      "car_model": carModelTextEditingController.text.trim(),
+      "type": selectedCarType,
+    };
   }
 
   @override
@@ -151,9 +155,7 @@ class _CarInfoScreenState extends State<CarInfoScreen> {
                 style: ElevatedButton.styleFrom(
                   primary: Colors.lightGreenAccent,
                 ),
-                onPressed: () {
-
-                },
+                onPressed: () {},
                 child: const Text(
                   "Save Now",
                   style: TextStyle(
