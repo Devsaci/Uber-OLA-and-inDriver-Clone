@@ -26,8 +26,12 @@ class _CarInfoScreenState extends State<CarInfoScreen> {
       "car_model": carModelTextEditingController.text.trim(),
       "type": selectedCarType,
     };
-    DatabaseReference driversRef = FirebaseDatabase.instance.ref().child("drivers");
-    driversRef.child(currentFirebaseUser!.uid).child("car_details").set(driverCarInfoMap);
+    DatabaseReference driversRef =
+        FirebaseDatabase.instance.ref().child("drivers");
+    driversRef
+        .child(currentFirebaseUser!.uid)
+        .child("car_details")
+        .set(driverCarInfoMap);
   }
 
   @override
