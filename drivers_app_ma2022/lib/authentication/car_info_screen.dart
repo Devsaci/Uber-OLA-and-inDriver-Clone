@@ -1,4 +1,3 @@
-import 'dart:html';
 
 import 'package:drivers_app_ma2022/splashScreen/splash_screen.dart';
 import 'package:firebase_database/firebase_database.dart';
