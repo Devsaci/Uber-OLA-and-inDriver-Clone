@@ -165,7 +165,9 @@ class _CarInfoScreenState extends State<CarInfoScreen> {
                   if (carColorTextEditingController.text.isNotEmpty &&
                       carNumberTextEditingController.text.isNotEmpty &&
                       carModelTextEditingController.text.isNotEmpty &&
-                      selectedCarType != null) {}
+                      selectedCarType != null) {
+                    saveCarInfo();
+                  }
                 },
                 style: ElevatedButton.styleFrom(
                   primary: Colors.lightGreenAccent,
