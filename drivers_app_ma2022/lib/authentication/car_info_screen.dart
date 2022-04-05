@@ -1,4 +1,3 @@
-
 import 'package:drivers_app_ma2022/splashScreen/splash_screen.dart';
 import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
@@ -35,8 +34,12 @@ class _CarInfoScreenState extends State<CarInfoScreen> {
         .child(currentFirebaseUser!.uid)
         .child("car_details")
         .set(driverCarInfoMap);
-    Fluttertoast.showToast(msg: "Car Details has been saved, Congratulations.");
-    Navigator.push(context, MaterialPageRoute(builder: (c) => const MySplashScreen()));
+    Fluttertoast.showToast(
+      msg: "Car Details has been saved, Congratulations.",
+      backgroundColor: Colors.lightGreenAccent,
+    );
+    Navigator.push(
+        context, MaterialPageRoute(builder: (c) => const MySplashScreen()));
   }
 
   @override

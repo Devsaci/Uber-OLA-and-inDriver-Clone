@@ -1,4 +1,3 @@
-
 import 'package:drivers_app_ma2022/authentication/car_info_screen.dart';
 import 'package:drivers_app_ma2022/authentication/login_screen.dart';
 import 'package:drivers_app_ma2022/global/global.dart';
@@ -71,7 +70,8 @@ class _SignUpScreenState extends State<SignUpScreen> {
           msg: "Error: " + msg.toString(),
         );
       },
-    )).user;
+    ))
+        .user;
 
     if (firebaseUser != null) {
       Map driverMap = {
@@ -79,13 +79,19 @@ class _SignUpScreenState extends State<SignUpScreen> {
         "name": nameTextEditingController.text.trim(),
         "phone": phoneTextEditingController.text.trim(),
       };
-      DatabaseReference driversRef =  FirebaseDatabase.instance.ref().child("drivers");
+      DatabaseReference driversRef =
+          FirebaseDatabase.instance.ref().child("drivers");
       driversRef.child(firebaseUser.uid).set(driverMap);
       currentFirebaseUser = firebaseUser;
+      Fluttertoast.showToast(
+        msg: "Account has been Created.",
+        backgroundColor: Colors.lightGreenAccent,
+      );
+      Navigator.push(
+          context, MaterialPageRoute(builder: (c) => CarInfoScreen()));
     } else {
       Navigator.pop(context);
       Fluttertoast.showToast(msg: "Account has not been Created.");
-      Navigator.push(context, MaterialPageRoute(builder: (c)=> CarInfoScreen()));
     }
   }
 
