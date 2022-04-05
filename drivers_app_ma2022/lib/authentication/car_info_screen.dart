@@ -161,10 +161,15 @@ class _CarInfoScreenState extends State<CarInfoScreen> {
                 height: 20,
               ),
               ElevatedButton(
+                onPressed: () {
+                  if (carColorTextEditingController.text.isNotEmpty &&
+                      carNumberTextEditingController.text.isNotEmpty &&
+                      carModelTextEditingController.text.isNotEmpty &&
+                      selectedCarType != null) {}
+                },
                 style: ElevatedButton.styleFrom(
                   primary: Colors.lightGreenAccent,
                 ),
-                onPressed: () {},
                 child: const Text(
                   "Save Now",
                   style: TextStyle(
