@@ -1,4 +1,7 @@
+import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
+
+import '../global/global.dart';
 
 class CarInfoScreen extends StatefulWidget {
   @override
@@ -23,6 +26,8 @@ class _CarInfoScreenState extends State<CarInfoScreen> {
       "car_model": carModelTextEditingController.text.trim(),
       "type": selectedCarType,
     };
+    DatabaseReference driversRef = FirebaseDatabase.instance.ref().child("drivers");
+    driversRef.child(currentFirebaseUser!.uid).child("car_details").set(driverCarInfoMap);
   }
 
   @override
