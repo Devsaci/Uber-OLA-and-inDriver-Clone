@@ -16,6 +16,11 @@ class _CarInfoScreenState extends State<CarInfoScreen> {
   List<String> carTypesList = ["uber-x", "uber-go", "bike"];
   String? selectedCarType;
 
+
+  saveCarInfo(){
+
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -147,12 +152,7 @@ class _CarInfoScreenState extends State<CarInfoScreen> {
                   primary: Colors.lightGreenAccent,
                 ),
                 onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (c) => CarInfoScreen(),
-                    ),
-                  );
+
                 },
                 child: const Text(
                   "Save Now",
