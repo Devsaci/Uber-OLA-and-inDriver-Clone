@@ -1,5 +1,6 @@
 // ignore_for_file: prefer_const_constructors
 
+import 'package:drivers_app_ma2022/splashScreen/splash_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -19,6 +20,12 @@ class _ProfileTabPageState extends State<ProfileTabPage> {
       child: ElevatedButton(
         onPressed: () {
           fAuth.signOut();
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (c) => const MySplashScreen(),
+            ),
+          );
         },
         child: Text(
           'Sing Out',
