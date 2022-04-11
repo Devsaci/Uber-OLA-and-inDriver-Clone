@@ -3,6 +3,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+import '../global/global.dart';
+
 class ProfileTabPage extends StatefulWidget {
   const ProfileTabPage({Key? key}) : super(key: key);
 
@@ -15,7 +17,9 @@ class _ProfileTabPageState extends State<ProfileTabPage> {
   Widget build(BuildContext context) {
     return Center(
       child: ElevatedButton(
-        onPressed: () {},
+        onPressed: () {
+          fAuth.signOut();
+        },
         child: Text(
           'Sing Out',
         ),
