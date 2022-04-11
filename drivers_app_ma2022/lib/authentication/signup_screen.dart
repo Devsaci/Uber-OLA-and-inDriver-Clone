@@ -58,29 +58,26 @@ class _SignUpScreenState extends State<SignUpScreen> {
         return ProgressDialog("Processing, Please wait...");
       },
     );
-    final User? firebaseUser = (await fAuth
-            .createUserWithEmailAndPassword(
+    final User? firebaseUser = (
+        await fAuth.createUserWithEmailAndPassword(
       email: emailTextEditingController.text.trim(),
       password: passwordTextEditingController.text.trim(),
-    )
-            .catchError(
-      (msg) {
+    ).catchError((msg) {
         Navigator.pop(context);
         Fluttertoast.showToast(
           msg: "Error: " + msg.toString(),
         );
       },
-    ))
-        .user;
+    )).user;
 
     if (firebaseUser != null) {
       Map driverMap = {
         "id": firebaseUser.uid,
         "name": nameTextEditingController.text.trim(),
+        "email": emailTextEditingController.text.trim(),
         "phone": phoneTextEditingController.text.trim(),
       };
-      DatabaseReference driversRef =
-          FirebaseDatabase.instance.ref().child("drivers");
+      DatabaseReference driversRef = FirebaseDatabase.instance.ref().child("drivers");
       driversRef.child(firebaseUser.uid).set(driverMap);
       currentFirebaseUser = firebaseUser;
       Fluttertoast.showToast(

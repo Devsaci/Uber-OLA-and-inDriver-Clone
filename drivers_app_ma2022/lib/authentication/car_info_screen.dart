@@ -13,8 +13,7 @@ class CarInfoScreen extends StatefulWidget {
 class _CarInfoScreenState extends State<CarInfoScreen> {
   TextEditingController carModelTextEditingController = TextEditingController();
 
-  TextEditingController carNumberTextEditingController =
-      TextEditingController();
+  TextEditingController carNumberTextEditingController = TextEditingController();
 
   TextEditingController carColorTextEditingController = TextEditingController();
 
@@ -39,7 +38,11 @@ class _CarInfoScreenState extends State<CarInfoScreen> {
       backgroundColor: Colors.lightGreenAccent,
     );
     Navigator.push(
-        context, MaterialPageRoute(builder: (c) => const MySplashScreen()));
+      context,
+      MaterialPageRoute(
+        builder: (c) => const MySplashScreen(),
+      ),
+    );
   }
 
   @override
