@@ -47,7 +47,7 @@ class _LoginScreenState extends State<LoginScreen> {
 
     if(firebaseUser != null)
     {
-
+      currentFirebaseUser = firebaseUser;
     }
     else
     {
