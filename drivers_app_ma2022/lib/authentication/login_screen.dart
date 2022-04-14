@@ -1,4 +1,6 @@
 import 'package:drivers_app_ma2022/authentication/signup_screen.dart';
+import 'package:drivers_app_ma2022/global/global.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 
@@ -25,13 +27,23 @@ class _LoginScreenState extends State<LoginScreen> {
     }
   }
 
-  loginDriverNow() {
+  loginDriverNow() async{
     showDialog(
       context: context,
       builder: (BuildContext c) {
         return ProgressDialog(message: "Processing, Please wait...");
       },
     );
+
+    final User? firebaseUser = (
+        await fAuth.createUserWithEmailAndPassword(
+            email:  emailTextEditingController.text.trim(),
+            password: passwordTextEditingController.text.trim(),
+        ).catchError((msg){
+          Navigator.pop(context);
+          Fluttertoast.showToast(msg: "Error: " + msg.toString());
+        })
+    ).user;
   }
 
   @override
