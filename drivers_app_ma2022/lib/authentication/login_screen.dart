@@ -44,6 +44,16 @@ class _LoginScreenState extends State<LoginScreen> {
           Fluttertoast.showToast(msg: "Error: " + msg.toString());
         })
     ).user;
+
+    if(firebaseUser != null)
+    {
+
+    }
+    else
+    {
+      Navigator.pop(context);
+      Fluttertoast.showToast(msg: "Error Occurred during Login.");
+    }
   }
 
   @override
