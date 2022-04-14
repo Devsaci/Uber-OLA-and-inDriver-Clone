@@ -12,6 +12,8 @@ class _LoginScreenState extends State<LoginScreen> {
   TextEditingController emailTextEditingController = TextEditingController();
   TextEditingController passwordTextEditingController = TextEditingController();
 
+  validateForm() {}
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
