@@ -18,8 +18,12 @@ class _LoginScreenState extends State<LoginScreen> {
       Fluttertoast.showToast(msg: "Email address is not Valid.");
     } else if (passwordTextEditingController.text.isEmpty) {
       Fluttertoast.showToast(msg: "Password is required.");
+    } else {
+      loginDriverNow();
     }
   }
+
+  loginDriverNow(){}
 
   @override
   Widget build(BuildContext context) {
