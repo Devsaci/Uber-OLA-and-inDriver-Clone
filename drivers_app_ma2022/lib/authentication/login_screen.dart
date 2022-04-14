@@ -14,9 +14,10 @@ class _LoginScreenState extends State<LoginScreen> {
   TextEditingController passwordTextEditingController = TextEditingController();
 
   validateForm() {
-    if(!emailTextEditingController.text.contains("@"))
-    {
+    if (!emailTextEditingController.text.contains("@")) {
       Fluttertoast.showToast(msg: "Email address is not Valid.");
+    } else if (passwordTextEditingController.text.isEmpty) {
+      Fluttertoast.showToast(msg: "Password is required.");
     }
   }
 
