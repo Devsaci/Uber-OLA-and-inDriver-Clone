@@ -4,6 +4,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 
+import '../splashScreen/splash_screen.dart';
 import '../widgets/progress_dialog.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -49,6 +50,7 @@ class _LoginScreenState extends State<LoginScreen> {
     {
       currentFirebaseUser = firebaseUser;
       Fluttertoast.showToast(msg: "Login Successful.");
+      Navigator.push(context, MaterialPageRoute(builder: (c)=> const MySplashScreen()));
     }
     else
     {
