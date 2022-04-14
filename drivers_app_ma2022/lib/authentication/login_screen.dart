@@ -48,6 +48,7 @@ class _LoginScreenState extends State<LoginScreen> {
     if(firebaseUser != null)
     {
       currentFirebaseUser = firebaseUser;
+      Fluttertoast.showToast(msg: "Login Successful.");
     }
     else
     {
