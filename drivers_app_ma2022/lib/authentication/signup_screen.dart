@@ -55,7 +55,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
       barrierDismissible: false,
       context: context,
       builder: (context) {
-        return ProgressDialog("Processing, Please wait...");
+        return ProgressDialog(message: "Processing, Please wait...",);
       },
     );
     final User? firebaseUser = (
@@ -240,7 +240,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (c) => const LoginScreen(),
+                      builder: (c) =>  LoginScreen(),
                     ),
                   );
                 },

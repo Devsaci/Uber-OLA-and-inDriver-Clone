@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:drivers_app_ma2022/authentication/signup_screen.dart';
 import 'package:drivers_app_ma2022/global/global.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -8,7 +10,7 @@ import '../splashScreen/splash_screen.dart';
 import '../widgets/progress_dialog.dart';
 
 class LoginScreen extends StatefulWidget {
-  const LoginScreen({Key? key}) : super(key: key);
+  // const LoginScreen({Key? key}) : super(key: key);
 
   @override
   State<LoginScreen> createState() => _LoginScreenState();
@@ -30,16 +32,18 @@ class _LoginScreenState extends State<LoginScreen> {
 
   loginDriverNow() async{
     showDialog(
-      context: context,
-      builder: (BuildContext c) {
-        return ProgressDialog(message: "Processing, Please wait...");
-      },
+        context: context,
+        barrierDismissible: false,
+        builder: (BuildContext c)
+        {
+          return ProgressDialog(message: "Processing, Please wait...",);
+        }
     );
 
     final User? firebaseUser = (
-        await fAuth.createUserWithEmailAndPassword(
-            email:  emailTextEditingController.text.trim(),
-            password: passwordTextEditingController.text.trim(),
+        await fAuth.signInWithEmailAndPassword(
+          email: emailTextEditingController.text.trim(),
+          password: passwordTextEditingController.text.trim(),
         ).catchError((msg){
           Navigator.pop(context);
           Fluttertoast.showToast(msg: "Error: " + msg.toString());
@@ -133,7 +137,9 @@ class _LoginScreenState extends State<LoginScreen> {
                 height: 20,
               ),
               ElevatedButton(
-                onPressed: () {},
+                onPressed: () {
+                  validateForm();
+                },
                 style: ElevatedButton.styleFrom(
                   primary: Colors.lightGreenAccent,
                 ),
