@@ -13,7 +13,9 @@ class _MainScreenState extends State<MainScreen> {
     return Center(
       child: ElevatedButton(
         onPressed: () {},
-        child: null,
+        child: const Text(
+            "Logout"
+        ),
       ),
     );
   }
