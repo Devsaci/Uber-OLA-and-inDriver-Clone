@@ -4,8 +4,8 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:users_app/mainScreens/main_screen.dart';
 
+import '../authentication/login_screen.dart';
 import '../global/global.dart';
-
 
 class MySplashScreen extends StatefulWidget {
   const MySplashScreen({Key? key}) : super(key: key);
@@ -15,18 +15,15 @@ class MySplashScreen extends StatefulWidget {
 }
 
 class _MySplashScreenState extends State<MySplashScreen> {
-  startTimer()
-  {
-    Timer(const Duration(seconds: 3), () async
-    {
-      if(await fAuth.currentUser != null)
-      {
+  startTimer() {
+    Timer(const Duration(seconds: 3), () async {
+      if (await fAuth.currentUser != null) {
         currentFirebaseUser = fAuth.currentUser;
-        Navigator.push(context, MaterialPageRoute(builder: (c)=> MainScreen()));
-      }
-      else
-      {
-        //Navigator.push(context, MaterialPageRoute(builder: (c)=> LoginScreen()));
+        Navigator.push(
+            context, MaterialPageRoute(builder: (c) => MainScreen()));
+      } else {
+        Navigator.push(
+            context, MaterialPageRoute(builder: (c) => LoginScreen()));
       }
     });
   }
