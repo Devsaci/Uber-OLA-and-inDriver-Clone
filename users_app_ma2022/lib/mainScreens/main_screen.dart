@@ -13,14 +13,11 @@ class MainScreen extends StatefulWidget {
 class _MainScreenState extends State<MainScreen> {
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: ElevatedButton(
-        onPressed: () {
-          fAuth.signOut();
-          Navigator.push(
-              context, MaterialPageRoute(builder: (c) => LoginScreen()));
-        },
-        child: const Text("Logout"),
+    return Scaffold(
+      body: Stack(
+        children: [
+
+        ],
       ),
     );
   }
