@@ -1,8 +1,7 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
-import 'package:users_app/global/global.dart';
-
-import '../authentication/login_screen.dart';
 
 class MainScreen extends StatefulWidget {
   // const MainScreen({Key? key}) : super(key: key);
@@ -12,20 +11,25 @@ class MainScreen extends StatefulWidget {
 }
 
 class _MainScreenState extends State<MainScreen> {
+
+  final Completer<GoogleMapController> _controller = Completer();
   static const CameraPosition _kGooglePlex = CameraPosition(
     target: LatLng(49.8980884, 2.2880343),
     zoom: 19,
   );
 
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Stack(
-        children: const [
+        children:  [
           GoogleMap(
             initialCameraPosition: _kGooglePlex,
             myLocationEnabled: true,
             mapType: MapType.normal,
+          onMapCreated: (GoogleMapController _controller){},
           ),
         ],
       ),
