@@ -25,6 +25,7 @@ class _MainScreenState extends State<MainScreen> {
         children: const [
           GoogleMap(
             initialCameraPosition: _kGooglePlex,
+            myLocationEnabled: true,
             mapType: MapType.normal,
 
           ),
