@@ -13,10 +13,9 @@ class MainScreen extends StatefulWidget {
 
 class _MainScreenState extends State<MainScreen> {
   static const CameraPosition _kGooglePlex = CameraPosition(
-    target: LatLng(49.8980884,2.2880343),
+    target: LatLng(49.8980884, 2.2880343),
     zoom: 19,
   );
-
 
   @override
   Widget build(BuildContext context) {
@@ -27,7 +26,6 @@ class _MainScreenState extends State<MainScreen> {
             initialCameraPosition: _kGooglePlex,
             myLocationEnabled: true,
             mapType: MapType.normal,
-
           ),
         ],
       ),
