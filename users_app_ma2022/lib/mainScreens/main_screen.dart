@@ -18,21 +18,8 @@ class _MainScreenState extends State<MainScreen> {
     zoom: 19,
   );
 
-  blackThemegoogleMap() {}
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: Stack(
-        children: [
-          GoogleMap(
-            initialCameraPosition: _kGooglePlex,
-            myLocationEnabled: true,
-            mapType: MapType.normal,
-            onMapCreated: (GoogleMapController controller) {
-              _controllerGoogleMap.complete(controller);
-              newGoogleMapController = controller;
-              newGoogleMapController!.setMapStyle('''
+  blackThemeGoogleMap() {
+    newGoogleMapController!.setMapStyle('''
                     [
                       {
                         "elementType": "geometry",
@@ -195,6 +182,21 @@ class _MainScreenState extends State<MainScreen> {
                       }
                     ]
                 ''');
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Stack(
+        children: [
+          GoogleMap(
+            initialCameraPosition: _kGooglePlex,
+            myLocationEnabled: true,
+            mapType: MapType.normal,
+            onMapCreated: (GoogleMapController controller) {
+              _controllerGoogleMap.complete(controller);
+              newGoogleMapController = controller;
+              blackThemeGoogleMap();
             },
           ),
         ],
