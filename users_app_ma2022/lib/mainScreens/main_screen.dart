@@ -29,6 +29,7 @@ class _MainScreenState extends State<MainScreen> {
             mapType: MapType.normal,
             onMapCreated: (GoogleMapController controller) {
               _controllerGoogleMap.complete(controller);
+              newGoogleMapController = controller;
             },
           ),
         ],
