@@ -14,7 +14,7 @@ class MainScreen extends StatefulWidget {
 class _MainScreenState extends State<MainScreen> {
   static const CameraPosition _kGooglePlex = CameraPosition(
     target: LatLng(49.8980884,2.2880343),
-    zoom: 14.4746,
+    zoom: 16,
   );
 
 
