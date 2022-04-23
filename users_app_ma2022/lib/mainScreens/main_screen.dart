@@ -18,6 +18,8 @@ class _MainScreenState extends State<MainScreen> {
     zoom: 19,
   );
 
+  blackThemegoogleMap() {}
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -30,7 +32,7 @@ class _MainScreenState extends State<MainScreen> {
             onMapCreated: (GoogleMapController controller) {
               _controllerGoogleMap.complete(controller);
               newGoogleMapController = controller;
-             newGoogleMapController!.setMapStyle('''
+              newGoogleMapController!.setMapStyle('''
                     [
                       {
                         "elementType": "geometry",
