@@ -28,6 +28,9 @@ class _HomeTabPageState extends State<HomeTabPage> {
           initialCameraPosition: _kGooglePlex,
           mapType: MapType.normal,
           myLocationEnabled: true,
+          onMapCreated: (GoogleMapController controller) {
+            _controllerGoogleMap.complete(controller);
+          },
         )
       ],
     );
