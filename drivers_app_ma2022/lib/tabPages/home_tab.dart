@@ -23,10 +23,6 @@ class _HomeTabPageState extends State<HomeTabPage> {
 
   @override
   Widget build(BuildContext context) {
-    return   Center(
-      child: Text(
-        'HomeTabPage',
-      ),
-    );
+    return   Stack();
   }
 }
