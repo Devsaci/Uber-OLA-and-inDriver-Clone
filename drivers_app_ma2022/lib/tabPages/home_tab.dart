@@ -13,7 +13,6 @@ class HomeTabPage extends StatefulWidget {
 }
 
 class _HomeTabPageState extends State<HomeTabPage> {
-
   final Completer<GoogleMapController> _controllerGoogleMap = Completer();
 
   static final CameraPosition _kGooglePlex = CameraPosition(
@@ -23,11 +22,12 @@ class _HomeTabPageState extends State<HomeTabPage> {
 
   @override
   Widget build(BuildContext context) {
-    return   Stack(
+    return Stack(
       children: [
         GoogleMap(
-            initialCameraPosition: _kGooglePlex,)
-
+          initialCameraPosition: _kGooglePlex,
+          mapType: MapType.normal,
+        )
       ],
     );
   }
