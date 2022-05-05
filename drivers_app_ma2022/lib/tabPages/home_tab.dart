@@ -27,6 +27,7 @@ class _HomeTabPageState extends State<HomeTabPage> {
         GoogleMap(
           initialCameraPosition: _kGooglePlex,
           mapType: MapType.normal,
+          myLocationEnabled: true,
         )
       ],
     );
