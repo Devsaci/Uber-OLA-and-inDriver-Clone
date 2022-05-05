@@ -23,6 +23,12 @@ class _HomeTabPageState extends State<HomeTabPage> {
 
   @override
   Widget build(BuildContext context) {
-    return   Stack();
+    return   Stack(
+      children: [
+        GoogleMap(
+            initialCameraPosition: _kGooglePlex,)
+
+      ],
+    );
   }
 }
