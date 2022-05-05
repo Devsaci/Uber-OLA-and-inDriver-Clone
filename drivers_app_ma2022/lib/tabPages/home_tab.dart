@@ -13,6 +13,7 @@ class HomeTabPage extends StatefulWidget {
 }
 
 class _HomeTabPageState extends State<HomeTabPage> {
+  GoogleMapController? newGoogleMapController;
   final Completer<GoogleMapController> _controllerGoogleMap = Completer();
 
   static final CameraPosition _kGooglePlex = CameraPosition(
@@ -30,6 +31,7 @@ class _HomeTabPageState extends State<HomeTabPage> {
           myLocationEnabled: true,
           onMapCreated: (GoogleMapController controller) {
             _controllerGoogleMap.complete(controller);
+            newGoogleMapController = controller;
           },
         )
       ],
