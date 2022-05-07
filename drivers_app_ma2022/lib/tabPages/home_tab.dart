@@ -26,9 +26,8 @@ class _HomeTabPageState extends State<HomeTabPage> {
     return Stack(
       children: [
         GoogleMap(
-          padding: EdgeInsets.all(20.0),
           initialCameraPosition: _kGooglePlex,
-          mapType: MapType.hybrid,
+          mapType: MapType.normal,
           myLocationEnabled: true,
           onMapCreated: (GoogleMapController controller) {
             _controllerGoogleMap.complete(controller);
