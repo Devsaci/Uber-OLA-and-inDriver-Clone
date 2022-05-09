@@ -3,6 +3,7 @@
 import 'package:drivers_app_ma2022/authentication/signup_screen.dart';
 import 'package:drivers_app_ma2022/global/global.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 
@@ -51,6 +52,7 @@ class _LoginScreenState extends State<LoginScreen> {
     })).user;
 
     if (firebaseUser != null) {
+      DatabaseReference driversRef = FirebaseDatabase.instance.ref().child("drivers");
       currentFirebaseUser = firebaseUser;
       Fluttertoast.showToast(msg: "Login Successful.");
       Navigator.push(
