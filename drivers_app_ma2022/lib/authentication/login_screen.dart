@@ -30,34 +30,32 @@ class _LoginScreenState extends State<LoginScreen> {
     }
   }
 
-  loginDriverNow() async{
+  loginDriverNow() async {
     showDialog(
         context: context,
         barrierDismissible: false,
-        builder: (BuildContext c)
-        {
-          return ProgressDialog(message: "Processing, Please wait...",);
-        }
-    );
+        builder: (BuildContext c) {
+          return ProgressDialog(
+            message: "Processing, Please wait...",
+          );
+        });
 
-    final User? firebaseUser = (
-        await fAuth.signInWithEmailAndPassword(
-          email: emailTextEditingController.text.trim(),
-          password: passwordTextEditingController.text.trim(),
-        ).catchError((msg){
-          Navigator.pop(context);
-          Fluttertoast.showToast(msg: "Error: " + msg.toString());
-        })
-    ).user;
+    final User? firebaseUser = (await fAuth
+            .signInWithEmailAndPassword(
+      email: emailTextEditingController.text.trim(),
+      password: passwordTextEditingController.text.trim(),
+    )
+            .catchError((msg) {
+      Navigator.pop(context);
+      Fluttertoast.showToast(msg: "Error: " + msg.toString());
+    })).user;
 
-    if(firebaseUser != null)
-    {
+    if (firebaseUser != null) {
       currentFirebaseUser = firebaseUser;
       Fluttertoast.showToast(msg: "Login Successful.");
-      Navigator.push(context, MaterialPageRoute(builder: (c)=> const MySplashScreen()));
-    }
-    else
-    {
+      Navigator.push(
+          context, MaterialPageRoute(builder: (c) => const MySplashScreen()));
+    } else {
       Navigator.pop(context);
       Fluttertoast.showToast(msg: "Error Occurred during Login.");
     }
