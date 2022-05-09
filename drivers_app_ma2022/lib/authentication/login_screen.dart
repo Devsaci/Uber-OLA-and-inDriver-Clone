@@ -53,7 +53,7 @@ class _LoginScreenState extends State<LoginScreen> {
 
     if (firebaseUser != null) {
       DatabaseReference driversRef = FirebaseDatabase.instance.ref().child("drivers");
-      driversRef.child("path");
+      driversRef.child(firebaseUser.uid);
       currentFirebaseUser = firebaseUser;
       Fluttertoast.showToast(msg: "Login Successful.");
       Navigator.push(
