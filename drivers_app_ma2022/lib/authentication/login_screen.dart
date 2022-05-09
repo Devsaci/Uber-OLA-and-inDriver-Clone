@@ -60,6 +60,8 @@ class _LoginScreenState extends State<LoginScreen> {
           Fluttertoast.showToast(msg: "Login Successful.");
           Navigator.push(context, MaterialPageRoute
             (builder: (c) => const MySplashScreen()));
+        }else{
+          Navigator.push(context, MaterialPageRoute(builder: (c)=> MySplashScreen()));
         }
       });
     } else {
