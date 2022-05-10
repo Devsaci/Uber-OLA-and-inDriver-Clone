@@ -36,18 +36,17 @@ class _LoginScreenState extends State<LoginScreen> {
           );
         });
 
-    final User? firebaseUser = (await fAuth
-            .signInWithEmailAndPassword(
+    final User? firebaseUser = (
+        await fAuth.signInWithEmailAndPassword(
       email: emailTextEditingController.text.trim(),
       password: passwordTextEditingController.text.trim(),
-    )
-            .catchError((msg) {
+    ).catchError((msg) {
       Navigator.pop(context);
       Fluttertoast.showToast(msg: "Error: " + msg.toString());
-    }))
-        .user;
+    })).user;
 
     if (firebaseUser != null) {
+      //27. Check if User Record Exists
       currentFirebaseUser = firebaseUser;
       Fluttertoast.showToast(msg: "Login Successful.");
       Navigator.push(
