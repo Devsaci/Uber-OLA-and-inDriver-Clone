@@ -48,14 +48,17 @@ class _LoginScreenState extends State<LoginScreen> {
 
     if (firebaseUser != null) {
       //27. Check if User Record Exists
-      DatabaseReference driversRef = FirebaseDatabase.instance.ref().child("users");
+      DatabaseReference driversRef =
+          FirebaseDatabase.instance.ref().child("users");
       driversRef.child(firebaseUser.uid).once().then((driverKey) {
         final snap = driverKey.snapshot;
-        if(snap.value != null){
+        if (snap.value != null) {
           currentFirebaseUser = firebaseUser;
           Fluttertoast.showToast(msg: "Login Successful.");
-          Navigator.push(context, MaterialPageRoute
-            (builder: (c) => const MySplashScreen()));
+          Navigator.push(context,
+              MaterialPageRoute(builder: (c) => const MySplashScreen()));
+        } else {
+          Fluttertoast.showToast(msg: "No record exist with this email.");
         }
       });
       currentFirebaseUser = firebaseUser;
