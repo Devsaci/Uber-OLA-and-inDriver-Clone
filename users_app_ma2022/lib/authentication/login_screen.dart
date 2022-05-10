@@ -50,7 +50,7 @@ class _LoginScreenState extends State<LoginScreen> {
       //27. Check if User Record Exists
       DatabaseReference driversRef = FirebaseDatabase.instance.ref().child("users");
       driversRef.child(firebaseUser.uid).once().then((driverKey) {
-        return null;
+        final snap = driverKey.snapshot;
       });
       currentFirebaseUser = firebaseUser;
       Fluttertoast.showToast(msg: "Login Successful.");
