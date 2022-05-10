@@ -54,6 +54,8 @@ class _LoginScreenState extends State<LoginScreen> {
         if(snap.value != null){
           currentFirebaseUser = firebaseUser;
           Fluttertoast.showToast(msg: "Login Successful.");
+          Navigator.push(context, MaterialPageRoute
+            (builder: (c) => const MySplashScreen()));
         }
       });
       currentFirebaseUser = firebaseUser;
