@@ -60,6 +60,7 @@ class _LoginScreenState extends State<LoginScreen> {
         } else {
           Fluttertoast.showToast(msg: "No record exist with this email.");
           fAuth.signOut();
+          Navigator.push(context, MaterialPageRoute(builder: (c)=> const MySplashScreen()));
         }
       });
       currentFirebaseUser = firebaseUser;
