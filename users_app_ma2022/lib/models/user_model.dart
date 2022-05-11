@@ -10,5 +10,7 @@ class UserModel {
   UserModel({this.phone, this.name, this.id, this.email});
 
 //Generated Named Constructor
-  UserModel.fromSnapshot(DataSnapshot snap) {}
+  UserModel.fromSnapshot(DataSnapshot snap) {
+    phone = (snap.value as dynamic)["phone"];
+  }
 }
