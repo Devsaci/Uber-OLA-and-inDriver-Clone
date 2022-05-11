@@ -12,5 +12,6 @@ class UserModel {
 //Generated Named Constructor
   UserModel.fromSnapshot(DataSnapshot snap) {
     phone = (snap.value as dynamic)["phone"];
+    name = (snap.value as dynamic)["name"];
   }
 }
