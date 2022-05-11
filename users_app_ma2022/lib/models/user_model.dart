@@ -5,5 +5,6 @@ class UserModel {
   String? id;
   String? email;
 
-  UserModel(this.phone, this.name, this.id, this.email);
+  UserModel({});
+  //this.phone, this.name, this.id, this.email
 }
