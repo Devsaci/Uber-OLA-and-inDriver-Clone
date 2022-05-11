@@ -1,4 +1,6 @@
 // 29. user Model Class
+import 'package:firebase_database/firebase_database.dart';
+
 class UserModel {
   String? phone;
   String? name;
@@ -6,4 +8,7 @@ class UserModel {
   String? email;
 
   UserModel({this.phone, this.name, this.id, this.email});
+
+//Generated Named Constructor
+  UserModel.fromSnapshot(DataSnapshot snap) {}
 }
