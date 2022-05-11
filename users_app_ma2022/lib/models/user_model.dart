@@ -1,2 +1,4 @@
 // 29. user Model Class
-class UserModel{}
+class UserModel{
+  String? phone;
+}
