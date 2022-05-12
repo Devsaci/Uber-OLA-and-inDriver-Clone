@@ -7,6 +7,9 @@ import 'package:users_app/global/global.dart';
 class AssistantMethods {
   static void readCurrentOnlineUserInfo() {
     currentFirebaseUser = fAuth.currentUser;
-    FirebaseDatabase.instance.ref().child("users").child(currentFirebaseUser!.uid);
+    DatabaseReference userRef = FirebaseDatabase.instance
+        .ref()
+        .child("users")
+        .child(currentFirebaseUser!.uid);
   }
 }
