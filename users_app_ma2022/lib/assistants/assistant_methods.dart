@@ -13,7 +13,7 @@ class AssistantMethods {
 
     userRef.once().then((snap) {
       if (snap.snapshot.value != null) {
-        UserModel.fromSnapshot(snap.snapshot);
+        userModelCurrentInfo =UserModel.fromSnapshot(snap.snapshot);
       }
     });
   }
