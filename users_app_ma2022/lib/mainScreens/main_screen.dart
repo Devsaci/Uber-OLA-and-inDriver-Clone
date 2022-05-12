@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
+import 'package:users_app/assistants/assistant_methods.dart';
 
 class MainScreen extends StatefulWidget {
   // const MainScreen({Key? key}) : super(key: key);
@@ -186,8 +187,9 @@ class _MainScreenState extends State<MainScreen> {
 
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
+    // For Testing methode AssistantMethods
+    AssistantMethods.readCurrentOnlineUserInfo();
   }
   @override
   Widget build(BuildContext context) {

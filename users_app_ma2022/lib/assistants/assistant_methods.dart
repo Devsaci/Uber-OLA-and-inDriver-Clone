@@ -14,6 +14,10 @@ class AssistantMethods {
     userRef.once().then((snap) {
       if (snap.snapshot.value != null) {
         userModelCurrentInfo =UserModel.fromSnapshot(snap.snapshot);
+        // For Testing methode AssistantMethods
+        print("******** name   =  " + userModelCurrentInfo!.name.toString());
+        print("******** email  =  " + userModelCurrentInfo!.email.toString());
+        print("******** phone  =  " + userModelCurrentInfo!.phone.toString());
       }
     });
   }
