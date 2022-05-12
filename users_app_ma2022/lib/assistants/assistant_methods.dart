@@ -11,7 +11,7 @@ class AssistantMethods {
         .child(currentFirebaseUser!.uid);
 
     userRef.once().then((snap) {
-      return null;
+      if(snap.snapshot.value != null){}
     });
   }
 }
