@@ -10,6 +10,6 @@ class AssistantMethods {
         .child("users")
         .child(currentFirebaseUser!.uid);
 
-    userRef.once();
+    userRef.once().then((value) => null);
   }
 }
