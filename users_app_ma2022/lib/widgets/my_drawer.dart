@@ -22,14 +22,27 @@ class _MyDrawerState extends State<MyDrawer> {
             child: DrawerHeader(
               decoration: const BoxDecoration(color: Colors.black),
               child: Row(
-                children:  [
+                children: [
                   const Icon(
                     Icons.person,
                     size: 80,
                     color: Colors.grey,
                   ),
                   const SizedBox(width: 16),
-                  Column(),
+                  Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: const [
+                      Text(
+                        "widget.name.toString()",
+                        style: TextStyle(
+                          fontSize: 16,
+                          color: Colors.grey,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+
+                    ],
+                  ),
                 ],
               ),
             ),
