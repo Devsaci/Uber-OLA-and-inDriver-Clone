@@ -3,6 +3,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:users_app/assistants/assistant_methods.dart';
+import 'package:users_app/widgets/my_drawer.dart';
 
 class MainScreen extends StatefulWidget {
   // const MainScreen({Key? key}) : super(key: key);
@@ -194,6 +195,7 @@ class _MainScreenState extends State<MainScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      drawer: MyDrawer(),
       body: Stack(
         children: [
           GoogleMap(
