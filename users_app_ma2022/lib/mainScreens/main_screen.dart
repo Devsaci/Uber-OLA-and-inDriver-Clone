@@ -198,6 +198,7 @@ class _MainScreenState extends State<MainScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      key: sKey,
       // appBar: AppBar(),
       // 32. Implement Custom Navigation Drawer Button
       drawer: MyDrawer(
@@ -221,7 +222,9 @@ class _MainScreenState extends State<MainScreen> {
             top: 40,
             left: 14,
             child: GestureDetector(
-              onTap: (){},
+              onTap: (){
+                sKey.currentState!.openDrawer();
+              },
                 child: const CircleAvatar(
                   backgroundColor: Colors.deepPurpleAccent,
                   child: Icon(
