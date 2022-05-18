@@ -195,7 +195,8 @@ class _MainScreenState extends State<MainScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      // appBar: AppBar(),
+      // 32. Implement Custom Navigation Drawer Button
       drawer: MyDrawer(
         name: userModelCurrentInfo!.name,
         email: userModelCurrentInfo!.email,
