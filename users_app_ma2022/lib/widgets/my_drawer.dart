@@ -40,7 +40,16 @@ class _MyDrawerState extends State<MyDrawer> {
                           fontWeight: FontWeight.bold,
                         ),
                       ),
-
+                      SizedBox(
+                        height: 10,
+                      ),
+                      Text(
+                        "widget.email.toString()",
+                        style: TextStyle(
+                          fontSize: 12,
+                          color: Colors.grey,
+                        ),
+                      ),
                     ],
                   ),
                 ],
