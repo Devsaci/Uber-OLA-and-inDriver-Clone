@@ -1,7 +1,7 @@
 // 31. Navigation Drawer - Drawer Header
 
-
 import 'package:flutter/material.dart';
+
 class MyDrawer extends StatefulWidget {
   const MyDrawer({Key? key}) : super(key: key);
 
@@ -19,6 +19,9 @@ class _MyDrawerState extends State<MyDrawer> {
           Container(
             height: 165,
             color: Colors.grey,
+            child: DrawerHeader(
+              child: Row(),
+            ),
           ),
 
           //drawer body
