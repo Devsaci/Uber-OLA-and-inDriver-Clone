@@ -18,6 +18,7 @@ class AssistantMethods {
         print("******** name   =  " + userModelCurrentInfo!.name.toString());
         print("******** email  =  " + userModelCurrentInfo!.email.toString());
         print("******** phone  =  " + userModelCurrentInfo!.phone.toString());
+        //31. Navigation Drawer - Drawer Header
       }
     });
   }
