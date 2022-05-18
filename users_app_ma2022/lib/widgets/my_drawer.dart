@@ -16,6 +16,10 @@ class _MyDrawerState extends State<MyDrawer> {
       child: ListView(
         children: [
           //drawer header
+          Container(
+            height: 165,
+            color: Colors.grey,
+          ),
 
           //drawer body
         ],
