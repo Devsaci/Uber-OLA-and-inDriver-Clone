@@ -20,8 +20,16 @@ class _MyDrawerState extends State<MyDrawer> {
             height: 165,
             color: Colors.grey,
             child: DrawerHeader(
-              decoration: const BoxDecoration(color: Colors.black),,
-              child: Row(),
+              decoration: const BoxDecoration(color: Colors.black),
+              child: Row(
+                children: const [
+                  Icon(
+                    Icons.person,
+                    size: 80,
+                    color: Colors.grey,
+                  ),
+                ],
+              ),
             ),
           ),
 
