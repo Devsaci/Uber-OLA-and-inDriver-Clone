@@ -21,6 +21,9 @@ class _MainScreenState extends State<MainScreen> {
     zoom: 19,
   );
 
+
+  GlobalKey<ScaffoldState> sKey = GlobalKey<ScaffoldState>();
+
   blackThemeGoogleMap() {
     newGoogleMapController!.setMapStyle('''
                     [
