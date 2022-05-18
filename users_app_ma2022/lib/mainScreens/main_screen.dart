@@ -198,6 +198,7 @@ class _MainScreenState extends State<MainScreen> {
     return Scaffold(
       drawer: MyDrawer(
         name: userModelCurrentInfo!.name,
+        email: userModelCurrentInfo!.email,
       ),
       body: Stack(
         children: [
