@@ -190,9 +190,8 @@ class _MainScreenState extends State<MainScreen> {
   @override
   void initState() {
     super.initState();
-    // For Testing methode AssistantMethods
-    AssistantMethods.readCurrentOnlineUserInfo();
   }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
