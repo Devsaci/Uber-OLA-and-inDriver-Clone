@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_literals_to_create_immutables
 
 import 'dart:async';
+import 'dart:ffi';
 import 'package:flutter/material.dart';
 import 'package:users_app/mainScreens/main_screen.dart';
 
@@ -17,8 +18,8 @@ class MySplashScreen extends StatefulWidget {
 
 class _MySplashScreenState extends State<MySplashScreen> {
   startTimer() {
-    AssistantMethods.readCurrentOnlineUserInfo();
-    Timer(const Duration(seconds: 1), () async {
+    fAuth.currentUser != null ?  AssistantMethods.readCurrentOnlineUserInfo() : null;
+    Timer(const Duration(seconds: 6), () async {
       if (await fAuth.currentUser != null) {
         currentFirebaseUser = fAuth.currentUser;
         Navigator.push(

@@ -195,6 +195,7 @@ class _MainScreenState extends State<MainScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(),
       drawer: MyDrawer(
         name: userModelCurrentInfo!.name,
         email: userModelCurrentInfo!.email,
