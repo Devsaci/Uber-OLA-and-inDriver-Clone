@@ -34,7 +34,7 @@ class _MyDrawerState extends State<MyDrawer> {
                   const SizedBox(width: 16),
                   Column(
                     mainAxisAlignment: MainAxisAlignment.center,
-                    children:  [
+                    children: [
                       Text(
                         widget.name.toString(),
                         style: const TextStyle(
@@ -57,8 +57,9 @@ class _MyDrawerState extends State<MyDrawer> {
               ),
             ),
           ),
-
+          const SizedBox(height: 12.0),
           //drawer body
+          //33. Navigation Drawer - Drawer Body
         ],
       ),
     );
