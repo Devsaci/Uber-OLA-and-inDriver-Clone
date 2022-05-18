@@ -213,6 +213,17 @@ class _MainScreenState extends State<MainScreen> {
               blackThemeGoogleMap();
             },
           ),
+          //custom hamburger button for drawer
+          Positioned(
+            top: 40,
+            left: 14,
+            child: GestureDetector(
+                child: const Icon(
+                  Icons.menu,
+                  color: Colors.yellow,
+                ),
+            ),
+          )
         ],
       ),
     );
