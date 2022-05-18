@@ -218,6 +218,7 @@ class _MainScreenState extends State<MainScreen> {
             top: 40,
             left: 14,
             child: GestureDetector(
+              onTap: (){},
                 child: const Icon(
                   Icons.menu,
                   color: Colors.yellow,
