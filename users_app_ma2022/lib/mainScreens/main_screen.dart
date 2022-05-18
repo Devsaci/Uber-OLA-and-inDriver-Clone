@@ -219,9 +219,11 @@ class _MainScreenState extends State<MainScreen> {
             left: 14,
             child: GestureDetector(
               onTap: (){},
-                child: const Icon(
-                  Icons.menu,
-                  color: Colors.yellow,
+                child: const CircleAvatar(
+                  child: Icon(
+                    Icons.menu,
+                    color: Colors.yellow,
+                  ),
                 ),
             ),
           )
