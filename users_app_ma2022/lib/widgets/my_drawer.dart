@@ -28,6 +28,7 @@ class _MyDrawerState extends State<MyDrawer> {
                     size: 80,
                     color: Colors.grey,
                   ),
+                  SizedBox(width: 16),
                 ],
               ),
             ),
