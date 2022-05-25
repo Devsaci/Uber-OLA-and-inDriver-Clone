@@ -70,6 +70,15 @@ class _MyDrawerState extends State<MyDrawer> {
                   style: TextStyle(color: Colors.white54),
                 ),
               )),
+          GestureDetector(
+              onTap: () {},
+              child: const ListTile(
+                leading: Icon(Icons.person, color: Colors.white54),
+                title: Text(
+                  "Visit Profile",
+                  style: TextStyle(color: Colors.white54),
+                ),
+              )),
         ],
       ),
     );
