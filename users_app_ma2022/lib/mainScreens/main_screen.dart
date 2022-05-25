@@ -201,13 +201,16 @@ class _MainScreenState extends State<MainScreen> {
       key: sKey,
       // appBar: AppBar(),
       // 32. Implement Custom Navigation Drawer Button
-      drawer: Theme(
-        data: Theme.of(context).copyWith(
-          canvasColor: Colors.blueGrey
-        ),
-        child: MyDrawer(
-          name: userModelCurrentInfo!.name,
-          email: userModelCurrentInfo!.email,
+      drawer: Container(
+        width: 280,
+        child: Theme(
+          data: Theme.of(context).copyWith(
+            canvasColor: Colors.blueGrey
+          ),
+          child: MyDrawer(
+            name: userModelCurrentInfo!.name,
+            email: userModelCurrentInfo!.email,
+          ),
         ),
       ),
       body: Stack(
