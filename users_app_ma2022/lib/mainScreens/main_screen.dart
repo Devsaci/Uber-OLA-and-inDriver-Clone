@@ -201,7 +201,7 @@ class _MainScreenState extends State<MainScreen> {
       key: sKey,
       // appBar: AppBar(),
       // 32. Implement Custom Navigation Drawer Button
-      drawer: SizedBox(
+      drawer: Container(
         width: 280,
         child: Theme(
           data: Theme.of(context).copyWith(
