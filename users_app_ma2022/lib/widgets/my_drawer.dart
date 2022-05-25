@@ -16,6 +16,7 @@ class _MyDrawerState extends State<MyDrawer> {
   @override
   Widget build(BuildContext context) {
     return Drawer(
+      backgroundColor: Colors.blueGrey,
       child: ListView(
         children: [
           //drawer header
@@ -63,10 +64,10 @@ class _MyDrawerState extends State<MyDrawer> {
           GestureDetector(
               onTap: () {},
               child: const ListTile(
-                leading: Icon(Icons.history, color: Colors.black),
+                leading: Icon(Icons.history, color: Colors.white54),
                 title: Text(
                   "History",
-                  style: TextStyle(color: Colors.black),
+                  style: TextStyle(color: Colors.white54),
                 ),
               )),
         ],
