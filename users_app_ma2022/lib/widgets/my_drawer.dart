@@ -64,6 +64,10 @@ class _MyDrawerState extends State<MyDrawer> {
               onTap: () {},
               child: const ListTile(
                 leading: Icon(Icons.history, color: Colors.black),
+                title: Text(
+                  "History",
+                  style: TextStyle(color: Colors.black),
+                ),
               )),
         ],
       ),
