@@ -61,9 +61,10 @@ class _MyDrawerState extends State<MyDrawer> {
           //drawer body
           //33. Navigation Drawer - Drawer Body
           GestureDetector(
-            onTap: (){},
-            child: ListTile()
-          ),
+              onTap: () {},
+              child: const ListTile(
+                leading: Icon(Icons.history, color: Colors.white54),
+              )),
         ],
       ),
     );
