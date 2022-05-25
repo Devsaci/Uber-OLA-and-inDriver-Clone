@@ -1,6 +1,7 @@
 // 31. Navigation Drawer - Drawer Header
 
 import 'package:flutter/material.dart';
+import 'package:users_app/global/global.dart';
 
 class MyDrawer extends StatefulWidget {
   String? name;
@@ -84,12 +85,14 @@ class _MyDrawerState extends State<MyDrawer> {
               child: const ListTile(
                 leading: Icon(Icons.info, color: Colors.white54),
                 title: Text(
-                    "About",
+                  "About",
                   style: TextStyle(color: Colors.white54),
                 ),
               )),
           GestureDetector(
-              onTap: () {},
+              onTap: () {
+                fAuth.signOut();
+              },
               child: const ListTile(
                 leading: Icon(Icons.logout, color: Colors.white54),
                 title: Text(
