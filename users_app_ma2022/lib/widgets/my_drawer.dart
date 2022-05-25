@@ -63,7 +63,7 @@ class _MyDrawerState extends State<MyDrawer> {
           GestureDetector(
               onTap: () {},
               child: const ListTile(
-                leading: Icon(Icons.history, color: Colors.white54),
+                leading: Icon(Icons.history, color: Colors.black),
               )),
         ],
       ),
