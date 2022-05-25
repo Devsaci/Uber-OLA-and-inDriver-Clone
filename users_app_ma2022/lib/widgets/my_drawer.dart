@@ -79,6 +79,15 @@ class _MyDrawerState extends State<MyDrawer> {
                   style: TextStyle(color: Colors.white54),
                 ),
               )),
+          GestureDetector(
+              onTap: () {},
+              child: const ListTile(
+                leading: Icon(Icons.info, color: Colors.white54),
+                title: Text(
+                    "About",
+                  style: TextStyle(color: Colors.white54),
+                ),
+              )),
         ],
       ),
     );
