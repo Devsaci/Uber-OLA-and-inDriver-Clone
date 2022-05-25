@@ -60,7 +60,9 @@ class _MyDrawerState extends State<MyDrawer> {
           const SizedBox(height: 12.0),
           //drawer body
           //33. Navigation Drawer - Drawer Body
-          GestureDetector(),
+          GestureDetector(
+            onTap: (){},
+          ),
         ],
       ),
     );
