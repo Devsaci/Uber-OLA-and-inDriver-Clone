@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:users_app/global/global.dart';
+import 'package:users_app/splashScreen/splash_screen.dart';
 
 class MyDrawer extends StatefulWidget {
   String? name;
@@ -92,6 +93,7 @@ class _MyDrawerState extends State<MyDrawer> {
           GestureDetector(
               onTap: () {
                 fAuth.signOut();
+                Navigator.push(context, MaterialPageRoute(builder: (c)=> const MySplashScreen()));
               },
               child: const ListTile(
                 leading: Icon(Icons.logout, color: Colors.white54),
