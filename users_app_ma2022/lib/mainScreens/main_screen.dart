@@ -263,7 +263,25 @@ class _MainScreenState extends State<MainScreen> {
                 child: Column(
                   children: [
                     //from
-                    Row(),
+                    Row(
+                      children: [
+                        const Icon(Icons.add_location_alt_outlined, color: Colors.grey,),
+                        const SizedBox(width: 12.0,),
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: const [
+                            Text(
+                              "From",
+                              style: TextStyle(color: Colors.grey, fontSize: 12),
+                            ),
+                            Text(
+                              "your current location",
+                              style: TextStyle(color: Colors.grey, fontSize: 14),
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
                     const SizedBox(height: 10.0),
                     const Divider(
                       height: 1,
