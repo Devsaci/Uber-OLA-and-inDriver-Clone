@@ -290,7 +290,25 @@ class _MainScreenState extends State<MainScreen> {
                     ),
                     const SizedBox(height: 16.0),
                     //to
-                    Row()
+                    Row(
+                      children: [
+                        const Icon(Icons.add_location_alt_outlined, color: Colors.grey,),
+                        const SizedBox(width: 12.0,),
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: const [
+                            Text(
+                              "to",
+                              style: TextStyle(color: Colors.grey, fontSize: 12),
+                            ),
+                            Text(
+                              "Where to go?",
+                              style: TextStyle(color: Colors.grey, fontSize: 14),
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
                   ],
                 ),
               ),
