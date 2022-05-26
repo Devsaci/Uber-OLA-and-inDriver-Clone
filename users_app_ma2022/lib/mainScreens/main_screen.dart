@@ -21,7 +21,6 @@ class _MainScreenState extends State<MainScreen> {
     zoom: 14.75,
   );
 
-
   GlobalKey<ScaffoldState> sKey = GlobalKey<ScaffoldState>();
 
   blackThemeGoogleMap() {
@@ -204,9 +203,7 @@ class _MainScreenState extends State<MainScreen> {
       drawer: Container(
         width: 280,
         child: Theme(
-          data: Theme.of(context).copyWith(
-            canvasColor: Colors.blueGrey
-          ),
+          data: Theme.of(context).copyWith(canvasColor: Colors.blueGrey),
           child: MyDrawer(
             name: userModelCurrentInfo!.name,
             email: userModelCurrentInfo!.email,
@@ -230,20 +227,25 @@ class _MainScreenState extends State<MainScreen> {
             top: 40,
             left: 14,
             child: GestureDetector(
-              onTap: (){
+              onTap: () {
                 sKey.currentState!.openDrawer();
               },
-                child: const CircleAvatar(
-                  backgroundColor: Colors.deepPurpleAccent,
-                  child: Icon(
-                    Icons.menu,
-                    color: Colors.orange,
-                  ),
+              child: const CircleAvatar(
+                backgroundColor: Colors.deepPurpleAccent,
+                child: Icon(
+                  Icons.menu,
+                  color: Colors.orange,
                 ),
+              ),
             ),
           ),
           //35. search location ui container
-
+          //ui for searching location
+          const Positioned(
+            child: AnimatedSize(
+              duration: Duration(milliseconds: 120),
+            ),
+          ),
         ],
       ),
     );
