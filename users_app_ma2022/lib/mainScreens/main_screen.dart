@@ -242,8 +242,12 @@ class _MainScreenState extends State<MainScreen> {
           //35. search location ui container
           //ui for searching location
           const Positioned(
+            bottom: 0,
+            left: 0,
+            right: 0,
             child: AnimatedSize(
               duration: Duration(milliseconds: 120),
+              curve: Curves.easeIn,
             ),
           ),
         ],
