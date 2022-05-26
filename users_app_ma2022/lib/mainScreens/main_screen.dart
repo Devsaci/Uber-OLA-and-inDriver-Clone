@@ -252,7 +252,14 @@ class _MainScreenState extends State<MainScreen> {
               duration: const Duration(milliseconds: 120),
               child: Container(
                 height: searchLocationContainerHeight,
-                color: Colors.black,
+                // color: Colors.black,
+                decoration: const BoxDecoration(
+                  color: Colors.black45,
+                  borderRadius: BorderRadius.only(
+                    topRight: Radius.circular(20),
+                    topLeft: Radius.circular(20),
+                  ),
+                ),
               ),
             ),
           ),
