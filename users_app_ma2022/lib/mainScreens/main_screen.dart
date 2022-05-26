@@ -260,6 +260,21 @@ class _MainScreenState extends State<MainScreen> {
                     topLeft: Radius.circular(20),
                   ),
                 ),
+                child: Column(
+                  children: [
+                    //from
+                    Row(),
+                    const SizedBox(height: 10.0),
+                    const Divider(
+                      height: 1,
+                      thickness: 1,
+                      color: Colors.grey,
+                    ),
+                    const SizedBox(height: 16.0),
+                    //to
+                    Row()
+                  ],
+                ),
               ),
             ),
           ),
