@@ -202,7 +202,8 @@ class _MainScreenState extends State<MainScreen> {
     LatLng latLngPosition =
         LatLng(userCurrentPosition!.latitude, userCurrentPosition!.longitude);
 
-    CameraPosition(target: latLngPosition, zoom: 14.78);
+    CameraPosition cameraPosition =
+        CameraPosition(target: latLngPosition, zoom: 14.78);
   }
 
   @override
