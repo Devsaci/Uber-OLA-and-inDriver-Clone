@@ -198,6 +198,8 @@ class _MainScreenState extends State<MainScreen> {
     Position cPosition = await Geolocator.getCurrentPosition(
         desiredAccuracy: LocationAccuracy.high);
     userCurrentPosition = cPosition;
+
+    LatLng(userCurrentPosition!.latitude, userCurrentPosition!.longitude);
   }
 
   @override
