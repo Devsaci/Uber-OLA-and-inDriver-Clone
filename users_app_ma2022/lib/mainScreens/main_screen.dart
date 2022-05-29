@@ -204,6 +204,8 @@ class _MainScreenState extends State<MainScreen> {
 
     CameraPosition cameraPosition =
         CameraPosition(target: latLngPosition, zoom: 14.78);
+    newGoogleMapController!
+        .animateCamera(CameraUpdate.newCameraPosition(cameraPosition));
   }
 
   @override
