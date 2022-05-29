@@ -194,6 +194,8 @@ class _MainScreenState extends State<MainScreen> {
                 ''');
   }
 
+  locateUserPosition() {}
+
   @override
   void initState() {
     super.initState();
