@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'dart:ui';
 import 'package:flutter/material.dart';
+import 'package:geolocator/geolocator.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:users_app/global/global.dart';
 import 'package:users_app/widgets/my_drawer.dart';
@@ -23,6 +24,8 @@ class _MainScreenState extends State<MainScreen> {
   GlobalKey<ScaffoldState> sKey = GlobalKey<ScaffoldState>();
 
   double searchLocationContainerHeight = 240;
+
+  Position? userCurrentPosition;
 
   blackThemeGoogleMap() {
     newGoogleMapController!.setMapStyle('''
