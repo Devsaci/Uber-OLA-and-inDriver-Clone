@@ -234,6 +234,7 @@ class _MainScreenState extends State<MainScreen> {
           GoogleMap(
             initialCameraPosition: _kGooglePlex,
             myLocationEnabled: true,
+            zoomGesturesEnabled: true,
             mapType: MapType.normal,
             onMapCreated: (GoogleMapController controller) {
               _controllerGoogleMap.complete(controller);
