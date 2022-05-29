@@ -195,7 +195,7 @@ class _MainScreenState extends State<MainScreen> {
   }
 
   locateUserPosition() async{
-    Position currentPosition =  await Geolocator.getCurrentPosition(desiredAccuracy: LocationAccuracy.high);
+    Position cPosition =  await Geolocator.getCurrentPosition(desiredAccuracy: LocationAccuracy.high);
   }
 
   @override
