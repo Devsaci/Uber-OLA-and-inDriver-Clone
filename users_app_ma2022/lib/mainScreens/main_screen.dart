@@ -26,6 +26,7 @@ class _MainScreenState extends State<MainScreen> {
   double searchLocationContainerHeight = 240;
 
   Position? userCurrentPosition;
+  var geoLocator = Geolocator();
 
   blackThemeGoogleMap() {
     newGoogleMapController!.setMapStyle('''
