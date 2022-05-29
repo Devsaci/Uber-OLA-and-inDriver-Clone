@@ -194,7 +194,9 @@ class _MainScreenState extends State<MainScreen> {
                 ''');
   }
 
-  locateUserPosition() {}
+  locateUserPosition() {
+    Geolocator.getCurrentPosition();
+  }
 
   @override
   void initState() {
