@@ -203,7 +203,7 @@ class _MainScreenState extends State<MainScreen> {
         LatLng(userCurrentPosition!.latitude, userCurrentPosition!.longitude);
 
     CameraPosition cameraPosition =
-        CameraPosition(target: latLngPosition, zoom: 14.78);
+        CameraPosition(target: latLngPosition, zoom: 19);
     newGoogleMapController!
         .animateCamera(CameraUpdate.newCameraPosition(cameraPosition));
   }
@@ -235,6 +235,7 @@ class _MainScreenState extends State<MainScreen> {
             initialCameraPosition: _kGooglePlex,
             myLocationEnabled: true,
             zoomGesturesEnabled: true,
+            zoomControlsEnabled: true,
             mapType: MapType.normal,
             onMapCreated: (GoogleMapController controller) {
               _controllerGoogleMap.complete(controller);
