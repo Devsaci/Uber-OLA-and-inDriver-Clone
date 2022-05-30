@@ -293,7 +293,7 @@ class _MainScreenState extends State<MainScreen> {
                 height: searchLocationContainerHeight,
                 // color: Colors.black,
                 decoration: const BoxDecoration(
-                  color: Colors.black,
+                  color: Colors.black87,
                   borderRadius: BorderRadius.only(
                     topRight: Radius.circular(20),
                     topLeft: Radius.circular(20),
