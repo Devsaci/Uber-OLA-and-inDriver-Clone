@@ -31,6 +31,9 @@ class _MainScreenState extends State<MainScreen> {
   // 39. alert dialog - asked for location permission
   LocationPermission? _locationPermission;
 
+  //40. setting up the map requirements
+  double bottomPaddingOfMap = 0;
+
   blackThemeGoogleMap() {
     newGoogleMapController!.setMapStyle('''
                     [
@@ -286,7 +289,7 @@ class _MainScreenState extends State<MainScreen> {
                 height: searchLocationContainerHeight,
                 // color: Colors.black,
                 decoration: const BoxDecoration(
-                  color: Colors.black45,
+                  color: Colors.black,
                   borderRadius: BorderRadius.only(
                     topRight: Radius.circular(20),
                     topLeft: Radius.circular(20),
