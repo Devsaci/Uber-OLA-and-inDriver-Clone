@@ -197,8 +197,8 @@ class _MainScreenState extends State<MainScreen> {
                 ''');
   }
 
-  checkIfLocationPermissionAllowed(){
-    Geolocator.requestPermission();
+  checkIfLocationPermissionAllowed() async{
+    _locationPermission = await Geolocator.requestPermission();
   }
 
   locateUserPosition() async {
