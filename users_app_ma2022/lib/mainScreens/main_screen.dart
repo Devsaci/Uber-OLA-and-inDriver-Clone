@@ -201,7 +201,7 @@ class _MainScreenState extends State<MainScreen> {
     _locationPermission = await Geolocator.requestPermission();
 
     if(_locationPermission == LocationPermission.denied){
-      Geolocator.requestPermission();
+      _locationPermission = await Geolocator.requestPermission();
     }
   }
 
