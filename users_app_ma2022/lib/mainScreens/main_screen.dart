@@ -200,7 +200,9 @@ class _MainScreenState extends State<MainScreen> {
   checkIfLocationPermissionAllowed() async{
     _locationPermission = await Geolocator.requestPermission();
 
-    if(_locationPermission == LocationPermission.denied){}
+    if(_locationPermission == LocationPermission.denied){
+      Geolocator.requestPermission();
+    }
   }
 
   locateUserPosition() async {
