@@ -197,10 +197,10 @@ class _MainScreenState extends State<MainScreen> {
                 ''');
   }
 
-  checkIfLocationPermissionAllowed() async{
+  checkIfLocationPermissionAllowed() async {
     _locationPermission = await Geolocator.requestPermission();
 
-    if(_locationPermission == LocationPermission.denied){
+    if (_locationPermission == LocationPermission.denied) {
       _locationPermission = await Geolocator.requestPermission();
     }
   }
@@ -222,6 +222,7 @@ class _MainScreenState extends State<MainScreen> {
   @override
   void initState() {
     super.initState();
+    checkIfLocationPermissionAllowed();
   }
 
   @override
