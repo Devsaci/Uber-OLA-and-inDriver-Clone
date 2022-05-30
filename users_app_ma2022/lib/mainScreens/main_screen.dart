@@ -28,6 +28,9 @@ class _MainScreenState extends State<MainScreen> {
   Position? userCurrentPosition;
   var geoLocator = Geolocator();
 
+  // 39. alert dialog - asked for location permission
+  LocationPermission? _locationPermission;
+
   blackThemeGoogleMap() {
     newGoogleMapController!.setMapStyle('''
                     [
@@ -194,6 +197,8 @@ class _MainScreenState extends State<MainScreen> {
                 ''');
   }
 
+  checkIfLocationPermissionAllowed(){}
+
   locateUserPosition() async {
     Position cPosition = await Geolocator.getCurrentPosition(
         desiredAccuracy: LocationAccuracy.high);
@@ -236,7 +241,7 @@ class _MainScreenState extends State<MainScreen> {
             myLocationEnabled: true,
             zoomGesturesEnabled: true,
             zoomControlsEnabled: true,
-            mapType: MapType.normal,
+            mapType: MapType.satellite,
             onMapCreated: (GoogleMapController controller) {
               _controllerGoogleMap.complete(controller);
               newGoogleMapController = controller;
