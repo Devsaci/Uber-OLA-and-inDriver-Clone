@@ -1,0 +1,1048 @@
+// 20220531224225
+// https://maps.googleapis.com/maps/api/geocode/json?latlng=49.8980884,%202.2880343&key=AIzaSyAPxmJiF4JR36J_wB2rjycTt6ABn3GJNZ8
+
+{
+  "plus_code": {
+    "compound_code": "V7XQ+66M Amiens, France",
+    "global_code": "8FX4V7XQ+66M"
+  },
+  "results": [
+    {
+      "address_components": [
+        {
+          "long_name": "17",
+          "short_name": "17",
+          "types": [
+            "street_number"
+          ]
+        },
+        {
+          "long_name": "Rue du Cocher",
+          "short_name": "Rue du Cocher",
+          "types": [
+            "route"
+          ]
+        },
+        {
+          "long_name": "Amiens",
+          "short_name": "Amiens",
+          "types": [
+            "locality",
+            "political"
+          ]
+        },
+        {
+          "long_name": "Somme",
+          "short_name": "Somme",
+          "types": [
+            "administrative_area_level_2",
+            "political"
+          ]
+        },
+        {
+          "long_name": "Hauts-de-France",
+          "short_name": "Hauts-de-France",
+          "types": [
+            "administrative_area_level_1",
+            "political"
+          ]
+        },
+        {
+          "long_name": "France",
+          "short_name": "FR",
+          "types": [
+            "country",
+            "political"
+          ]
+        },
+        {
+          "long_name": "80000",
+          "short_name": "80000",
+          "types": [
+            "postal_code"
+          ]
+        }
+      ],
+      "formatted_address": "17 Rue du Cocher, 80000 Amiens, France",
+      "geometry": {
+        "bounds": {
+          "northeast": {
+            "lat": 49.8981696,
+            "lng": 2.2881258
+          },
+          "southwest": {
+            "lat": 49.8979831,
+            "lng": 2.2878528
+          }
+        },
+        "location": {
+          "lat": 49.8980598,
+          "lng": 2.2879819
+        },
+        "location_type": "ROOFTOP",
+        "viewport": {
+          "northeast": {
+            "lat": 49.89942533029151,
+            "lng": 2.289338280291501
+          },
+          "southwest": {
+            "lat": 49.89672736970851,
+            "lng": 2.286640319708498
+          }
+        }
+      },
+      "place_id": "ChIJ5dg8FxSE50cRAmhu7rTwvfM",
+      "types": [
+        "premise"
+      ]
+    },
+    {
+      "address_components": [
+        {
+          "long_name": "19",
+          "short_name": "19",
+          "types": [
+            "street_number"
+          ]
+        },
+        {
+          "long_name": "Rue de l'Écuyer",
+          "short_name": "Rue de l'Écuyer",
+          "types": [
+            "route"
+          ]
+        },
+        {
+          "long_name": "Amiens",
+          "short_name": "Amiens",
+          "types": [
+            "locality",
+            "political"
+          ]
+        },
+        {
+          "long_name": "Somme",
+          "short_name": "Somme",
+          "types": [
+            "administrative_area_level_2",
+            "political"
+          ]
+        },
+        {
+          "long_name": "Hauts-de-France",
+          "short_name": "Hauts-de-France",
+          "types": [
+            "administrative_area_level_1",
+            "political"
+          ]
+        },
+        {
+          "long_name": "France",
+          "short_name": "FR",
+          "types": [
+            "country",
+            "political"
+          ]
+        },
+        {
+          "long_name": "80000",
+          "short_name": "80000",
+          "types": [
+            "postal_code"
+          ]
+        }
+      ],
+      "formatted_address": "19 Rue de l'Écuyer, 80000 Amiens, France",
+      "geometry": {
+        "location": {
+          "lat": 49.8979141,
+          "lng": 2.288064
+        },
+        "location_type": "ROOFTOP",
+        "viewport": {
+          "northeast": {
+            "lat": 49.8992630802915,
+            "lng": 2.289412980291502
+          },
+          "southwest": {
+            "lat": 49.8965651197085,
+            "lng": 2.286715019708498
+          }
+        }
+      },
+      "place_id": "ChIJXUOLFhSE50cRHegZahB1L5Y",
+      "plus_code": {
+        "compound_code": "V7XQ+56 Amiens, France",
+        "global_code": "8FX4V7XQ+56"
+      },
+      "types": [
+        "street_address"
+      ]
+    },
+    {
+      "address_components": [
+        {
+          "long_name": "25",
+          "short_name": "25",
+          "types": [
+            "street_number"
+          ]
+        },
+        {
+          "long_name": "Rue du Cocher",
+          "short_name": "Rue du Cocher",
+          "types": [
+            "route"
+          ]
+        },
+        {
+          "long_name": "Amiens",
+          "short_name": "Amiens",
+          "types": [
+            "locality",
+            "political"
+          ]
+        },
+        {
+          "long_name": "Somme",
+          "short_name": "Somme",
+          "types": [
+            "administrative_area_level_2",
+            "political"
+          ]
+        },
+        {
+          "long_name": "Hauts-de-France",
+          "short_name": "Hauts-de-France",
+          "types": [
+            "administrative_area_level_1",
+            "political"
+          ]
+        },
+        {
+          "long_name": "France",
+          "short_name": "FR",
+          "types": [
+            "country",
+            "political"
+          ]
+        },
+        {
+          "long_name": "80000",
+          "short_name": "80000",
+          "types": [
+            "postal_code"
+          ]
+        }
+      ],
+      "formatted_address": "25 Rue du Cocher, 80000 Amiens, France",
+      "geometry": {
+        "location": {
+          "lat": 49.8983225,
+          "lng": 2.2879257
+        },
+        "location_type": "ROOFTOP",
+        "viewport": {
+          "northeast": {
+            "lat": 49.8996714802915,
+            "lng": 2.289274680291502
+          },
+          "southwest": {
+            "lat": 49.8969735197085,
+            "lng": 2.286576719708498
+          }
+        }
+      },
+      "place_id": "ChIJOw7DVomF50cRNGoectEvONg",
+      "plus_code": {
+        "compound_code": "V7XQ+85 Amiens, France",
+        "global_code": "8FX4V7XQ+85"
+      },
+      "types": [
+        "establishment",
+        "point_of_interest"
+      ]
+    },
+    {
+      "address_components": [
+        {
+          "long_name": "41",
+          "short_name": "41",
+          "types": [
+            "street_number"
+          ]
+        },
+        {
+          "long_name": "Allée des Henson",
+          "short_name": "All. des Henson",
+          "types": [
+            "route"
+          ]
+        },
+        {
+          "long_name": "Amiens",
+          "short_name": "Amiens",
+          "types": [
+            "locality",
+            "political"
+          ]
+        },
+        {
+          "long_name": "Somme",
+          "short_name": "Somme",
+          "types": [
+            "administrative_area_level_2",
+            "political"
+          ]
+        },
+        {
+          "long_name": "Hauts-de-France",
+          "short_name": "Hauts-de-France",
+          "types": [
+            "administrative_area_level_1",
+            "political"
+          ]
+        },
+        {
+          "long_name": "France",
+          "short_name": "FR",
+          "types": [
+            "country",
+            "political"
+          ]
+        },
+        {
+          "long_name": "80000",
+          "short_name": "80000",
+          "types": [
+            "postal_code"
+          ]
+        }
+      ],
+      "formatted_address": "41 All. des Henson, 80000 Amiens, France",
+      "geometry": {
+        "location": {
+          "lat": 49.8985129,
+          "lng": 2.2880491
+        },
+        "location_type": "RANGE_INTERPOLATED",
+        "viewport": {
+          "northeast": {
+            "lat": 49.8998618802915,
+            "lng": 2.289398080291502
+          },
+          "southwest": {
+            "lat": 49.8971639197085,
+            "lng": 2.286700119708498
+          }
+        }
+      },
+      "place_id": "Eig0MSBBbGwuIGRlcyBIZW5zb24sIDgwMDAwIEFtaWVucywgRnJhbmNlIhoSGAoUChIJE93BHhSE50cRU2v0ekMFEysQKQ",
+      "types": [
+        "street_address"
+      ]
+    },
+    {
+      "address_components": [
+        {
+          "long_name": "V7XQ+66",
+          "short_name": "V7XQ+66",
+          "types": [
+            "plus_code"
+          ]
+        },
+        {
+          "long_name": "Amiens",
+          "short_name": "Amiens",
+          "types": [
+            "locality",
+            "political"
+          ]
+        },
+        {
+          "long_name": "Somme",
+          "short_name": "Somme",
+          "types": [
+            "administrative_area_level_2",
+            "political"
+          ]
+        },
+        {
+          "long_name": "Hauts-de-France",
+          "short_name": "Hauts-de-France",
+          "types": [
+            "administrative_area_level_1",
+            "political"
+          ]
+        },
+        {
+          "long_name": "France",
+          "short_name": "FR",
+          "types": [
+            "country",
+            "political"
+          ]
+        }
+      ],
+      "formatted_address": "V7XQ+66 Amiens, France",
+      "geometry": {
+        "bounds": {
+          "northeast": {
+            "lat": 49.898125,
+            "lng": 2.288125
+          },
+          "southwest": {
+            "lat": 49.898,
+            "lng": 2.288
+          }
+        },
+        "location": {
+          "lat": 49.8980884,
+          "lng": 2.288034300000001
+        },
+        "location_type": "GEOMETRIC_CENTER",
+        "viewport": {
+          "northeast": {
+            "lat": 49.8994114802915,
+            "lng": 2.289411480291502
+          },
+          "southwest": {
+            "lat": 49.8967135197085,
+            "lng": 2.286713519708498
+          }
+        }
+      },
+      "place_id": "GhIJX3WJj_TySEARkgJV7eRNAkA",
+      "plus_code": {
+        "compound_code": "V7XQ+66 Amiens, France",
+        "global_code": "8FX4V7XQ+66"
+      },
+      "types": [
+        "plus_code"
+      ]
+    },
+    {
+      "address_components": [
+        {
+          "long_name": "27-1",
+          "short_name": "27-1",
+          "types": [
+            "street_number"
+          ]
+        },
+        {
+          "long_name": "Rue de l'Écuyer",
+          "short_name": "Rue de l'Écuyer",
+          "types": [
+            "route"
+          ]
+        },
+        {
+          "long_name": "Amiens",
+          "short_name": "Amiens",
+          "types": [
+            "locality",
+            "political"
+          ]
+        },
+        {
+          "long_name": "Somme",
+          "short_name": "Somme",
+          "types": [
+            "administrative_area_level_2",
+            "political"
+          ]
+        },
+        {
+          "long_name": "Hauts-de-France",
+          "short_name": "Hauts-de-France",
+          "types": [
+            "administrative_area_level_1",
+            "political"
+          ]
+        },
+        {
+          "long_name": "France",
+          "short_name": "FR",
+          "types": [
+            "country",
+            "political"
+          ]
+        },
+        {
+          "long_name": "80000",
+          "short_name": "80000",
+          "types": [
+            "postal_code"
+          ]
+        }
+      ],
+      "formatted_address": "27-1 Rue de l'Écuyer, 80000 Amiens, France",
+      "geometry": {
+        "bounds": {
+          "northeast": {
+            "lat": 49.8983426,
+            "lng": 2.288283
+          },
+          "southwest": {
+            "lat": 49.8974674,
+            "lng": 2.2879786
+          }
+        },
+        "location": {
+          "lat": 49.89790499999999,
+          "lng": 2.288131
+        },
+        "location_type": "GEOMETRIC_CENTER",
+        "viewport": {
+          "northeast": {
+            "lat": 49.8992539802915,
+            "lng": 2.289479780291502
+          },
+          "southwest": {
+            "lat": 49.8965560197085,
+            "lng": 2.286781819708498
+          }
+        }
+      },
+      "place_id": "ChIJl4VoFhSE50cRLqDknpivuOs",
+      "types": [
+        "route"
+      ]
+    },
+    {
+      "address_components": [
+        {
+          "long_name": "Saint-Jacques - Saint-Roch",
+          "short_name": "Saint-Jacques - Saint-Roch",
+          "types": [
+            "neighborhood",
+            "political"
+          ]
+        },
+        {
+          "long_name": "Amiens",
+          "short_name": "Amiens",
+          "types": [
+            "locality",
+            "political"
+          ]
+        },
+        {
+          "long_name": "Somme",
+          "short_name": "Somme",
+          "types": [
+            "administrative_area_level_2",
+            "political"
+          ]
+        },
+        {
+          "long_name": "Hauts-de-France",
+          "short_name": "Hauts-de-France",
+          "types": [
+            "administrative_area_level_1",
+            "political"
+          ]
+        },
+        {
+          "long_name": "France",
+          "short_name": "FR",
+          "types": [
+            "country",
+            "political"
+          ]
+        },
+        {
+          "long_name": "80000",
+          "short_name": "80000",
+          "types": [
+            "postal_code"
+          ]
+        }
+      ],
+      "formatted_address": "Saint-Jacques - Saint-Roch, 80000 Amiens, France",
+      "geometry": {
+        "bounds": {
+          "northeast": {
+            "lat": 49.901553,
+            "lng": 2.291716
+          },
+          "southwest": {
+            "lat": 49.8916549,
+            "lng": 2.271324
+          }
+        },
+        "location": {
+          "lat": 49.8975713,
+          "lng": 2.2853306
+        },
+        "location_type": "APPROXIMATE",
+        "viewport": {
+          "northeast": {
+            "lat": 49.901553,
+            "lng": 2.291716
+          },
+          "southwest": {
+            "lat": 49.8916549,
+            "lng": 2.271324
+          }
+        }
+      },
+      "place_id": "ChIJ95ePfBKE50cRetg6X50Gehk",
+      "types": [
+        "neighborhood",
+        "political"
+      ]
+    },
+    {
+      "address_components": [
+        {
+          "long_name": "Canton d'Amiens-1",
+          "short_name": "Canton d'Amiens-1",
+          "types": [
+            "administrative_area_level_4",
+            "political"
+          ]
+        },
+        {
+          "long_name": "Amiens",
+          "short_name": "Amiens",
+          "types": [
+            "locality",
+            "political"
+          ]
+        },
+        {
+          "long_name": "Somme",
+          "short_name": "Somme",
+          "types": [
+            "administrative_area_level_2",
+            "political"
+          ]
+        },
+        {
+          "long_name": "Hauts-de-France",
+          "short_name": "Hauts-de-France",
+          "types": [
+            "administrative_area_level_1",
+            "political"
+          ]
+        },
+        {
+          "long_name": "France",
+          "short_name": "FR",
+          "types": [
+            "country",
+            "political"
+          ]
+        }
+      ],
+      "formatted_address": "Canton d'Amiens-1, Amiens, France",
+      "geometry": {
+        "bounds": {
+          "northeast": {
+            "lat": 49.9506852,
+            "lng": 2.3019593
+          },
+          "southwest": {
+            "lat": 49.8870096,
+            "lng": 2.2235417
+          }
+        },
+        "location": {
+          "lat": 49.9095126,
+          "lng": 2.264493
+        },
+        "location_type": "APPROXIMATE",
+        "viewport": {
+          "northeast": {
+            "lat": 49.9506852,
+            "lng": 2.3019593
+          },
+          "southwest": {
+            "lat": 49.8870096,
+            "lng": 2.2235417
+          }
+        }
+      },
+      "place_id": "ChIJ6aP321aB50cR-F1_eufwEhE",
+      "types": [
+        "administrative_area_level_4",
+        "political"
+      ]
+    },
+    {
+      "address_components": [
+        {
+          "long_name": "80000",
+          "short_name": "80000",
+          "types": [
+            "postal_code"
+          ]
+        },
+        {
+          "long_name": "Amiens",
+          "short_name": "Amiens",
+          "types": [
+            "locality",
+            "political"
+          ]
+        },
+        {
+          "long_name": "Somme",
+          "short_name": "Somme",
+          "types": [
+            "administrative_area_level_2",
+            "political"
+          ]
+        },
+        {
+          "long_name": "Hauts-de-France",
+          "short_name": "Hauts-de-France",
+          "types": [
+            "administrative_area_level_1",
+            "political"
+          ]
+        },
+        {
+          "long_name": "France",
+          "short_name": "FR",
+          "types": [
+            "country",
+            "political"
+          ]
+        }
+      ],
+      "formatted_address": "80000 Amiens, France",
+      "geometry": {
+        "bounds": {
+          "northeast": {
+            "lat": 49.9187331,
+            "lng": 2.3359537
+          },
+          "southwest": {
+            "lat": 49.8738889,
+            "lng": 2.2234834
+          }
+        },
+        "location": {
+          "lat": 49.89905,
+          "lng": 2.2752772
+        },
+        "location_type": "APPROXIMATE",
+        "viewport": {
+          "northeast": {
+            "lat": 49.9187331,
+            "lng": 2.3359537
+          },
+          "southwest": {
+            "lat": 49.8738889,
+            "lng": 2.2234834
+          }
+        }
+      },
+      "place_id": "ChIJSUzCdQ2E50cR8EAl8UHxChw",
+      "types": [
+        "postal_code"
+      ]
+    },
+    {
+      "address_components": [
+        {
+          "long_name": "Amiens",
+          "short_name": "Amiens",
+          "types": [
+            "locality",
+            "political"
+          ]
+        },
+        {
+          "long_name": "Somme",
+          "short_name": "Somme",
+          "types": [
+            "administrative_area_level_2",
+            "political"
+          ]
+        },
+        {
+          "long_name": "Hauts-de-France",
+          "short_name": "Hauts-de-France",
+          "types": [
+            "administrative_area_level_1",
+            "political"
+          ]
+        },
+        {
+          "long_name": "France",
+          "short_name": "FR",
+          "types": [
+            "country",
+            "political"
+          ]
+        }
+      ],
+      "formatted_address": "Amiens, France",
+      "geometry": {
+        "bounds": {
+          "northeast": {
+            "lat": 49.9505774,
+            "lng": 2.3457968
+          },
+          "southwest": {
+            "lat": 49.8468434,
+            "lng": 2.2235657
+          }
+        },
+        "location": {
+          "lat": 49.894067,
+          "lng": 2.295753
+        },
+        "location_type": "APPROXIMATE",
+        "viewport": {
+          "northeast": {
+            "lat": 49.9505774,
+            "lng": 2.3457968
+          },
+          "southwest": {
+            "lat": 49.8468434,
+            "lng": 2.2235657
+          }
+        }
+      },
+      "place_id": "ChIJC3aL1xOE50cR4CBigT7xCgQ",
+      "types": [
+        "locality",
+        "political"
+      ]
+    },
+    {
+      "address_components": [
+        {
+          "long_name": "Arrondissement d'Amiens",
+          "short_name": "Arrondissement d'Amiens",
+          "types": [
+            "administrative_area_level_3",
+            "political"
+          ]
+        },
+        {
+          "long_name": "Somme",
+          "short_name": "Somme",
+          "types": [
+            "administrative_area_level_2",
+            "political"
+          ]
+        },
+        {
+          "long_name": "Hauts-de-France",
+          "short_name": "Hauts-de-France",
+          "types": [
+            "administrative_area_level_1",
+            "political"
+          ]
+        },
+        {
+          "long_name": "France",
+          "short_name": "FR",
+          "types": [
+            "country",
+            "political"
+          ]
+        }
+      ],
+      "formatted_address": "Arrondissement d'Amiens, France",
+      "geometry": {
+        "bounds": {
+          "northeast": {
+            "lat": 50.2390515,
+            "lng": 2.6799532
+          },
+          "southwest": {
+            "lat": 49.6831115,
+            "lng": 1.6355017
+          }
+        },
+        "location": {
+          "lat": 49.8939821,
+          "lng": 2.2957006
+        },
+        "location_type": "APPROXIMATE",
+        "viewport": {
+          "northeast": {
+            "lat": 50.2390515,
+            "lng": 2.6799532
+          },
+          "southwest": {
+            "lat": 49.6831115,
+            "lng": 1.6355017
+          }
+        }
+      },
+      "place_id": "ChIJQ6fvOAx_50cRqMnNO_uZ8mE",
+      "types": [
+        "administrative_area_level_3",
+        "political"
+      ]
+    },
+    {
+      "address_components": [
+        {
+          "long_name": "Somme",
+          "short_name": "Somme",
+          "types": [
+            "administrative_area_level_2",
+            "political"
+          ]
+        },
+        {
+          "long_name": "Hauts-de-France",
+          "short_name": "Hauts-de-France",
+          "types": [
+            "administrative_area_level_1",
+            "political"
+          ]
+        },
+        {
+          "long_name": "France",
+          "short_name": "FR",
+          "types": [
+            "country",
+            "political"
+          ]
+        }
+      ],
+      "formatted_address": "Somme, France",
+      "geometry": {
+        "bounds": {
+          "northeast": {
+            "lat": 50.3663366,
+            "lng": 3.2027692
+          },
+          "southwest": {
+            "lat": 49.5717805,
+            "lng": 1.3802174
+          }
+        },
+        "location": {
+          "lat": 49.914518,
+          "lng": 2.2707095
+        },
+        "location_type": "APPROXIMATE",
+        "viewport": {
+          "northeast": {
+            "lat": 50.3663366,
+            "lng": 3.2027692
+          },
+          "southwest": {
+            "lat": 49.5717805,
+            "lng": 1.3802174
+          }
+        }
+      },
+      "place_id": "ChIJn6rXUTmH50cRgCphgT7xCgM",
+      "types": [
+        "administrative_area_level_2",
+        "political"
+      ]
+    },
+    {
+      "address_components": [
+        {
+          "long_name": "Hauts-de-France",
+          "short_name": "Hauts-de-France",
+          "types": [
+            "administrative_area_level_1",
+            "political"
+          ]
+        },
+        {
+          "long_name": "France",
+          "short_name": "FR",
+          "types": [
+            "country",
+            "political"
+          ]
+        }
+      ],
+      "formatted_address": "Hauts-de-France, France",
+      "geometry": {
+        "bounds": {
+          "northeast": {
+            "lat": 51.08898,
+            "lng": 4.255836899999999
+          },
+          "southwest": {
+            "lat": 48.8372074,
+            "lng": 1.3802174
+          }
+        },
+        "location": {
+          "lat": 49.66361269999999,
+          "lng": 2.5280732
+        },
+        "location_type": "APPROXIMATE",
+        "viewport": {
+          "northeast": {
+            "lat": 51.08898,
+            "lng": 4.255836899999999
+          },
+          "southwest": {
+            "lat": 48.8372074,
+            "lng": 1.3802174
+          }
+        }
+      },
+      "place_id": "ChIJub25mcD450cR4lI4Zc0AtJA",
+      "types": [
+        "administrative_area_level_1",
+        "political"
+      ]
+    },
+    {
+      "address_components": [
+        {
+          "long_name": "France",
+          "short_name": "FR",
+          "types": [
+            "country",
+            "political"
+          ]
+        }
+      ],
+      "formatted_address": "France",
+      "geometry": {
+        "bounds": {
+          "northeast": {
+            "lat": 51.1241999,
+            "lng": 9.6624999
+          },
+          "southwest": {
+            "lat": 41.31433,
+            "lng": -5.5591
+          }
+        },
+        "location": {
+          "lat": 46.227638,
+          "lng": 2.213749
+        },
+        "location_type": "APPROXIMATE",
+        "viewport": {
+          "northeast": {
+            "lat": 51.1241999,
+            "lng": 9.6624999
+          },
+          "southwest": {
+            "lat": 41.31433,
+            "lng": -5.5591
+          }
+        }
+      },
+      "place_id": "ChIJMVd4MymgVA0R99lHx5Y__Ws",
+      "types": [
+        "country",
+        "political"
+      ]
+    }
+  ],
+  "status": "OK"
+}
