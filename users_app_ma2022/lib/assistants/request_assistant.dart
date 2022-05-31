@@ -10,5 +10,6 @@ class RequestAssistant {
       var decodeResponseData = jsonDecode(responseData);
       return decodeResponseData;
     } //successful
+    else {}
   }
 }
