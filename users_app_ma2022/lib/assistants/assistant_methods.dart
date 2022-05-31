@@ -4,9 +4,15 @@ import 'package:geolocator/geolocator.dart';
 import 'package:users_app/global/global.dart';
 import 'package:users_app/models/user_model.dart';
 
+import '../global/map_key.dart';
+
 class AssistantMethods {
   static Future<String?> searchAddressForGeographicCoOrdinates(
-      Position position) async {}
+      Position position) async {
+    "https://maps.googleapis.com/maps/api/geocode/json?latlng=${position.latitude},${position.longitude}&key=$mapKey";
+    String humanReadableAddress="";
+
+  }
 
   static void readCurrentOnlineUserInfo() {
     currentFirebaseUser = fAuth.currentUser;
