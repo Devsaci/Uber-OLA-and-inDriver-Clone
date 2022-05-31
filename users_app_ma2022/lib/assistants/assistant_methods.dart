@@ -18,6 +18,7 @@ class AssistantMethods {
     if (requestResponse != "Error Occurred, Failed. No Response.") {
       humanReadableAddress = requestResponse["results"][0]["formatted_address"];
     }
+    return humanReadableAddress;
   }
 
   static void readCurrentOnlineUserInfo() {
