@@ -7,7 +7,7 @@ class RequestAssistant {
     http.Response httpResponse = await http.get(Uri.parse(url));
     if (httpResponse.statusCode == 200) {
       String responseData = httpResponse.body; //json
-      jsonDecode(responseData);
+      var decodeResponseData = jsonDecode(responseData);
     } //successful
   }
 }
