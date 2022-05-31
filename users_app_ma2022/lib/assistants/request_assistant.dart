@@ -8,6 +8,7 @@ class RequestAssistant {
     if (httpResponse.statusCode == 200) {
       String responseData = httpResponse.body; //json
       var decodeResponseData = jsonDecode(responseData);
+      return decodeResponseData;
     } //successful
   }
 }
