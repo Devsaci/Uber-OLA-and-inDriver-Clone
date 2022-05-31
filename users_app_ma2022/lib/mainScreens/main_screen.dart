@@ -260,7 +260,7 @@ class _MainScreenState extends State<MainScreen> {
               newGoogleMapController = controller;
               blackThemeGoogleMap();
               setState(() {
-                bottomPaddingOfMap = 240;
+                bottomPaddingOfMap = 233;
                 topPaddingOfMap = 20;
               });
               locateUserPosition();
