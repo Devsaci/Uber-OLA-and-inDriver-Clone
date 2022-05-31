@@ -33,6 +33,8 @@ class _MainScreenState extends State<MainScreen> {
 
   //40. setting up the map requirements
   double bottomPaddingOfMap = 0;
+  double topPaddingOfMap = 0;
+
 
   blackThemeGoogleMap() {
     newGoogleMapController!.setMapStyle('''
@@ -247,7 +249,7 @@ class _MainScreenState extends State<MainScreen> {
       body: Stack(
         children: [
           GoogleMap(
-            padding: EdgeInsets.only(bottom: bottomPaddingOfMap),
+            padding: EdgeInsets.only(bottom: bottomPaddingOfMap,top: topPaddingOfMap),
             initialCameraPosition: _kGooglePlex,
             myLocationEnabled: true,
             zoomGesturesEnabled: true,
@@ -259,6 +261,7 @@ class _MainScreenState extends State<MainScreen> {
               blackThemeGoogleMap();
               setState(() {
                 bottomPaddingOfMap = 240;
+                topPaddingOfMap = 20;
               });
               locateUserPosition();
             },
