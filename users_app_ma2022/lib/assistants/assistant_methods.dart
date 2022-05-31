@@ -12,7 +12,7 @@ class AssistantMethods {
       Position position) async {
     String apiUrl =
         "https://maps.googleapis.com/maps/api/geocode/json?latlng=${position.latitude},${position.longitude}&key=$mapKey";
-    await RequestAssistant.receiveRequest(apiUrl);
+    var requestResponse = await RequestAssistant.receiveRequest(apiUrl);
   }
 
   static void readCurrentOnlineUserInfo() {
