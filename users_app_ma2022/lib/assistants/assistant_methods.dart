@@ -9,7 +9,7 @@ import '../global/map_key.dart';
 class AssistantMethods {
   static Future<String?> searchAddressForGeographicCoOrdinates(
       Position position) async {
-    "https://maps.googleapis.com/maps/api/geocode/json?latlng=${position.latitude},${position.longitude}&key=$mapKey";
+    String apiUrl = "https://maps.googleapis.com/maps/api/geocode/json?latlng=${position.latitude},${position.longitude}&key=$mapKey";
     String humanReadableAddress="";
 
   }
