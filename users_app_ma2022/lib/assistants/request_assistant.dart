@@ -7,17 +7,15 @@ class RequestAssistant {
     http.Response httpResponse = await http.get(Uri.parse(url));
 
     try {
-
+      if (httpResponse.statusCode == 200) {
+        String responseData = httpResponse.body; //json
+        var decodeResponseData = jsonDecode(responseData);
+        return decodeResponseData;
+      } //successful
+      else {
+        return "Error Occurred, Failed. No Response.";
+      }
     } catch (exp) {
-      return "Error Occurred, Failed. No Response.";
-    }
-
-    if (httpResponse.statusCode == 200) {
-      String responseData = httpResponse.body; //json
-      var decodeResponseData = jsonDecode(responseData);
-      return decodeResponseData;
-    } //successful
-    else {
       return "Error Occurred, Failed. No Response.";
     }
   }
