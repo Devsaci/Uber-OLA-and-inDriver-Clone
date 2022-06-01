@@ -227,7 +227,7 @@ class _MainScreenState extends State<MainScreen> {
     String? humanReadableAddress =
         await AssistantMethods.searchAddressForGeographicCoOrdinates(
             userCurrentPosition!);
-
+    print("this is your address = " + humanReadableAddress!);
   }
 
   @override
