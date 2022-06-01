@@ -225,7 +225,7 @@ class _MainScreenState extends State<MainScreen> {
         .animateCamera(CameraUpdate.newCameraPosition(cameraPosition));
 
       // 43. get human readable address from user geo graphic coordinate
-    AssistantMethods.searchAddressForGeographicCoOrdinates(userCurrentPosition!);
+    await AssistantMethods.searchAddressForGeographicCoOrdinates(userCurrentPosition!);
 
 
   }
