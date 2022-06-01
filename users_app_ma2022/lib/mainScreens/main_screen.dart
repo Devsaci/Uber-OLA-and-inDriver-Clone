@@ -36,7 +36,6 @@ class _MainScreenState extends State<MainScreen> {
   double bottomPaddingOfMap = 0;
   double topPaddingOfMap = 0;
 
-
   blackThemeGoogleMap() {
     newGoogleMapController!.setMapStyle('''
                     [
@@ -224,9 +223,10 @@ class _MainScreenState extends State<MainScreen> {
     newGoogleMapController!
         .animateCamera(CameraUpdate.newCameraPosition(cameraPosition));
 
-      // 43. get human readable address from user geo graphic coordinate
-    await AssistantMethods.searchAddressForGeographicCoOrdinates(userCurrentPosition!);
-
+    // 43. get human readable address from user geo graphic coordinate
+    String? humanReadableAddress =
+        await AssistantMethods.searchAddressForGeographicCoOrdinates(
+            userCurrentPosition!);
 
   }
 
@@ -255,7 +255,8 @@ class _MainScreenState extends State<MainScreen> {
       body: Stack(
         children: [
           GoogleMap(
-            padding: EdgeInsets.only(bottom: bottomPaddingOfMap,top: topPaddingOfMap),
+            padding: EdgeInsets.only(
+                bottom: bottomPaddingOfMap, top: topPaddingOfMap),
             initialCameraPosition: _kGooglePlex,
             myLocationEnabled: true,
             zoomGesturesEnabled: true,
