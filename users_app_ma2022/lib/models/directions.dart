@@ -1,2 +1,3 @@
-
-class Directions{}
+class Directions {
+  String? humanReadableAddress;
+}
