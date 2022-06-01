@@ -20,7 +20,7 @@ class AssistantMethods {
       humanReadableAddress = requestResponse["results"][0]["formatted_address"];
       Directions userPickUpAddress = Directions();
       userPickUpAddress.locationLatitude = position.latitude;
-
+      userPickUpAddress.locationLongitude = position.longitude;
     }
     return humanReadableAddress;
   }
