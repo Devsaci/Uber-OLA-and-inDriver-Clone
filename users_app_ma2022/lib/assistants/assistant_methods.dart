@@ -18,7 +18,7 @@ class AssistantMethods {
     var requestResponse = await RequestAssistant.receiveRequest(apiUrl);
     if (requestResponse != "Error Occurred, Failed. No Response.") {
       humanReadableAddress = requestResponse["results"][0]["formatted_address"];
-      Directions();
+      Directions userPickUpAddress = Directions();
     }
     return humanReadableAddress;
   }
