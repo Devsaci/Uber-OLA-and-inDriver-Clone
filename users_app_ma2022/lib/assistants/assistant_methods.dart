@@ -6,6 +6,7 @@ import 'package:users_app/global/global.dart';
 import 'package:users_app/models/user_model.dart';
 
 import '../global/map_key.dart';
+import '../models/directions.dart';
 
 class AssistantMethods {
   static Future<String?> searchAddressForGeographicCoOrdinates(
@@ -17,6 +18,7 @@ class AssistantMethods {
     var requestResponse = await RequestAssistant.receiveRequest(apiUrl);
     if (requestResponse != "Error Occurred, Failed. No Response.") {
       humanReadableAddress = requestResponse["results"][0]["formatted_address"];
+      Directions();
     }
     return humanReadableAddress;
   }
