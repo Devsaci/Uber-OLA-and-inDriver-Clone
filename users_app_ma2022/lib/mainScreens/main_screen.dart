@@ -3,6 +3,7 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
+import 'package:users_app/assistants/assistant_methods.dart';
 import 'package:users_app/global/global.dart';
 import 'package:users_app/widgets/my_drawer.dart';
 
@@ -222,6 +223,11 @@ class _MainScreenState extends State<MainScreen> {
         CameraPosition(target: latLngPosition, zoom: 19);
     newGoogleMapController!
         .animateCamera(CameraUpdate.newCameraPosition(cameraPosition));
+
+      // 43. get human readable address from user geo graphic coordinate
+    AssistantMethods.searchAddressForGeographicCoOrdinates(userCurrentPosition!);
+
+
   }
 
   @override
