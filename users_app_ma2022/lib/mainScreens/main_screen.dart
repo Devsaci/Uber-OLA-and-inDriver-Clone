@@ -225,8 +225,7 @@ class _MainScreenState extends State<MainScreen> {
 
     // 43. get human readable address from user geo graphic coordinate
     String? humanReadableAddress =
-        await AssistantMethods.searchAddressForGeographicCoOrdinates(
-            userCurrentPosition!);
+        await AssistantMethods.searchAddressForGeographicCoOrdinates(userCurrentPosition!,context);
     print("this is your address = " + humanReadableAddress!);
   }
 
