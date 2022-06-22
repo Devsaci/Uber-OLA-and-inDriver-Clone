@@ -1,8 +1,10 @@
 //30. Read and Display Current Online user info from Database
 import 'package:firebase_database/firebase_database.dart';
 import 'package:geolocator/geolocator.dart';
+import 'package:provider/provider.dart';
 import 'package:users_app/assistants/request_assistant.dart';
 import 'package:users_app/global/global.dart';
+import 'package:users_app/infoHandler/app_info.dart';
 import 'package:users_app/models/user_model.dart';
 
 import '../global/map_key.dart';
@@ -10,7 +12,7 @@ import '../models/directions.dart';
 
 class AssistantMethods {
   static Future<String?> searchAddressForGeographicCoOrdinates(
-      Position position) async {
+      Position position,context) async {
     String apiUrl =
         "https://maps.googleapis.com/maps/api/geocode/json?latlng=${position.latitude},${position.longitude}&key=$mapKey";
     String humanReadableAddress = "";
@@ -22,6 +24,7 @@ class AssistantMethods {
       userPickUpAddress.locationLatitude = position.latitude;
       userPickUpAddress.locationLongitude = position.longitude;
       userPickUpAddress.locationName = humanReadableAddress;
+      Provider.of<AppInfo>(context).updatePickUpLocationAddress(userPickUpAddress);
     }
     return humanReadableAddress;
   }
