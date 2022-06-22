@@ -8,5 +8,6 @@ class AppInfo extends ChangeNotifier {
   void updatePickUpLocationAddress(Directions userPickUpAddress)
   {
     userPickUpLocation = userPickUpAddress;
+    notifyListeners();
   }
 }
