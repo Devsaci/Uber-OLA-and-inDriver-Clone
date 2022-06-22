@@ -1,11 +1,13 @@
 import 'dart:async';
-import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
+import 'package:provider/provider.dart';
 import 'package:users_app/assistants/assistant_methods.dart';
 import 'package:users_app/global/global.dart';
 import 'package:users_app/widgets/my_drawer.dart';
+
+import '../infoHandler/app_info.dart';
 
 class MainScreen extends StatefulWidget {
   // const MainScreen({Key? key}) : super(key: key);
@@ -225,7 +227,8 @@ class _MainScreenState extends State<MainScreen> {
 
     // 43. get human readable address from user geo graphic coordinate
     String? humanReadableAddress =
-        await AssistantMethods.searchAddressForGeographicCoOrdinates(userCurrentPosition!,context);
+        await AssistantMethods.searchAddressForGeographicCoOrdinates(
+            userCurrentPosition!, context);
     print("this is your address = " + humanReadableAddress!);
   }
 
@@ -325,16 +328,17 @@ class _MainScreenState extends State<MainScreen> {
                           ),
                           Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
-                            children: const [
-                              Text(
-                                "From",
+                            children: [
+                              const Text( "From",
                                 style:
                                     TextStyle(color: Colors.grey, fontSize: 12),
                               ),
                               Text(
-                                "your current location",
+                                Provider.of<AppInfo>(context).userPickUpLocation != null
+                                    ? Provider.of<AppInfo>(context).userPickUpLocation!.locationName!
+                                    : "not getting address",
                                 style:
-                                    TextStyle(color: Colors.grey, fontSize: 14),
+                                    const TextStyle(color: Colors.grey, fontSize: 14),
                               ),
                             ],
                           ),
