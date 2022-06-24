@@ -354,6 +354,7 @@ class _MainScreenState extends State<MainScreen> {
                       // 47. search dropoff location address screen ui
                       //to
                       GestureDetector(
+                        onTap: (){},
                         child: Row(
                           children: [
                             const Icon(
