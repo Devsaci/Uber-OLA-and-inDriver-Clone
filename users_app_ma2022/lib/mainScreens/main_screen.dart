@@ -356,6 +356,7 @@ class _MainScreenState extends State<MainScreen> {
                       //to
                       GestureDetector(
                         onTap: (){
+                          // ignore: prefer_const_constructors
                           Navigator.push(context, MaterialPageRoute(builder: (c) => SearchPlacesScreen()));
                         },
                         child: Row(
