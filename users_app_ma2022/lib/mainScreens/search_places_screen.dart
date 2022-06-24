@@ -15,7 +15,7 @@ class _SearchPlacesScreenState extends State<SearchPlacesScreen> {
       backgroundColor: Colors.black87,
       body: Column(
         children: [
-
+          Container(),
         ],
       ),
     );
