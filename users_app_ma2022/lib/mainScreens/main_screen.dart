@@ -5,6 +5,7 @@ import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:provider/provider.dart';
 import 'package:users_app/assistants/assistant_methods.dart';
 import 'package:users_app/global/global.dart';
+import 'package:users_app/mainScreens/search_places_screen.dart';
 import 'package:users_app/widgets/my_drawer.dart';
 
 import '../infoHandler/app_info.dart';
@@ -354,7 +355,9 @@ class _MainScreenState extends State<MainScreen> {
                       // 47. search dropoff location address screen ui
                       //to
                       GestureDetector(
-                        onTap: (){},
+                        onTap: (){
+                          Navigator.push(context, MaterialPageRoute(builder: (c) => SearchPlacesScreen()));
+                        },
                         child: Row(
                           children: [
                             const Icon(
