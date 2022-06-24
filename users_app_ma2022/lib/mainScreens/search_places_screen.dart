@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 class SearchPlacesScreen extends StatefulWidget {
   const SearchPlacesScreen({Key? key}) : super(key: key);
 
@@ -9,6 +10,14 @@ class SearchPlacesScreen extends StatefulWidget {
 class _SearchPlacesScreenState extends State<SearchPlacesScreen> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    // ignore: prefer_const_constructors
+    return Scaffold(
+      backgroundColor: Colors.black87,
+      body: Column(
+        children: [
+
+        ],
+      ),
+    );
   }
 }
