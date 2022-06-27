@@ -59,17 +59,18 @@ class _SearchPlacesScreenState extends State<SearchPlacesScreen> {
                   ],
                 ),
                 Row(
-                  children: const [
-                    Icon(
+                  children: [
+                    const Icon(
                       Icons.adjust_sharp,
                       color: Colors.grey,
                     ),
-                    SizedBox(width: 18.0),
+                    const SizedBox(width: 18.0),
                     Expanded(
                       child: Padding(
-                        padding: EdgeInsets.all(8.0),
+                        padding: const EdgeInsets.all(8.0),
                         child: TextField(
-                          decoration: InputDecoration(
+                          onChanged: (valueTyped) {},
+                          decoration: const InputDecoration(
                             hintText: "search here...",
                             fillColor: Colors.white54,
                             filled: true,
