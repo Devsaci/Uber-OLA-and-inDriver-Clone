@@ -45,6 +45,7 @@ class _SearchPlacesScreenState extends State<SearchPlacesScreen> {
                         color: Colors.grey,
                       ),
                     ),
+                    const Text(" Search & Set DropOff Lo²cation",)
                   ],
                 ),
               ],
