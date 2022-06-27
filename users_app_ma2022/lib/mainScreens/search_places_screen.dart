@@ -60,7 +60,10 @@ class _SearchPlacesScreenState extends State<SearchPlacesScreen> {
                 ),
                 Row(
                   children: [
-
+                    const Icon(
+                      Icons.adjust_sharp,
+                      color: Colors.grey,
+                    ),
                   ],
                 ),
               ],
