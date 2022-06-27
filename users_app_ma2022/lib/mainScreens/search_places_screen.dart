@@ -36,9 +36,11 @@ class _SearchPlacesScreenState extends State<SearchPlacesScreen> {
               children: [
                 Stack(
                   children:  [
-                    Icon(
-                      Icons.arrow_back,
-                      color: Colors.grey,
+                    GestureDetector(
+                      child: Icon(
+                        Icons.arrow_back,
+                        color: Colors.grey,
+                      ),
                     ),
                   ],
                 ),
