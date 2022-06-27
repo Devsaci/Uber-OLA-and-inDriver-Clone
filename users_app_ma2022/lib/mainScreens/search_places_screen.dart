@@ -65,16 +65,18 @@ class _SearchPlacesScreenState extends State<SearchPlacesScreen> {
                       color: Colors.grey,
                     ),
                     SizedBox(width: 18.0),
-                    TextField(
-                      decoration: InputDecoration(
-                        hintText: "search here...",
-                        fillColor: Colors.white54,
-                        filled: true,
-                        border: InputBorder.none,
-                        contentPadding: EdgeInsets.only(
-                          left: 11.0,
-                          top: 8.0,
-                          bottom: 8.0,
+                    Expanded(
+                      child: TextField(
+                        decoration: InputDecoration(
+                          hintText: "search here...",
+                          fillColor: Colors.white54,
+                          filled: true,
+                          border: InputBorder.none,
+                          contentPadding: EdgeInsets.only(
+                            left: 11.0,
+                            top: 8.0,
+                            bottom: 8.0,
+                          ),
                         ),
                       ),
                     ),
