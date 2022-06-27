@@ -65,7 +65,11 @@ class _SearchPlacesScreenState extends State<SearchPlacesScreen> {
                       color: Colors.grey,
                     ),
                     SizedBox(width: 18.0),
-                    TextField(),
+                    TextField(
+                      decoration: InputDecoration(
+
+                      ),
+                    ),
                   ],
                 ),
               ],
