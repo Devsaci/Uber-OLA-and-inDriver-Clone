@@ -70,6 +70,7 @@ class _SearchPlacesScreenState extends State<SearchPlacesScreen> {
                         hintText: "search here...",
                         fillColor: Colors.white54,
                         filled: true,
+                        border: InputBorder.none,
                       ),
                     ),
                   ],
