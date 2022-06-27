@@ -34,6 +34,7 @@ class _SearchPlacesScreenState extends State<SearchPlacesScreen> {
             ),
             child: Column(
               children: [
+                const SizedBox(height: 25.0),
                 Stack(
                   children: [
                     GestureDetector(
