@@ -37,7 +37,8 @@ class _SearchPlacesScreenState extends State<SearchPlacesScreen> {
                 Stack(
                   children:  [
                     GestureDetector(
-                      child: Icon(
+                      onTap: (){},
+                      child: const Icon(
                         Icons.arrow_back,
                         color: Colors.grey,
                       ),
