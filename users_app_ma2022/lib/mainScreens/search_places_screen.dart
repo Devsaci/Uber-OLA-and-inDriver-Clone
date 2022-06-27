@@ -67,7 +67,7 @@ class _SearchPlacesScreenState extends State<SearchPlacesScreen> {
                     SizedBox(width: 18.0),
                     TextField(
                       decoration: InputDecoration(
-
+                          hintText:"search here...",
                       ),
                     ),
                   ],
