@@ -32,6 +32,11 @@ class _SearchPlacesScreenState extends State<SearchPlacesScreen> {
                 ),
               ],
             ),
+            child: Column(
+              children: [
+
+              ],
+            ),
           ),
         ],
       ),
