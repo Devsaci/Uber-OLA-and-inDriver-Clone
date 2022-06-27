@@ -51,6 +51,7 @@ class _SearchPlacesScreenState extends State<SearchPlacesScreen> {
                         style: TextStyle(
                           fontSize: 18.0,
                           color: Colors.grey,
+                          fontWeight: FontWeight.bold,
                         ),
                       ),
                     )
