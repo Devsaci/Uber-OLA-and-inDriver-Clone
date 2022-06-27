@@ -34,7 +34,14 @@ class _SearchPlacesScreenState extends State<SearchPlacesScreen> {
             ),
             child: Column(
               children: [
-
+                Stack(
+                  children:  [
+                    Icon(
+                      Icons.arrow_back,
+                      color: Colors.grey,
+                    ),
+                  ],
+                ),
               ],
             ),
           ),
