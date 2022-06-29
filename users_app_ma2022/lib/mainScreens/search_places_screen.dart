@@ -17,7 +17,7 @@ class _SearchPlacesScreenState extends State<SearchPlacesScreen> {
     if (inputText.length > 1) {
       String urlAutoCompleteSearch =
           "https://maps.googleapis.com/maps/api/place/autocomplete/json?input=$inputText&key=$mapKey&components=country:FR";
-      RequestAssistant.receiveRequest(urlAutoCompleteSearch);
+      var responseAutoCompleteSearch = await RequestAssistant.receiveRequest(urlAutoCompleteSearch);
     }
   }
 
