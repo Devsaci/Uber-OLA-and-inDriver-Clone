@@ -8,9 +8,9 @@ class SearchPlacesScreen extends StatefulWidget {
 }
 
 class _SearchPlacesScreenState extends State<SearchPlacesScreen> {
+  // 48. Enable Places API [Auto Complete Place Search]
   @override
   Widget build(BuildContext context) {
-    // ignore: prefer_const_constructors
     return Scaffold(
       backgroundColor: Colors.black87,
       body: Column(
@@ -33,10 +33,10 @@ class _SearchPlacesScreenState extends State<SearchPlacesScreen> {
               ],
             ),
             child: Padding(
-              padding: const EdgeInsets.all(18.0),
+              padding: const EdgeInsets.all(15.0),
               child: Column(
                 children: [
-                  const SizedBox(height: 25.0),
+                  const SizedBox(height: 30.0),
                   Stack(
                     children: [
                       GestureDetector(
@@ -45,14 +45,14 @@ class _SearchPlacesScreenState extends State<SearchPlacesScreen> {
                         },
                         child: const Icon(
                           Icons.arrow_back,
-                          color: Colors.grey,
+                          color: Colors.amber,
                         ),
                       ),
                       const Center(
                         child: Text(
-                          " Search & Set DropOff Lo²cation",
+                          "Search & Set DropOff Location",
                           style: TextStyle(
-                            fontSize: 18.0,
+                            fontSize: 15.0,
                             color: Colors.grey,
                             fontWeight: FontWeight.bold,
                           ),
@@ -60,11 +60,13 @@ class _SearchPlacesScreenState extends State<SearchPlacesScreen> {
                       )
                     ],
                   ),
+                  const SizedBox(height: 10.0),
                   Row(
                     children: [
                       const Icon(
                         Icons.adjust_sharp,
-                        color: Colors.grey,
+                        color: Colors.amber,
+                        size:30.0 ,
                       ),
                       const SizedBox(width: 18.0),
                       Expanded(
