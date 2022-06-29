@@ -10,7 +10,10 @@ class SearchPlacesScreen extends StatefulWidget {
 class _SearchPlacesScreenState extends State<SearchPlacesScreen> {
   // 48. Enable Places API [Auto Complete Place Search]
 
-  void findPlaceAutoCompleteSearch(){}
+  void findPlaceAutoCompleteSearch(String inputText) {
+    if (inputText.length > 1) {} //2 or more than 2 input characters
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -68,7 +71,7 @@ class _SearchPlacesScreenState extends State<SearchPlacesScreen> {
                       const Icon(
                         Icons.adjust_sharp,
                         color: Colors.amber,
-                        size:30.0 ,
+                        size: 30.0,
                       ),
                       const SizedBox(width: 18.0),
                       Expanded(
