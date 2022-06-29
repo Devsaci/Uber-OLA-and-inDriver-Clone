@@ -15,7 +15,7 @@ class _SearchPlacesScreenState extends State<SearchPlacesScreen> {
   void findPlaceAutoCompleteSearch(String inputText) async{
     if (inputText.length > 1) {
       String urlAutoCompleteSearch =
-          "https://maps.googleapis.com/maps/api/place/autocomplete/json?input=$inputText&key=$mapKey";
+          "https://maps.googleapis.com/maps/api/place/autocomplete/json?input=$inputText&key=$mapKey&components=country:FR";
     } //2 or more than 2 input characters
   }
 
