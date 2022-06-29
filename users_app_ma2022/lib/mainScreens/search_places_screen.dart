@@ -19,7 +19,12 @@ class _SearchPlacesScreenState extends State<SearchPlacesScreen> {
           "https://maps.googleapis.com/maps/api/place/autocomplete/json?input=$inputText&key=$mapKey&components=country:FR";
       var responseAutoCompleteSearch =
           await RequestAssistant.receiveRequest(urlAutoCompleteSearch);
-      if(responseAutoCompleteSearch == "Error Occurred, Failed. No Response."){}
+      if (responseAutoCompleteSearch ==
+          "Error Occurred, Failed. No Response.") {
+        return;
+      }
+      print("this is response  / result");
+      print(responseAutoCompleteSearch);
     }
   }
 
