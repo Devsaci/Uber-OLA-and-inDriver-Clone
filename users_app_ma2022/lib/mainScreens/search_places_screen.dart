@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../assistants/request_assistant.dart';
 import '../global/map_key.dart';
 
 class SearchPlacesScreen extends StatefulWidget {
@@ -16,6 +17,7 @@ class _SearchPlacesScreenState extends State<SearchPlacesScreen> {
     if (inputText.length > 1) {
       String urlAutoCompleteSearch =
           "https://maps.googleapis.com/maps/api/place/autocomplete/json?input=$inputText&key=$mapKey&components=country:FR";
+      RequestAssistant.receiveRequest("url");
     } //2 or more than 2 input characters
   }
 
