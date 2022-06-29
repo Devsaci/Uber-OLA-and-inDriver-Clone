@@ -92,7 +92,10 @@ class _SearchPlacesScreenState extends State<SearchPlacesScreen> {
                         child: Padding(
                           padding: const EdgeInsets.all(8.0),
                           child: TextField(
-                            onChanged: (valueTyped) {},
+                            onChanged: (valueTyped)
+                            {
+                              findPlaceAutoCompleteSearch(valueTyped);
+                            },
                             decoration: const InputDecoration(
                               hintText: "search here...",
                               fillColor: Colors.white54,
