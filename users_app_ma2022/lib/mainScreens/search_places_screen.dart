@@ -11,7 +11,10 @@ class _SearchPlacesScreenState extends State<SearchPlacesScreen> {
   // 48. Enable Places API [Auto Complete Place Search]
 
   void findPlaceAutoCompleteSearch(String inputText) {
-    if (inputText.length > 1) {} //2 or more than 2 input characters
+    if (inputText.length > 1) {
+      String urlAutoCompleteSearch =
+          "https://maps.googleapis.com/maps/api/place/autocomplete/json?input=$inputText&keyYOUR_API_KEY=";
+    } //2 or more than 2 input characters
   }
 
   @override
