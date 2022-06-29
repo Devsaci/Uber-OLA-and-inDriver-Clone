@@ -9,6 +9,8 @@ class SearchPlacesScreen extends StatefulWidget {
 
 class _SearchPlacesScreenState extends State<SearchPlacesScreen> {
   // 48. Enable Places API [Auto Complete Place Search]
+
+  void findPlaceAutoCompleteSearch(){}
   @override
   Widget build(BuildContext context) {
     return Scaffold(
