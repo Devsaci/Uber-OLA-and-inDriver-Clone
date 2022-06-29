@@ -10,7 +10,7 @@ class SearchPlacesScreen extends StatefulWidget {
 class _SearchPlacesScreenState extends State<SearchPlacesScreen> {
   // 48. Enable Places API [Auto Complete Place Search]
 
-  void findPlaceAutoCompleteSearch(String inputText) {
+  void findPlaceAutoCompleteSearch(String inputText) async{
     if (inputText.length > 1) {
       String urlAutoCompleteSearch =
           "https://maps.googleapis.com/maps/api/place/autocomplete/json?input=$inputText&keyYOUR_API_KEY=";
