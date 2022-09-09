@@ -2,14 +2,9 @@
 
 import 'package:flutter/material.dart';
 
-class PlacePredictionTileDesign extends StatefulWidget {
+class PlacePredictionTileDesign extends StatelessWidget {
   const PlacePredictionTileDesign({Key? key}) : super(key: key);
 
-  @override
-  State<PlacePredictionTileDesign> createState() => _PlacePredictionTileDesignState();
-}
-
-class _PlacePredictionTileDesignState extends State<PlacePredictionTileDesign> {
   @override
   Widget build(BuildContext context) {
     return Container();
