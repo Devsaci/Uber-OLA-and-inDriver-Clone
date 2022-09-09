@@ -13,7 +13,7 @@ class SearchPlacesScreen extends StatefulWidget {
 
 class _SearchPlacesScreenState extends State<SearchPlacesScreen> {
   // 48. Enable Places API [Auto Complete Place Search]
-
+  List<PredictedPlaces> placesPredictedList = [];
   void findPlaceAutoCompleteSearch(String inputText) async {
     if (inputText.length > 1) {
       String urlAutoCompleteSearch =
