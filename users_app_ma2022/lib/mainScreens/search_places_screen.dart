@@ -23,8 +23,7 @@ class _SearchPlacesScreenState extends State<SearchPlacesScreen> {
           "Error Occurred, Failed. No Response.") {
         return;
       }
-      print("this is response  / result");
-      print(responseAutoCompleteSearch);
+      if(responseAutoCompleteSearch["status"] == "OK");
     }
   }
 
