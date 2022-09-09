@@ -29,6 +29,7 @@ class _SearchPlacesScreenState extends State<SearchPlacesScreen> {
         var placePredictionsList = (placePredictions as List)
             .map((jsonData) => PredictedPlaces.fromJson(jsonData))
             .toList();
+        placesPredictedList = placePredictionsList;
       }
     }
   }
