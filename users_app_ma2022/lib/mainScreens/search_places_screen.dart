@@ -24,11 +24,12 @@ class _SearchPlacesScreenState extends State<SearchPlacesScreen> {
           "Error Occurred, Failed. No Response.") {
         return;
       }
-      if(responseAutoCompleteSearch["status"] == "OK"){
+      if (responseAutoCompleteSearch["status"] == "OK") {
         var placePredictions = responseAutoCompleteSearch["predictions"];
-        (placePredictions as List).map((jsonData) => PredictedPlaces.fromJson(jsonData)).toList();
+        var placePredictionsList = (placePredictions as List)
+            .map((jsonData) => PredictedPlaces.fromJson(jsonData))
+            .toList();
       }
-
     }
   }
 
@@ -96,8 +97,7 @@ class _SearchPlacesScreenState extends State<SearchPlacesScreen> {
                         child: Padding(
                           padding: const EdgeInsets.all(8.0),
                           child: TextField(
-                            onChanged: (valueTyped)
-                            {
+                            onChanged: (valueTyped) {
                               findPlaceAutoCompleteSearch(valueTyped);
                             },
                             decoration: const InputDecoration(
