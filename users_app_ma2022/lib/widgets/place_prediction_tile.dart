@@ -2,8 +2,12 @@
 
 import 'package:flutter/material.dart';
 
+import '../models/predicted_places.dart';
+
 class PlacePredictionTileDesign extends StatelessWidget {
-  const PlacePredictionTileDesign({Key? key}) : super(key: key);
+  final PredictedPlaces? predictedPlaces;
+
+  PlacePredictionTileDesign(this.predictedPlaces);
 
   @override
   Widget build(BuildContext context) {
