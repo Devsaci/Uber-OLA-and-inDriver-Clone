@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../assistants/request_assistant.dart';
 import '../global/map_key.dart';
+import '../models/predicted_places.dart';
 
 class SearchPlacesScreen extends StatefulWidget {
   const SearchPlacesScreen({Key? key}) : super(key: key);
@@ -25,7 +26,7 @@ class _SearchPlacesScreenState extends State<SearchPlacesScreen> {
       }
       if(responseAutoCompleteSearch["status"] == "OK"){
         var placePredictions = responseAutoCompleteSearch["predictions"];
-        (placePredictions as List).map((jsonData) => null);
+        (placePredictions as List).map((jsonData) => PredictedPlaces.fromJson(jsonData)).toList();
       }
 
     }
