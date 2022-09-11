@@ -35,6 +35,16 @@ class PlacePredictionTileDesign extends StatelessWidget {
                     color: Colors.white54,
                   ),
                 ),
+                const SizedBox(height: 2.0,),
+                Text(
+                  predictedPlaces!.secondary_text!,
+                  overflow: TextOverflow.ellipsis,
+                  style: const TextStyle(
+                    fontSize: 12.0,
+                    color: Colors.white54,
+                  ),
+                ),
+                const SizedBox(height: 8.0,),
               ],
             ),
           )
