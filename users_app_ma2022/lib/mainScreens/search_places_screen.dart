@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '../assistants/request_assistant.dart';
 import '../global/map_key.dart';
 import '../models/predicted_places.dart';
+import '../widgets/place_prediction_tile.dart';
 
 class SearchPlacesScreen extends StatefulWidget {
   const SearchPlacesScreen({Key? key}) : super(key: key);
@@ -130,10 +131,12 @@ class _SearchPlacesScreenState extends State<SearchPlacesScreen> {
                   child: ListView.separated(
                     itemCount: placesPredictedList.length,
                     physics: const ClampingScrollPhysics(),
-                    itemBuilder: (BuildContext context, int index) {
-                      return const Text('PlacePredictionTileDesign');
+                    itemBuilder: ( context, index) {
+                      return PlacePredictionTileDesign(
+                        predictedPlaces: placesPredictedList[index],
+                      );
                     },
-                    separatorBuilder: (context, index) {
+                    separatorBuilder: (BuildContext context, int index) {
                       return const Divider(
                         height: 1,
                         color: Colors.white,
