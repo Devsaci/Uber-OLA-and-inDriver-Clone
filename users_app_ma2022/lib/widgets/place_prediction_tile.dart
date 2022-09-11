@@ -24,8 +24,17 @@ class PlacePredictionTileDesign extends StatelessWidget {
           ),
           Expanded(
             child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-
+                const SizedBox(height: 8.0,),
+                Text(
+                  predictedPlaces!.main_text!,
+                  overflow: TextOverflow.ellipsis,
+                  style: const TextStyle(
+                    fontSize: 16.0,
+                    color: Colors.white54,
+                  ),
+                ),
               ],
             ),
           )
