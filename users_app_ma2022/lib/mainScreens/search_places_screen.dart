@@ -133,7 +133,11 @@ class _SearchPlacesScreenState extends State<SearchPlacesScreen> {
                       return const Text('PlacePredictionTileDesign');
                     },
                     separatorBuilder: (context, index) {
-                      return const Text('Divider');
+                      return const Divider(
+                        height: 1,
+                        color: Colors.white,
+                        thickness: 1,
+                      );
                     },
                   ),
                 )
