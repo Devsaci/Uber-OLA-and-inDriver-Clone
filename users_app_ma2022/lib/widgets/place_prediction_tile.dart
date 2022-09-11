@@ -17,8 +17,11 @@ class PlacePredictionTileDesign extends StatelessWidget {
 
       },
       child: Row(
-        children: [
-
+        children: const [
+          Icon(
+            Icons.add_location,
+            color: Colors.grey,
+          ),
         ],
       ),
     );
