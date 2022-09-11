@@ -123,6 +123,7 @@ class _SearchPlacesScreenState extends State<SearchPlacesScreen> {
               ),
             ),
           ),
+          //display place predictions result
         ],
       ),
     );
