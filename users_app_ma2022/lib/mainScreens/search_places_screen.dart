@@ -129,7 +129,8 @@ class _SearchPlacesScreenState extends State<SearchPlacesScreen> {
               ? Expanded(
                   child: ListView.separated(
                     itemCount: placesPredictedList.length,
-                    physics: const ClampingScrollPhysics(),                    itemBuilder: (BuildContext context, int index) {
+                    physics: const ClampingScrollPhysics(),
+                    itemBuilder: (BuildContext context, int index) {
                       return const Text('PlacePredictionTileDesign');
                     },
                     separatorBuilder: (context, index) {
