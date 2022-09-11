@@ -12,16 +12,23 @@ class PlacePredictionTileDesign extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
-      onPressed: ()
-      {
-
-      },
+      onPressed: () {},
       child: Row(
-        children: const [
-          Icon(
+        children:  [
+          const Icon(
             Icons.add_location,
             color: Colors.grey,
           ),
+          const SizedBox(
+            width: 14.0,
+          ),
+          Expanded(
+            child: Column(
+              children: [
+
+              ],
+            ),
+          )
         ],
       ),
     );
