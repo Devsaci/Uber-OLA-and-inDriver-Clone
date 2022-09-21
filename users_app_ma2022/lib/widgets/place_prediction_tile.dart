@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:users_app/widgets/progress_dialog.dart';
 
+import '../assistants/request_assistant.dart';
 import '../global/map_key.dart';
 import '../models/predicted_places.dart';
 
@@ -11,7 +12,7 @@ class PlacePredictionTileDesign extends StatelessWidget {
 
   PlacePredictionTileDesign({this.predictedPlaces});
 
-  getPlaceDirectionDetails(String? placeId, context) {
+  getPlaceDirectionDetails(String? placeId, context) async {
     showDialog(
         context: context,
         builder: (BuildContext context) => ProgressDialog(
@@ -19,6 +20,7 @@ class PlacePredictionTileDesign extends StatelessWidget {
             ));
     String placeDirectionDetailsUrl =
         "https://maps.googleapis.com/maps/api/place/details/json?place_id=$placeId&key=$mapKey";
+    await RequestAssistant.receiveRequest(placeDirectionDetailsUrl);
   }
 
   @override
