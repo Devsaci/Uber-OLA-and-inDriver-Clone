@@ -9,14 +9,14 @@ class PlacePredictionTileDesign extends StatelessWidget {
 
   PlacePredictionTileDesign({this.predictedPlaces});
 
-  void getPlaceDirectionDetails() {}
+  getPlaceDirectionDetails(String? placeId,context) {}
 
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
       onPressed: () {
         //51. get lat & lng for drop-off location using placeId
-        getPlaceDirectionDetails();
+        getPlaceDirectionDetails(predictedPlaces!.place_id,context);
       },
       style: ElevatedButton.styleFrom(
         primary: Colors.white24,
