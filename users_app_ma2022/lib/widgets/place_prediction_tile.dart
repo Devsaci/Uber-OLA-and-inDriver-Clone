@@ -16,6 +16,8 @@ class PlacePredictionTileDesign extends StatelessWidget {
         builder: (BuildContext context) => ProgressDialog(
               message: "Setting Up Drof-Off, Please wait...",
             ));
+    String placeDirectionDetailsUrl =
+        "https://maps.googleapis.com/maps/api/place/details/json?place_id=$placeId&key=$mapKey";
   }
 
   @override
