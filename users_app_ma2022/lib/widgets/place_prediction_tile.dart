@@ -10,10 +10,12 @@ class PlacePredictionTileDesign extends StatelessWidget {
 
   PlacePredictionTileDesign({this.predictedPlaces});
 
-  getPlaceDirectionDetails(String? placeId,context) {
-    showDialog(context: context, builder: (BuildContext context){
-      return ProgressDialog();
-    });
+  getPlaceDirectionDetails(String? placeId, context) {
+    showDialog(
+        context: context,
+        builder: (BuildContext context) => ProgressDialog(
+              message: "Setting Up Drof-Off, Please wait...",
+            ));
   }
 
   @override
@@ -21,7 +23,7 @@ class PlacePredictionTileDesign extends StatelessWidget {
     return ElevatedButton(
       onPressed: () {
         //51. get lat & lng for drop-off location using placeId
-        getPlaceDirectionDetails(predictedPlaces!.place_id,context);
+        getPlaceDirectionDetails(predictedPlaces!.place_id, context);
       },
       style: ElevatedButton.styleFrom(
         primary: Colors.white24,
