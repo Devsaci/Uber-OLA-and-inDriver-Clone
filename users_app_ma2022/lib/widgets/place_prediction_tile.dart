@@ -9,17 +9,22 @@ class PlacePredictionTileDesign extends StatelessWidget {
 
   PlacePredictionTileDesign({this.predictedPlaces});
 
+  void getPlaceDirectionDetails() {}
+
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
-      onPressed: () {},
+      onPressed: () {
+        //51. get lat & lng for drop-off location using placeId
+        getPlaceDirectionDetails();
+      },
       style: ElevatedButton.styleFrom(
         primary: Colors.white24,
       ),
       child: Padding(
         padding: const EdgeInsets.all(4.0),
         child: Row(
-          children:  [
+          children: [
             const Icon(
               Icons.add_location,
               color: Colors.grey,
@@ -31,7 +36,9 @@ class PlacePredictionTileDesign extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  const SizedBox(height: 8.0,),
+                  const SizedBox(
+                    height: 8.0,
+                  ),
                   Text(
                     predictedPlaces!.main_text!,
                     overflow: TextOverflow.ellipsis,
@@ -40,7 +47,9 @@ class PlacePredictionTileDesign extends StatelessWidget {
                       color: Colors.white54,
                     ),
                   ),
-                  const SizedBox(height: 2.0,),
+                  const SizedBox(
+                    height: 2.0,
+                  ),
                   Text(
                     predictedPlaces!.secondary_text!,
                     overflow: TextOverflow.ellipsis,
@@ -49,7 +58,9 @@ class PlacePredictionTileDesign extends StatelessWidget {
                       color: Colors.white54,
                     ),
                   ),
-                  const SizedBox(height: 8.0,),
+                  const SizedBox(
+                    height: 8.0,
+                  ),
                 ],
               ),
             )
