@@ -21,6 +21,10 @@ class PlacePredictionTileDesign extends StatelessWidget {
     String placeDirectionDetailsUrl =
         "https://maps.googleapis.com/maps/api/place/details/json?place_id=$placeId&key=$mapKey";
     var responseApi = await RequestAssistant.receiveRequest(placeDirectionDetailsUrl);
+    if(responseApi == "Error Occurred, Failed. No Response.")
+    {
+      return;
+    }
   }
 
   @override
