@@ -1,6 +1,7 @@
 //49. Convert, Add json Response Data to List - Display Places Predictions on ListView
 
 import 'package:flutter/material.dart';
+import 'package:users_app/widgets/progress_dialog.dart';
 
 import '../models/predicted_places.dart';
 
@@ -9,7 +10,11 @@ class PlacePredictionTileDesign extends StatelessWidget {
 
   PlacePredictionTileDesign({this.predictedPlaces});
 
-  getPlaceDirectionDetails(String? placeId,context) {}
+  getPlaceDirectionDetails(String? placeId,context) {
+    showDialog(context: context, builder: (BuildContext context){
+      return ProgressDialog();
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
