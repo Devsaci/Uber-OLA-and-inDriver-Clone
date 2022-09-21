@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:users_app/widgets/progress_dialog.dart';
 
+import '../global/map_key.dart';
 import '../models/predicted_places.dart';
 
 class PlacePredictionTileDesign extends StatelessWidget {
