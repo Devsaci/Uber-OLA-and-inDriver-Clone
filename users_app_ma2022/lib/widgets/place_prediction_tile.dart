@@ -34,6 +34,7 @@ class PlacePredictionTileDesign extends StatelessWidget {
           responseApi["result"]["geometry"]["location"]["lat"];
       direction.locationLongitude =
           responseApi["result"]["geometry"]["location"]["lng"];
+      print('locationName = ' + direction.locationName!);
     }
   }
 
