@@ -5,6 +5,7 @@ import 'package:users_app/widgets/progress_dialog.dart';
 
 import '../assistants/request_assistant.dart';
 import '../global/map_key.dart';
+import '../models/directions.dart';
 import '../models/predicted_places.dart';
 
 class PlacePredictionTileDesign extends StatelessWidget {
@@ -25,7 +26,9 @@ class PlacePredictionTileDesign extends StatelessWidget {
     if (responseApi == "Error Occurred, Failed. No Response.") {
       return;
     }
-    if (responseApi["status"] == "OK") {}
+    if (responseApi["status"] == "OK") {
+      Directions direction = Directions();
+    }
   }
 
   @override
