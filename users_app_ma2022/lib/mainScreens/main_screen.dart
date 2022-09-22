@@ -330,16 +330,23 @@ class _MainScreenState extends State<MainScreen> {
                           Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              const Text( "From",
+                              const Text(
+                                "From",
                                 style:
                                     TextStyle(color: Colors.grey, fontSize: 12),
                               ),
                               Text(
-                                Provider.of<AppInfo>(context).userPickUpLocation != null
-                                    ? (Provider.of<AppInfo>(context).userPickUpLocation!.locationName!).substring(0,25)+ "..."
+                                Provider.of<AppInfo>(context)
+                                            .userPickUpLocation !=
+                                        null
+                                    ? (Provider.of<AppInfo>(context)
+                                                .userPickUpLocation!
+                                                .locationName!)
+                                            .substring(0, 25) +
+                                        "..."
                                     : "not getting address",
-                                style:
-                                    const TextStyle(color: Colors.grey, fontSize: 14),
+                                style: const TextStyle(
+                                    color: Colors.grey, fontSize: 14),
                               ),
                             ],
                           ),
@@ -355,9 +362,12 @@ class _MainScreenState extends State<MainScreen> {
                       // 47. search dropoff location address screen ui
                       //to
                       GestureDetector(
-                        onTap: (){
+                        onTap: () {
                           // ignore: prefer_const_constructors
-                          Navigator.push(context, MaterialPageRoute(builder: (c) => SearchPlacesScreen()));
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (c) => SearchPlacesScreen()));
                         },
                         child: Row(
                           children: [
@@ -370,16 +380,18 @@ class _MainScreenState extends State<MainScreen> {
                             ),
                             Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
-                              children: const [
-                                Text(
+                              children: [
+                                const Text(
                                   "to",
-                                  style:
-                                      TextStyle(color: Colors.grey, fontSize: 12),
+                                  style: TextStyle(
+                                      color: Colors.grey, fontSize: 12),
                                 ),
                                 Text(
-                                  "Where to go?",
-                                  style:
-                                      TextStyle(color: Colors.grey, fontSize: 14),
+                                  Provider.of<AppInfo>(context).userDropOffLocation != null
+                                      ? Provider.of<AppInfo>(context).userDropOffLocation!.locationName!
+                                      : "Where to go?",
+                                  style: const TextStyle(
+                                      color: Colors.grey, fontSize: 14),
                                 ),
                               ],
                             ),
