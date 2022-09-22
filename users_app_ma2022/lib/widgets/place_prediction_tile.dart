@@ -23,6 +23,8 @@ class PlacePredictionTileDesign extends StatelessWidget {
         "https://maps.googleapis.com/maps/api/place/details/json?place_id=$placeId&key=$mapKey";
     var responseApi =
         await RequestAssistant.receiveRequest(placeDirectionDetailsUrl);
+    //52. update and display drop-off location using provider state management
+    Navigator.pop(context);
     if (responseApi == "Error Occurred, Failed. No Response.") {
       return;
     }
@@ -34,11 +36,12 @@ class PlacePredictionTileDesign extends StatelessWidget {
           responseApi["result"]["geometry"]["location"]["lat"];
       direction.locationLongitude =
           responseApi["result"]["geometry"]["location"]["lng"];
-      print('///////////////////////////////////////////////////');
+      //print('///////////////////////////////////////////////////');
       // print('\nlocationName = ' + direction.locationName!);
       // print('\nlocationLatitude = ' + direction.locationLatitude!.toString());
       // print('\nlocationLongitude = ' + direction.locationLongitude!.toString());
-      print('///////////////////////////////////////////////////');
+      //print('///////////////////////////////////////////////////');
+
     }
   }
 
