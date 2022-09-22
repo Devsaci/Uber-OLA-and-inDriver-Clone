@@ -363,11 +363,10 @@ class _MainScreenState extends State<MainScreen> {
                       //to
                       GestureDetector(
                         onTap: () {
-                          // ignore: prefer_const_constructors
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (c) => SearchPlacesScreen()));
+                          var responseFromSearchScreen =  Navigator.push(context, MaterialPageRoute(
+                              builder: (c) => const SearchPlacesScreen(),
+                            ),
+                          );
                         },
                         child: Row(
                           children: [
@@ -387,8 +386,12 @@ class _MainScreenState extends State<MainScreen> {
                                       color: Colors.grey, fontSize: 12),
                                 ),
                                 Text(
-                                  Provider.of<AppInfo>(context).userDropOffLocation != null
-                                      ? Provider.of<AppInfo>(context).userDropOffLocation!.locationName!
+                                  Provider.of<AppInfo>(context)
+                                              .userDropOffLocation !=
+                                          null
+                                      ? Provider.of<AppInfo>(context)
+                                          .userDropOffLocation!
+                                          .locationName!
                                       : "Where to go?",
                                   style: const TextStyle(
                                       color: Colors.grey, fontSize: 14),
