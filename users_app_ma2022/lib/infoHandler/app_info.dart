@@ -11,6 +11,6 @@ class AppInfo extends ChangeNotifier {
   }
 
   void updateDropOffLocationAddress(Directions dropOffAddress) {
-    dropOffAddress;
+    userDropOffLocation = dropOffAddress;
   }
 }
