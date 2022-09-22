@@ -1,6 +1,8 @@
 //49. Convert, Add json Response Data to List - Display Places Predictions on ListView
 
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:users_app/infoHandler/app_info.dart';
 import 'package:users_app/widgets/progress_dialog.dart';
 
 import '../assistants/request_assistant.dart';
@@ -36,6 +38,8 @@ class PlacePredictionTileDesign extends StatelessWidget {
           responseApi["result"]["geometry"]["location"]["lat"];
       direction.locationLongitude =
           responseApi["result"]["geometry"]["location"]["lng"];
+      Provider.of<AppInfo>(context);
+
       //print('///////////////////////////////////////////////////');
       // print('\nlocationName = ' + direction.locationName!);
       // print('\nlocationLatitude = ' + direction.locationLatitude!.toString());
