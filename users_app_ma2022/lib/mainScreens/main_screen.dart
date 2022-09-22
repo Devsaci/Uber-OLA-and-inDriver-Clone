@@ -367,6 +367,10 @@ class _MainScreenState extends State<MainScreen> {
                               builder: (c) => const SearchPlacesScreen(),
                             ),
                           );
+                          if( responseFromSearchScreen == "obtainedDropoff")
+                          {
+
+                          };
                         },
                         child: Row(
                           children: [
