@@ -3,14 +3,12 @@ import 'package:flutter/cupertino.dart';
 import 'package:users_app/models/directions.dart';
 
 class AppInfo extends ChangeNotifier {
-  Directions? userPickUpLocation;
+  Directions? userPickUpLocation, userDropOffLocation;
 
   void updatePickUpLocationAddress(Directions userPickUpAddress, context) {
     userPickUpLocation = userPickUpAddress;
     notifyListeners();
   }
 
-  void updateDropOffLocationAddress(Directions dropOffAddress) {
-    dropOffAddress;
-  }
+  void updateDropOffLocationAddress(Directions dropOffAddress) {}
 }
