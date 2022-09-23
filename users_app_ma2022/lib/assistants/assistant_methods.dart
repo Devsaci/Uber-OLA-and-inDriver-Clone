@@ -58,7 +58,7 @@ class AssistantMethods {
       LatLng origionPosition, LatLng destinationPosition) async {
     String urlOriginToDestinationDirectionDetails =
         'https://maps.googleapis.com/maps/api/directions/json?origin=${origionPosition.latitude},${origionPosition.longitude}&destination=${destinationPosition.latitude},${destinationPosition.longitude}&key=$mapKey';
-    await RequestAssistant.receiveRequest(
+    var responseDirectionApi = await RequestAssistant.receiveRequest(
         urlOriginToDestinationDirectionDetails);
   }
 }
