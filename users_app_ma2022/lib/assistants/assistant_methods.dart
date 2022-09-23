@@ -12,7 +12,7 @@ import '../models/directions.dart';
 
 class AssistantMethods {
   static Future<String?> searchAddressForGeographicCoOrdinates(
-      Position position,context) async {
+      Position position, context) async {
     String apiUrl =
         "https://maps.googleapis.com/maps/api/geocode/json?latlng=${position.latitude},${position.longitude}&key=$mapKey";
     String humanReadableAddress = "";
@@ -24,7 +24,8 @@ class AssistantMethods {
       userPickUpAddress.locationLatitude = position.latitude;
       userPickUpAddress.locationLongitude = position.longitude;
       userPickUpAddress.locationName = humanReadableAddress;
-      Provider.of<AppInfo>(context, listen: false).updatePickUpLocationAddress(userPickUpAddress, context);
+      Provider.of<AppInfo>(context, listen: false)
+          .updatePickUpLocationAddress(userPickUpAddress, context);
     }
     return humanReadableAddress;
   }
@@ -46,5 +47,13 @@ class AssistantMethods {
         //31. Navigation Drawer - Drawer Header
       }
     });
+  }
+
+// 54. direction details api - get direction details from origin to destination
+// API Library : Direction API Enable
+//https://console.cloud.google.com/apis/library/browse?project=uber-ola-and-indriver-cl-8fe3d&q=direction%20API
+
+  void obtainOriginToDestinationDirectionDetails() {
+    String urlOriginToDestinationDirectionDetails = '';
   }
 }
