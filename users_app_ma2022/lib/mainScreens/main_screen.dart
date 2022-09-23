@@ -439,6 +439,6 @@ class _MainScreenState extends State<MainScreen> {
   // 54. direction details api - get direction details from origin to destination
   Future<void> drawPolyLineFromOriginToDestination() async {
     var originPosition = Provider.of<AppInfo>(context, listen: false).userPickUpLocation;
-    Provider.of<AppInfo>(context, listen: false).userDropOffLocation;
+    var destinationPosition = Provider.of<AppInfo>(context, listen: false).userDropOffLocation;
   }
 }
