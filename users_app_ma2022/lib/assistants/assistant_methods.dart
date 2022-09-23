@@ -68,6 +68,7 @@ class AssistantMethods {
     //https://developers.google.com/maps/documentation/directions/start
     directionDetailsInfo.e_points =
         responseDirectionApi["routes"][0]["overview_polyline"]["points"];
-    responseDirectionApi["routes"][0]["legs"][0]["distance"]["text"];
+    directionDetailsInfo.distance_text =
+        responseDirectionApi["routes"][0]["legs"][0]["distance"]["text"];
   }
 }
