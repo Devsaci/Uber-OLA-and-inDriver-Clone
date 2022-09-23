@@ -371,7 +371,8 @@ class _MainScreenState extends State<MainScreen> {
                           );
                           if (responseFromSearchScreen == "obtainedDropoff") {
                             //draw routes - draw polyline
-                          };
+                          }
+                          ;
                         },
                         child: Row(
                           children: [
@@ -438,11 +439,14 @@ class _MainScreenState extends State<MainScreen> {
 
   // 54. direction details api - get direction details from origin to destination
   Future<void> drawPolyLineFromOriginToDestination() async {
-    var originPosition = Provider.of<AppInfo>(context, listen: false).userPickUpLocation;
-    var destinationPosition = Provider.of<AppInfo>(context, listen: false).userDropOffLocation;
+    var originPosition =
+        Provider.of<AppInfo>(context, listen: false).userPickUpLocation;
+    var destinationPosition =
+        Provider.of<AppInfo>(context, listen: false).userDropOffLocation;
 
-    var originLatLng = LatLng(originPosition!.locationLatitude!, originPosition.locationLongitude!);
-    var destinationLatLng = LatLng(destinationPosition!.locationLatitude!, destinationPosition.locationLongitude!);
-
+    var originLatLng = LatLng(
+        originPosition!.locationLatitude!, originPosition.locationLongitude!);
+    var destinationLatLng = LatLng(destinationPosition!.locationLatitude!,
+        destinationPosition.locationLongitude!);
   }
 }
