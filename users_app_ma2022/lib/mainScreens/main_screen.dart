@@ -9,6 +9,7 @@ import 'package:users_app/mainScreens/search_places_screen.dart';
 import 'package:users_app/widgets/my_drawer.dart';
 
 import '../infoHandler/app_info.dart';
+import '../widgets/progress_dialog.dart';
 
 class MainScreen extends StatefulWidget {
   // const MainScreen({Key? key}) : super(key: key);
@@ -452,7 +453,12 @@ class _MainScreenState extends State<MainScreen> {
     var directionDetailsInfo =
         await AssistantMethods.obtainOriginToDestinationDirectionDetails(
             originLatLng, destinationLatLng);
-
+    showDialog(
+      context: context,
+      builder: (BuildContext context) => ProgressDialog(
+        message: "Please wait...",
+      ),
+    );
     print("These are points = ");
     print(directionDetailsInfo!.e_points);
   }
