@@ -363,14 +363,16 @@ class _MainScreenState extends State<MainScreen> {
                       //to
                       GestureDetector(
                         onTap: () {
-                          var responseFromSearchScreen =  Navigator.push(context, MaterialPageRoute(
+                          var responseFromSearchScreen = Navigator.push(
+                            context,
+                            MaterialPageRoute(
                               builder: (c) => const SearchPlacesScreen(),
                             ),
                           );
-                          if( responseFromSearchScreen == "obtainedDropoff")
-                          {
-                              //draw routes - draw polyline
-                          };
+                          if (responseFromSearchScreen == "obtainedDropoff") {
+                            //draw routes - draw polyline
+                          }
+                          ;
                         },
                         child: Row(
                           children: [
@@ -434,4 +436,7 @@ class _MainScreenState extends State<MainScreen> {
       ),
     );
   }
+
+  // 54. direction details api - get direction details from origin to destination
+  Future<void> drawPolyLineFromOriginToDestination() async {}
 }
