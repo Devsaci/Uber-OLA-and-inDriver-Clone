@@ -449,6 +449,8 @@ class _MainScreenState extends State<MainScreen> {
     var destinationLatLng = LatLng(destinationPosition!.locationLatitude!,
         destinationPosition.locationLongitude!);
 
-    await AssistantMethods.obtainOriginToDestinationDirectionDetails(originLatLng, destinationLatLng);
+    var directionDetailsInfo =
+        await AssistantMethods.obtainOriginToDestinationDirectionDetails(
+            originLatLng, destinationLatLng);
   }
 }
