@@ -60,5 +60,9 @@ class AssistantMethods {
         'https://maps.googleapis.com/maps/api/directions/json?origin=${origionPosition.latitude},${origionPosition.longitude}&destination=${destinationPosition.latitude},${destinationPosition.longitude}&key=$mapKey';
     var responseDirectionApi = await RequestAssistant.receiveRequest(
         urlOriginToDestinationDirectionDetails);
+    if(responseDirectionApi == "Error Occurred, Failed. No Response.")
+    {
+      return;
+    }
   }
 }
