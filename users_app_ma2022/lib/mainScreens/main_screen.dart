@@ -461,6 +461,8 @@ class _MainScreenState extends State<MainScreen> {
         await AssistantMethods.obtainOriginToDestinationDirectionDetails(
             originLatLng, destinationLatLng);
 
+    Navigator.pop(context);
+
     print("These are points = ");
     print(directionDetailsInfo!.e_points);
   }
