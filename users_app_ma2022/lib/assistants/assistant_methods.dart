@@ -55,6 +55,6 @@ class AssistantMethods {
 //https://console.cloud.google.com/apis/library/browse?project=uber-ola-and-indriver-cl-8fe3d&q=direction%20API
 
   void obtainOriginToDestinationDirectionDetails(LatLng origionPosition, LatLng destinationPosition) {
-    String urlOriginToDestinationDirectionDetails = 'https://maps.googleapis.com/maps/api/directions/json?origin=${"origionPosition.latitude"},${"origionPosition.longitude"}&destination=${"destinationPosition.latitude"},${"destinationPosition.longitude"}&key=$mapKey';
+    String urlOriginToDestinationDirectionDetails = 'https://maps.googleapis.com/maps/api/directions/json?origin=${origionPosition.latitude},${origionPosition.longitude}&destination=${destinationPosition.latitude},${destinationPosition.longitude}&key=$mapKey';
   }
 }
