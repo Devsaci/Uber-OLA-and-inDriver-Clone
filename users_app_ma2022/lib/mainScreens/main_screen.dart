@@ -452,5 +452,8 @@ class _MainScreenState extends State<MainScreen> {
     var directionDetailsInfo =
         await AssistantMethods.obtainOriginToDestinationDirectionDetails(
             originLatLng, destinationLatLng);
+
+    print("These are points = ");
+    print(directionDetailsInfo!.e_points);
   }
 }
