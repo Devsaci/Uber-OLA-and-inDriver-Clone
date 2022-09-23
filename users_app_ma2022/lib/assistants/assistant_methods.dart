@@ -65,6 +65,7 @@ class AssistantMethods {
       return;
     }
     DirectionDetailsInfo directionDetailsInfo = DirectionDetailsInfo();
+    //https://developers.google.com/maps/documentation/directions/start
     directionDetailsInfo.e_points =
         responseDirectionApi["routes"][0]["overview_polyline"]["points"];
   }
