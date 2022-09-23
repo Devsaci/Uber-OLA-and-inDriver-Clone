@@ -440,5 +440,7 @@ class _MainScreenState extends State<MainScreen> {
   Future<void> drawPolyLineFromOriginToDestination() async {
     var originPosition = Provider.of<AppInfo>(context, listen: false).userPickUpLocation;
     var destinationPosition = Provider.of<AppInfo>(context, listen: false).userDropOffLocation;
+
+    var originLatLng = LatLng(originPosition!.locationLatitude!, originPosition.locationLongitude!);
   }
 }
