@@ -65,6 +65,7 @@ class AssistantMethods {
       return;
     }
     DirectionDetailsInfo directionDetailsInfo = DirectionDetailsInfo();
-    responseDirectionApi["routes"][0]["overview_polyline"]["points"];
+    directionDetailsInfo.e_points =
+        responseDirectionApi["routes"][0]["overview_polyline"]["points"];
   }
 }
