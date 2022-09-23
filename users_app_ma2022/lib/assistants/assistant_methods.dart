@@ -1,6 +1,7 @@
 //30. Read and Display Current Online user info from Database
 import 'package:firebase_database/firebase_database.dart';
 import 'package:geolocator/geolocator.dart';
+import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:provider/provider.dart';
 import 'package:users_app/assistants/request_assistant.dart';
 import 'package:users_app/global/global.dart';
@@ -53,7 +54,7 @@ class AssistantMethods {
 // API Library : Direction API Enable
 //https://console.cloud.google.com/apis/library/browse?project=uber-ola-and-indriver-cl-8fe3d&q=direction%20API
 
-  void obtainOriginToDestinationDirectionDetails() {
+  void obtainOriginToDestinationDirectionDetails(LatLng origionPosition, LatLng destinationPosition) {
     String urlOriginToDestinationDirectionDetails = 'https://maps.googleapis.com/maps/api/directions/json?origin=${"origionPosition.latitude"},${"origionPosition.longitude"}&destination=${"destinationPosition.latitude"},${"destinationPosition.longitude"}&key=$mapKey';
   }
 }
