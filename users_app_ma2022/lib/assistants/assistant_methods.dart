@@ -6,6 +6,7 @@ import 'package:provider/provider.dart';
 import 'package:users_app/assistants/request_assistant.dart';
 import 'package:users_app/global/global.dart';
 import 'package:users_app/infoHandler/app_info.dart';
+import 'package:users_app/models/direction_details_info.dart';
 import 'package:users_app/models/user_model.dart';
 
 import '../global/map_key.dart';
@@ -60,9 +61,9 @@ class AssistantMethods {
         'https://maps.googleapis.com/maps/api/directions/json?origin=${origionPosition.latitude},${origionPosition.longitude}&destination=${destinationPosition.latitude},${destinationPosition.longitude}&key=$mapKey';
     var responseDirectionApi = await RequestAssistant.receiveRequest(
         urlOriginToDestinationDirectionDetails);
-    if(responseDirectionApi == "Error Occurred, Failed. No Response.")
-    {
+    if (responseDirectionApi == "Error Occurred, Failed. No Response.") {
       return;
     }
+    DirectionDetailsInfo directionDetailsInfo = DirectionDetailsInfo();
   }
 }
