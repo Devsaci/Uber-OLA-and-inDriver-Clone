@@ -32,7 +32,7 @@ class ProgressDialog extends StatelessWidget {
                 message!,
                 style: const TextStyle(
                   color: Colors.black,
-                  fontSize: 12,
+                  fontSize: 9.0,
                 ),
               ),
             ],
