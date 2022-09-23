@@ -450,15 +450,17 @@ class _MainScreenState extends State<MainScreen> {
     var destinationLatLng = LatLng(destinationPosition!.locationLatitude!,
         destinationPosition.locationLongitude!);
 
-    var directionDetailsInfo =
-        await AssistantMethods.obtainOriginToDestinationDirectionDetails(
-            originLatLng, destinationLatLng);
     showDialog(
       context: context,
       builder: (BuildContext context) => ProgressDialog(
         message: "Please wait...",
       ),
     );
+
+    var directionDetailsInfo =
+        await AssistantMethods.obtainOriginToDestinationDirectionDetails(
+            originLatLng, destinationLatLng);
+
     print("These are points = ");
     print(directionDetailsInfo!.e_points);
   }
