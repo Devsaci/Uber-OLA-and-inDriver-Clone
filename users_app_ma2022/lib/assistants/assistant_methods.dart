@@ -70,5 +70,7 @@ class AssistantMethods {
         responseDirectionApi["routes"][0]["overview_polyline"]["points"];
     directionDetailsInfo.distance_text =
         responseDirectionApi["routes"][0]["legs"][0]["distance"]["text"];
+    directionDetailsInfo.duration_text =
+        responseDirectionApi["routes"][0]["legs"][0]["duration"]["text"];
   }
 }
