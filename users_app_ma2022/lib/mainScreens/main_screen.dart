@@ -488,6 +488,7 @@ class _MainScreenState extends State<MainScreen> {
 
     Polyline polyline = const Polyline(
       polylineId: PolylineId('PolylineID'),
+      color: Colors.purpleAccent,
     );
   }
 }
