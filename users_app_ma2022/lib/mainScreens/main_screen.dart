@@ -480,6 +480,7 @@ class _MainScreenState extends State<MainScreen> {
         pPoints.decodePolyline(directionDetailsInfo!.e_points!);
 
     if (decodedPolyLinePointsResultList.isNotEmpty) {
+      decodedPolyLinePointsResultList.forEach((element) { });
     }
   }
 }
