@@ -485,15 +485,16 @@ class _MainScreenState extends State<MainScreen> {
             .add(LatLng(pointLatLng.latitude, pointLatLng.longitude));
       });
     }
-    setState(() {});
-    Polyline polyline = Polyline(
-      polylineId: const PolylineId('PolylineID'),
-      color: Colors.purpleAccent,
-      jointType: JointType.round,
-      points: pLineCoOrdinatesList,
-      startCap: Cap.roundCap,
-      endCap: Cap.roundCap,
-      geodesic: true,
-    );
+    setState(() {
+      Polyline polyline = Polyline(
+        polylineId: const PolylineId('PolylineID'),
+        color: Colors.purpleAccent,
+        jointType: JointType.round,
+        points: pLineCoOrdinatesList,
+        startCap: Cap.roundCap,
+        endCap: Cap.roundCap,
+        geodesic: true,
+      );
+    });
   }
 }
