@@ -486,10 +486,11 @@ class _MainScreenState extends State<MainScreen> {
       });
     }
 
-    Polyline polyline = const Polyline(
-      polylineId: PolylineId('PolylineID'),
+    Polyline polyline =  Polyline(
+      polylineId: const PolylineId('PolylineID'),
       color: Colors.purpleAccent,
       jointType: JointType.round,
+      points: pLineCoOrdinatesList,
       startCap: Cap.roundCap,
       endCap: Cap.roundCap,
     );
