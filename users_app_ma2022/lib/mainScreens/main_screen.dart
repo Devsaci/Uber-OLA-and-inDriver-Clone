@@ -231,6 +231,8 @@ class _MainScreenState extends State<MainScreen> {
     String? humanReadableAddress =
         await AssistantMethods.searchAddressForGeographicCoOrdinates(
             userCurrentPosition!, context);
+    print(
+        " /////////////////////////////  this is your address  ========------>");
     print("this is your address = " + humanReadableAddress!);
   }
 
@@ -363,8 +365,8 @@ class _MainScreenState extends State<MainScreen> {
                       // 47. search dropoff location address screen ui
                       //to
                       GestureDetector(
-                        onTap: () {
-                          var responseFromSearchScreen = Navigator.push(
+                        onTap: () async {
+                          var responseFromSearchScreen = await Navigator.push(
                             context,
                             MaterialPageRoute(
                               builder: (c) => const SearchPlacesScreen(),
@@ -372,6 +374,7 @@ class _MainScreenState extends State<MainScreen> {
                           );
                           if (responseFromSearchScreen == "obtainedDropoff") {
                             //draw routes - draw polyline
+                            await drawPolyLineFromOriginToDestination();
                           }
                           ;
                         },
@@ -463,7 +466,7 @@ class _MainScreenState extends State<MainScreen> {
 
     Navigator.pop(context);
 
-    print("These are points = ");
+    print(" /////////////////////////////// These are points = ==============---->");
     print(directionDetailsInfo!.e_points);
   }
 }
