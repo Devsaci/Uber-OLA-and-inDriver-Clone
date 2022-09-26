@@ -495,6 +495,7 @@ class _MainScreenState extends State<MainScreen> {
         endCap: Cap.roundCap,
         geodesic: true,
       );
+      polyLineSet.add(polyline);
     });
   }
 }
