@@ -485,6 +485,7 @@ class _MainScreenState extends State<MainScreen> {
             .add(LatLng(pointLatLng.latitude, pointLatLng.longitude));
       });
     }
+    polyLineSet.clear();
     setState(() {
       Polyline polyline = Polyline(
         polylineId: const PolylineId('PolylineID'),
