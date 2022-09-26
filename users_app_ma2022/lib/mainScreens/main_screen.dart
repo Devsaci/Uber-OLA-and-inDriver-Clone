@@ -40,6 +40,8 @@ class _MainScreenState extends State<MainScreen> {
   double bottomPaddingOfMap = 0;
   double topPaddingOfMap = 0;
 
+  List<LatLng> pLineCoOrdinatesList = [];
+
   blackThemeGoogleMap() {
     newGoogleMapController!.setMapStyle('''
                     [
@@ -466,7 +468,8 @@ class _MainScreenState extends State<MainScreen> {
 
     Navigator.pop(context);
 
-    print(" /////////////////////////////// These are points = ==============---->");
+    print(
+        " /////////////////////////////// These are points = ==============---->");
     print(directionDetailsInfo!.e_points);
   }
 }
