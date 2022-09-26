@@ -491,6 +491,7 @@ class _MainScreenState extends State<MainScreen> {
       color: Colors.purpleAccent,
       jointType: JointType.round,
       startCap: Cap.roundCap,
+      endCap: Cap.roundCap,
     );
   }
 }
