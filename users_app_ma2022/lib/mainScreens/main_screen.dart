@@ -41,6 +41,7 @@ class _MainScreenState extends State<MainScreen> {
   double topPaddingOfMap = 0;
 
   List<LatLng> pLineCoOrdinatesList = [];
+  Set<Polyline> polyLineSet = {};
 
   blackThemeGoogleMap() {
     newGoogleMapController!.setMapStyle('''
