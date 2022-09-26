@@ -490,6 +490,7 @@ class _MainScreenState extends State<MainScreen> {
       polylineId: PolylineId('PolylineID'),
       color: Colors.purpleAccent,
       jointType: JointType.round,
+      startCap: Cap.roundCap,
     );
   }
 }
