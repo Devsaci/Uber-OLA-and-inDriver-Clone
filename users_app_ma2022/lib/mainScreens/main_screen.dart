@@ -479,6 +479,8 @@ class _MainScreenState extends State<MainScreen> {
     List<PointLatLng> decodedPolyLinePointsResultList =
         pPoints.decodePolyline(directionDetailsInfo!.e_points!);
 
+    pLineCoOrdinatesList.clear();
+
     if (decodedPolyLinePointsResultList.isNotEmpty) {
       decodedPolyLinePointsResultList.forEach((PointLatLng pointLatLng) {
         pLineCoOrdinatesList
