@@ -531,6 +531,18 @@ class _MainScreenState extends State<MainScreen> {
     newGoogleMapController!
         .animateCamera(CameraUpdate.newLatLngBounds(boundsLatLng, 65));
 
+    Marker originMarker = Marker(
+      markerId: const MarkerId("originID"),
+      infoWindow: InfoWindow(
+        title: originPosition.locationName,
+        snippet: "Origin",
+      ),
+      position: originLatLng,
+      icon: BitmapDescriptor.defaultMarkerWithHue(
+        BitmapDescriptor.hueYellow,
+      ),
+    );
+
     Marker destinationMarker = Marker(
       markerId: const MarkerId("destinationID"),
       infoWindow: InfoWindow(
