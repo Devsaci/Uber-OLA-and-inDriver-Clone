@@ -579,5 +579,6 @@ class _MainScreenState extends State<MainScreen> {
     );
 
     circlesSet.add(originCircle);
+    circlesSet.add(destinationCircle);
   }
 }
