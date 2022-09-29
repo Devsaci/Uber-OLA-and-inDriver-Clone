@@ -578,6 +578,7 @@ class _MainScreenState extends State<MainScreen> {
       center: destinationLatLng,
     );
 
+    setState(() {});
     circlesSet.add(originCircle);
     circlesSet.add(destinationCircle);
   }
