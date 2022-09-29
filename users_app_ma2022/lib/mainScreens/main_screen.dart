@@ -577,5 +577,7 @@ class _MainScreenState extends State<MainScreen> {
       strokeColor: Colors.white,
       center: destinationLatLng,
     );
+
+    circlesSet.add(originCircle);
   }
 }
