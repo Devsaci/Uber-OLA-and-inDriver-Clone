@@ -45,6 +45,8 @@ class _MainScreenState extends State<MainScreen> {
 
   Set<Polyline> polyLineSet = {};
 
+  Set<Marker> markersSet = {};
+
   blackThemeGoogleMap() {
     newGoogleMapController!.setMapStyle('''
                     [
