@@ -555,7 +555,9 @@ class _MainScreenState extends State<MainScreen> {
       ),
     );
 
+    setState(() {});
     markersSet.add(originMarker);
+    markersSet.add(destinationMarker);
 
     Circle originCircle = Circle(
       circleId: const CircleId("originID"),
@@ -574,6 +576,5 @@ class _MainScreenState extends State<MainScreen> {
       strokeColor: Colors.white,
       center: destinationLatLng,
     );
-
   }
 }
