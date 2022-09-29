@@ -564,5 +564,14 @@ class _MainScreenState extends State<MainScreen> {
       center: originLatLng,
     );
 
+    Circle destinationCircle = Circle(
+      circleId: const CircleId("destinationID"),
+      fillColor: Colors.red,
+      radius: 12,
+      strokeWidth: 3,
+      strokeColor: Colors.white,
+      center: destinationLatLng,
+    );
+
   }
 }
