@@ -501,5 +501,8 @@ class _MainScreenState extends State<MainScreen> {
       );
       polyLineSet.add(polyline);
     });
+
+    LatLngBounds boundsLatLng;
+
   }
 }
