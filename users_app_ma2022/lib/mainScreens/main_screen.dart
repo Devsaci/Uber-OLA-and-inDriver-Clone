@@ -535,6 +535,7 @@ class _MainScreenState extends State<MainScreen> {
       markerId: const MarkerId("destinationID"),
       infoWindow: InfoWindow(
         title: destinationPosition.locationName,
+        snippet: "Destination",
       ),
     );
   }
