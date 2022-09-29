@@ -510,5 +510,7 @@ class _MainScreenState extends State<MainScreen> {
         northeast: originLatLng,
       );
     }
+    else  if (originLatLng.latitude > destinationLatLng.latitude &&
+        originLatLng.longitude > destinationLatLng.longitude){}
   }
 }
