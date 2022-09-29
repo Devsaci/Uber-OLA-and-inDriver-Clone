@@ -537,6 +537,10 @@ class _MainScreenState extends State<MainScreen> {
         title: destinationPosition.locationName,
         snippet: "Destination",
       ),
+      position: destinationLatLng,
+      icon: BitmapDescriptor.defaultMarkerWithHue(
+        BitmapDescriptor.hueYellow,
+      ),
     );
   }
 }
