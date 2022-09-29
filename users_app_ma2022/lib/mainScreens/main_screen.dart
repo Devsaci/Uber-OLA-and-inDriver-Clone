@@ -555,6 +555,8 @@ class _MainScreenState extends State<MainScreen> {
       ),
     );
 
+    markersSet.add(originMarker);
+
     Circle originCircle = Circle(
       circleId: const CircleId("originID"),
       fillColor: Colors.green,
