@@ -505,15 +505,20 @@ class _MainScreenState extends State<MainScreen> {
     LatLngBounds boundsLatLng;
     if (originLatLng.latitude > destinationLatLng.latitude &&
         originLatLng.longitude > destinationLatLng.longitude) {
-      LatLngBounds(
+      boundsLatLng = LatLngBounds(
         southwest: destinationLatLng,
         northeast: originLatLng,
       );
     } else if (originLatLng.longitude > destinationLatLng.longitude) {
-      LatLngBounds(
+      boundsLatLng = LatLngBounds(
         southwest: LatLng(originLatLng.latitude, destinationLatLng.longitude),
         northeast: LatLng(destinationLatLng.latitude, originLatLng.longitude),
       );
-    } else if (originLatLng.latitude > destinationLatLng.latitude) {}
+    } else if (originLatLng.latitude > destinationLatLng.latitude) {
+      boundsLatLng = LatLngBounds(
+        southwest: LatLng(destinationLatLng.latitude, originLatLng.longitude),
+        northeast: LatLng(originLatLng.latitude, destinationLatLng.longitude),
+      );
+    }
   }
 }
