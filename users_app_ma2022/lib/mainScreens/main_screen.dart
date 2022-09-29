@@ -531,9 +531,11 @@ class _MainScreenState extends State<MainScreen> {
     newGoogleMapController!
         .animateCamera(CameraUpdate.newLatLngBounds(boundsLatLng, 65));
 
-    Marker destinationMarker = const Marker(
-      markerId: MarkerId("destinationID"),
-      infoWindow: InfoWindow(),
+    Marker destinationMarker = Marker(
+      markerId: const MarkerId("destinationID"),
+      infoWindow: InfoWindow(
+        title: destinationPosition.locationName,
+      ),
     );
   }
 }
