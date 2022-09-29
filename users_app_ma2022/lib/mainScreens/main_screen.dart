@@ -519,6 +519,9 @@ class _MainScreenState extends State<MainScreen> {
         southwest: LatLng(destinationLatLng.latitude, originLatLng.longitude),
         northeast: LatLng(originLatLng.latitude, destinationLatLng.longitude),
       );
-    }else{}
+    } else {
+      boundsLatLng =
+          LatLngBounds(southwest: originLatLng, northeast: destinationLatLng);
+    }
   }
 }
