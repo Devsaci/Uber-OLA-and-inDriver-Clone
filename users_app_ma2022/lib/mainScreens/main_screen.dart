@@ -554,5 +554,15 @@ class _MainScreenState extends State<MainScreen> {
         BitmapDescriptor.hueOrange,
       ),
     );
+
+    Circle originCircle = Circle(
+      circleId: const CircleId("originID"),
+      fillColor: Colors.green,
+      radius: 12,
+      strokeWidth: 3,
+      strokeColor: Colors.white,
+      center: originLatLng,
+    );
+
   }
 }
