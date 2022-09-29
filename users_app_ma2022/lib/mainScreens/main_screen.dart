@@ -277,6 +277,7 @@ class _MainScreenState extends State<MainScreen> {
             zoomGesturesEnabled: true,
             zoomControlsEnabled: true,
             polylines: polyLineSet,
+            markers: markersSet,
             mapType: MapType.satellite,
             onMapCreated: (GoogleMapController controller) {
               _controllerGoogleMap.complete(controller);
