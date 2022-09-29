@@ -532,7 +532,7 @@ class _MainScreenState extends State<MainScreen> {
         .animateCamera(CameraUpdate.newLatLngBounds(boundsLatLng, 65));
 
     Marker destinationMarker = const Marker(
-      markerId: MarkerId('value'),
+      markerId: MarkerId("destinationID"),
     );
   }
 }
