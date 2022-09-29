@@ -523,5 +523,7 @@ class _MainScreenState extends State<MainScreen> {
       boundsLatLng =
           LatLngBounds(southwest: originLatLng, northeast: destinationLatLng);
     }
+    newGoogleMapController!
+        .animateCamera(CameraUpdate.newLatLngBounds(boundsLatLng, 65));
   }
 }
