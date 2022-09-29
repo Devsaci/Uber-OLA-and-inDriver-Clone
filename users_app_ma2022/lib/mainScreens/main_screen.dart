@@ -48,7 +48,6 @@ class _MainScreenState extends State<MainScreen> {
   Set<Marker> markersSet = {};
   Set<Circle> circlesSet = {};
 
-
   blackThemeGoogleMap() {
     newGoogleMapController!.setMapStyle('''
                     [
@@ -531,5 +530,9 @@ class _MainScreenState extends State<MainScreen> {
     }
     newGoogleMapController!
         .animateCamera(CameraUpdate.newLatLngBounds(boundsLatLng, 65));
+
+    const Marker(
+      markerId: MarkerId('value'),
+    );
   }
 }
