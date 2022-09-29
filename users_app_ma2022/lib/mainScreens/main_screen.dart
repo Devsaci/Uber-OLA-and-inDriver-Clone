@@ -539,7 +539,7 @@ class _MainScreenState extends State<MainScreen> {
       ),
       position: destinationLatLng,
       icon: BitmapDescriptor.defaultMarkerWithHue(
-        BitmapDescriptor.hueYellow,
+        BitmapDescriptor.hueOrange,
       ),
     );
   }
