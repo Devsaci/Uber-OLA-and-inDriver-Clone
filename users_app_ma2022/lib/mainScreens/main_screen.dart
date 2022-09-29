@@ -533,6 +533,7 @@ class _MainScreenState extends State<MainScreen> {
 
     Marker destinationMarker = const Marker(
       markerId: MarkerId("destinationID"),
+      infoWindow: InfoWindow(),
     );
   }
 }
