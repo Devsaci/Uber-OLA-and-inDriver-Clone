@@ -50,6 +50,7 @@ class _MainScreenState extends State<MainScreen> {
 
   //57. Fixing Bug - error null check operator used on null value
   String userName = "your Name";
+  String userEmail = "your Email";
 
   blackThemeGoogleMap() {
     newGoogleMapController!.setMapStyle('''
