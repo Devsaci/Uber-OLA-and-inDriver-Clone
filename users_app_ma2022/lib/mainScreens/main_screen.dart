@@ -48,6 +48,9 @@ class _MainScreenState extends State<MainScreen> {
   Set<Marker> markersSet = {};
   Set<Circle> circlesSet = {};
 
+  //57. Fixing Bug - error null check operator used on null value
+
+
   blackThemeGoogleMap() {
     newGoogleMapController!.setMapStyle('''
                     [
