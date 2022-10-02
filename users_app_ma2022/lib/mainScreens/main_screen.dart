@@ -246,6 +246,8 @@ class _MainScreenState extends State<MainScreen> {
     print(
         " /////////////////////////////  this is your address  ========------>");
     print("this is your address = " + humanReadableAddress!);
+
+    userName = userModelCurrentInfo!.name!;
   }
 
   @override
@@ -265,7 +267,7 @@ class _MainScreenState extends State<MainScreen> {
         child: Theme(
           data: Theme.of(context).copyWith(canvasColor: Colors.blueGrey),
           child: MyDrawer(
-            name: userModelCurrentInfo!.name,
+            name: userName,
             email: userModelCurrentInfo!.email,
           ),
         ),
