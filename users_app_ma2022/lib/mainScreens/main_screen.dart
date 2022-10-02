@@ -269,7 +269,7 @@ class _MainScreenState extends State<MainScreen> {
           data: Theme.of(context).copyWith(canvasColor: Colors.blueGrey),
           child: MyDrawer(
             name: userName,
-            email: userEmail
+            email: userEmail,
           ),
         ),
       ),
