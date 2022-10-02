@@ -49,7 +49,7 @@ class _MainScreenState extends State<MainScreen> {
   Set<Circle> circlesSet = {};
 
   //57. Fixing Bug - error null check operator used on null value
-
+  String userName = "your Name";
 
   blackThemeGoogleMap() {
     newGoogleMapController!.setMapStyle('''
