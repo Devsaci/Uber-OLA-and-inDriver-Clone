@@ -305,7 +305,9 @@ class _MainScreenState extends State<MainScreen> {
             left: 14,
             child: GestureDetector(
               onTap: () {
-                sKey.currentState!.openDrawer();
+                if(openNavigationDrawer) {
+                  sKey.currentState!.openDrawer();
+                }
               },
               child: CircleAvatar(
                 backgroundColor: Colors.deepPurpleAccent,
