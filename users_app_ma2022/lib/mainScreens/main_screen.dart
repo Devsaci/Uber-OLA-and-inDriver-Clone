@@ -307,7 +307,9 @@ class _MainScreenState extends State<MainScreen> {
               onTap: () {
                 if (openNavigationDrawer) {
                   sKey.currentState!.openDrawer();
-                } else {}
+                } else {
+                  //restart-refresh-minimize app pragmatically
+                }
               },
               child: CircleAvatar(
                 backgroundColor: Colors.deepPurpleAccent,
