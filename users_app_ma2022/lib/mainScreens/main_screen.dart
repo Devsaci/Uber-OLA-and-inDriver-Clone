@@ -310,7 +310,7 @@ class _MainScreenState extends State<MainScreen> {
               child: CircleAvatar(
                 backgroundColor: Colors.deepPurpleAccent,
                 child: Icon(
-                  openNavigationDrawer ? Icons.menu : Icons.close,
+                  openNavigationDrawer ? Icons.menu : Icons.fullscreen_exit,
                   color: Colors.orange,
                 ),
               ),
