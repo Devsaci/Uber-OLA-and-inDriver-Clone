@@ -307,10 +307,10 @@ class _MainScreenState extends State<MainScreen> {
               onTap: () {
                 sKey.currentState!.openDrawer();
               },
-              child: const CircleAvatar(
+              child: CircleAvatar(
                 backgroundColor: Colors.deepPurpleAccent,
                 child: Icon(
-                  Icons.menu,
+                  openNavigationDrawer ? Icons.menu : Icons.close,
                   color: Colors.orange,
                 ),
               ),
