@@ -1,5 +1,6 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_polyline_points/flutter_polyline_points.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
@@ -309,6 +310,7 @@ class _MainScreenState extends State<MainScreen> {
                   sKey.currentState!.openDrawer();
                 } else {
                   //restart-refresh-minimize app pragmatically
+                  SystemNavigator.pop();
                 }
               },
               child: CircleAvatar(
