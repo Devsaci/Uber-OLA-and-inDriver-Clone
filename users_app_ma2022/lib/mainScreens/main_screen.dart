@@ -52,6 +52,8 @@ class _MainScreenState extends State<MainScreen> {
   String userName = "your Name";
   String userEmail = "your Email";
 
+  var openNavigationDrawer = true;
+
   blackThemeGoogleMap() {
     newGoogleMapController!.setMapStyle('''
                     [
@@ -387,10 +389,12 @@ class _MainScreenState extends State<MainScreen> {
                           var responseFromSearchScreen = await Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (c) => const SearchPlacesScreen()
-                            ),
+                                builder: (c) => const SearchPlacesScreen()),
                           );
                           if (responseFromSearchScreen == "obtainedDropoff") {
+                            setState(() {
+                              openNavigationDrawer = false;
+                            });
                             //draw routes - draw polyline
                             await drawPolyLineFromOriginToDestination();
                             // 58. cancel the destination location set by user
