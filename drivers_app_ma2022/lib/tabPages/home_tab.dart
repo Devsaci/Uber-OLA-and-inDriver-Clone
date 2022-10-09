@@ -23,6 +23,8 @@ class _HomeTabPageState extends State<HomeTabPage> {
 
 
   // 60. Get Driver Current Location
+  Position? userCurrentPosition;
+  var geoLocator = Geolocator();
 
 
   blackThemeGoogleMap() {
@@ -189,6 +191,17 @@ class _HomeTabPageState extends State<HomeTabPage> {
                       }
                     ]
                 ''');
+  }
+
+
+  checkIfLocationPermissionAllowed() async
+  {
+    _locationPermission = await Geolocator.requestPermission();
+
+    if(_locationPermission == LocationPermission.denied)
+    {
+      _locationPermission = await Geolocator.requestPermission();
+    }
   }
 
   @override
