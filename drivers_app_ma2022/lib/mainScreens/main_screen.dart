@@ -1,5 +1,3 @@
-// ignore_for_file: prefer_const_literals_to_create_immutables
-
 import 'package:drivers_app_ma2022/tabPages/earning_tab.dart';
 import 'package:drivers_app_ma2022/tabPages/home_tab.dart';
 import 'package:drivers_app_ma2022/tabPages/profile_tab.dart';

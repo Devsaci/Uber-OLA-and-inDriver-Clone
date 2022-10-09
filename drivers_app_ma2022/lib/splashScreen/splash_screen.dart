@@ -1,5 +1,3 @@
-// ignore_for_file: prefer_const_literals_to_create_immutables
-
 import 'dart:async';
 
 import 'package:drivers_app_ma2022/authentication/login_screen.dart';

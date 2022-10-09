@@ -45,10 +45,12 @@ class _LoginScreenState extends State<LoginScreen> {
             .signInWithEmailAndPassword(
       email: emailTextEditingController.text.trim(),
       password: passwordTextEditingController.text.trim(),
-    ).catchError((msg) {
+    )
+            .catchError((msg) {
       Navigator.pop(context);
       Fluttertoast.showToast(msg: "Error: " + msg.toString());
-    })).user;
+    }))
+        .user;
 
     if (firebaseUser != null) {
       DatabaseReference driversRef =
@@ -58,12 +60,13 @@ class _LoginScreenState extends State<LoginScreen> {
         if (snap.value != null) {
           currentFirebaseUser = firebaseUser;
           Fluttertoast.showToast(msg: "Login Successful.");
-          Navigator.push(context, MaterialPageRoute
-            (builder: (c) => const MySplashScreen()));
-        }else{
+          Navigator.push(context,
+              MaterialPageRoute(builder: (c) => const MySplashScreen()));
+        } else {
           Fluttertoast.showToast(msg: "No record exist with this email.");
           fAuth.signOut();
-          Navigator.push(context, MaterialPageRoute(builder: (c)=> MySplashScreen()));
+          Navigator.push(
+              context, MaterialPageRoute(builder: (c) => MySplashScreen()));
         }
       });
     } else {
@@ -81,16 +84,12 @@ class _LoginScreenState extends State<LoginScreen> {
           padding: const EdgeInsets.all(30.0),
           child: Column(
             children: [
-              const SizedBox(
-                width: 10,
-              ),
+              const SizedBox(width: 10),
               Padding(
                 padding: const EdgeInsets.all(20.0),
                 child: Image.asset("images/logo1.png"),
               ),
-              const SizedBox(
-                width: 10,
-              ),
+              const SizedBox(width: 10),
               const Text(
                 "Login as a Driver",
                 style: TextStyle(fontSize: 26, color: Colors.grey),
