@@ -229,6 +229,14 @@ class _HomeTabPageState extends State<HomeTabPage> {
   }
 
   @override
+  void initState()
+  {
+    super.initState();
+
+    checkIfLocationPermissionAllowed();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Stack(
       children: [
