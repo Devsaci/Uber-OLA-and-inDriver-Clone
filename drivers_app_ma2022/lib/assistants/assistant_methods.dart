@@ -1,10 +1,5 @@
-import 'package:drivers_app/assistants/request_assistant.dart';
-import 'package:drivers_app/global/global.dart';
-import 'package:drivers_app/global/map_key.dart';
-import 'package:drivers_app/infoHandler/app_info.dart';
-import 'package:drivers_app/models/direction_details_info.dart';
-import 'package:drivers_app/models/directions.dart';
-import 'package:drivers_app/models/user_model.dart';
+
+import 'package:drivers_app_ma2022/assistants/request_assistant.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_database/firebase_database.dart';
 import 'package:geolocator/geolocator.dart';
