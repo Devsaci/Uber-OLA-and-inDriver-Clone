@@ -206,7 +206,7 @@ class _HomeTabPageState extends State<HomeTabPage> {
     }
   }
 
-  locateUserPosition() async {
+  locateDriverPosition() async {
     Position cPosition = await Geolocator.getCurrentPosition(
         desiredAccuracy: LocationAccuracy.high);
     userCurrentPosition = cPosition;
@@ -248,6 +248,7 @@ class _HomeTabPageState extends State<HomeTabPage> {
             _controllerGoogleMap.complete(controller);
             newGoogleMapController = controller;
             blackThemeGoogleMap();
+            locateDriverPosition();
           },
         )
       ],
