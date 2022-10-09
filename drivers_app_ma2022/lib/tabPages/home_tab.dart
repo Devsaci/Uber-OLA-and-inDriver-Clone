@@ -204,6 +204,30 @@ class _HomeTabPageState extends State<HomeTabPage> {
     }
   }
 
+  locateUserPosition() async {
+    Position cPosition = await Geolocator.getCurrentPosition(
+        desiredAccuracy: LocationAccuracy.high);
+    userCurrentPosition = cPosition;
+
+    LatLng latLngPosition =
+    LatLng(userCurrentPosition!.latitude, userCurrentPosition!.longitude);
+
+    CameraPosition cameraPosition =
+    CameraPosition(target: latLngPosition, zoom: 19);
+    newGoogleMapController!
+        .animateCamera(CameraUpdate.newCameraPosition(cameraPosition));
+
+    String? humanReadableAddress =
+    await AssistantMethods.searchAddressForGeographicCoOrdinates(
+        userCurrentPosition!, context);
+    print(
+        " /////////////////////////////  this is your address  ========------>");
+    print("this is your address = " + humanReadableAddress!);
+
+    userName = userModelCurrentInfo!.name!;
+    userEmail = userModelCurrentInfo!.email!;
+  }
+
   @override
   Widget build(BuildContext context) {
     return Stack(
