@@ -3,6 +3,7 @@
 import 'dart:async';
 
 import 'package:flutter/cupertino.dart';
+import 'package:geolocator/geolocator.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 
 class HomeTabPage extends StatefulWidget {
@@ -25,6 +26,7 @@ class _HomeTabPageState extends State<HomeTabPage> {
   // 60. Get Driver Current Location
   Position? userCurrentPosition;
   var geoLocator = Geolocator();
+  LocationPermission? _locationPermission;
 
 
   blackThemeGoogleMap() {
