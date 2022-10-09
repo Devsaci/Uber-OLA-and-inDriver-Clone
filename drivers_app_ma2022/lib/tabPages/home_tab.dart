@@ -1,10 +1,10 @@
-// ignore_for_file: prefer_const_constructors
-
 import 'dart:async';
 
 import 'package:flutter/cupertino.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
+
+import '../assistants/assistant_methods.dart';
 
 class HomeTabPage extends StatefulWidget {
   const HomeTabPage({Key? key}) : super(key: key);
@@ -226,8 +226,6 @@ class _HomeTabPageState extends State<HomeTabPage> {
         " /////////////////////////////  this is your address  ========------>");
     print("this is your address = " + humanReadableAddress!);
 
-    userName = userModelCurrentInfo!.name!;
-    userEmail = userModelCurrentInfo!.email!;
   }
 
   @override
