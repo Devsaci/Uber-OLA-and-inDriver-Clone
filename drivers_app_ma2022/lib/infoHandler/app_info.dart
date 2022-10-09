@@ -1,5 +1,7 @@
-import 'package:drivers_app/models/directions.dart';
+
 import 'package:flutter/cupertino.dart';
+
+import '../models/directions.dart';
 
 
 class AppInfo extends ChangeNotifier
