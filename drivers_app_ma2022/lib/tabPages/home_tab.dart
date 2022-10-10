@@ -201,6 +201,7 @@ class _HomeTabPageState extends State<HomeTabPage> {
                 ''');
   }
 
+
   checkIfLocationPermissionAllowed() async
   {
     _locationPermission = await Geolocator.requestPermission();
@@ -215,22 +216,17 @@ class _HomeTabPageState extends State<HomeTabPage> {
     Position cPosition = await Geolocator.getCurrentPosition(
         desiredAccuracy: LocationAccuracy.high);
     userCurrentPosition = cPosition;
-
     LatLng latLngPosition =
     LatLng(userCurrentPosition!.latitude, userCurrentPosition!.longitude);
-
     CameraPosition cameraPosition =
     CameraPosition(target: latLngPosition, zoom: 19);
     newGoogleMapController!
         .animateCamera(CameraUpdate.newCameraPosition(cameraPosition));
-
     String? humanReadableAddress =
     await AssistantMethods.searchAddressForGeographicCoOrdinates(
         userCurrentPosition!, context);
-    print(
-        " /////////////////////////////  this is your address  ========------>");
+    print(" ///////////  this is your address  ========------>");
     print("this is your address = " + humanReadableAddress);
-
   }
 
   @override
