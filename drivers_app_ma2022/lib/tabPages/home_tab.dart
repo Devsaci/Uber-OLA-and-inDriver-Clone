@@ -264,7 +264,14 @@ class _HomeTabPageState extends State<HomeTabPage> {
               ElevatedButton(
                 onPressed: () {},
                 child: statusText != "Now Online"
-                    ? const Text("ElevatedButton")
+                    ? Text(
+                        statusText,
+                        style: const TextStyle(
+                          fontSize: 16.0,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.white,
+                        ),
+                      )
                     : const Icon(Icons.phonelink_ring,
                         color: Colors.white, size: 26),
               ),
