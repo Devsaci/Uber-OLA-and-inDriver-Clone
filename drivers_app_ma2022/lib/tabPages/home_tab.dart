@@ -20,7 +20,7 @@ class _HomeTabPageState extends State<HomeTabPage> {
 
   static const CameraPosition _kGooglePlex = CameraPosition(
     target: LatLng(49.8980884, 2.2880343),
-    zoom: 14.4746,
+    zoom: 10.4746,
   );
 
 
@@ -256,7 +256,7 @@ class _HomeTabPageState extends State<HomeTabPage> {
         statusText != "Now Online"? Container(
           height: MediaQuery.of(context).size.height,
           width: double.infinity,
-          color: Colors.black87,
+          color: Colors.black26,
         ):Container(),
       ],
     );
