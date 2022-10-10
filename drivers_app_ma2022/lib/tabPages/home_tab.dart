@@ -33,6 +33,7 @@ class _HomeTabPageState extends State<HomeTabPage> {
 
   String statusText = "Now Offline";
   Color buttonColor = Colors.grey;
+  bool isDriverActive = false;
 
   blackThemeGoogleMap() {
     newGoogleMapController!.setMapStyle('''
