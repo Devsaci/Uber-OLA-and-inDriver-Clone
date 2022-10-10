@@ -1,6 +1,5 @@
 import 'dart:async';
 
-
 import 'package:flutter/material.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
@@ -22,9 +21,6 @@ class _HomeTabPageState extends State<HomeTabPage> {
     target: LatLng(49.8980884, 2.2880343),
     zoom: 10.4746,
   );
-
-
-
 
   // 60. Get Driver Current Location
   Position? userCurrentPosition;
@@ -201,13 +197,10 @@ class _HomeTabPageState extends State<HomeTabPage> {
                 ''');
   }
 
-
-  checkIfLocationPermissionAllowed() async
-  {
+  checkIfLocationPermissionAllowed() async {
     _locationPermission = await Geolocator.requestPermission();
 
-    if(_locationPermission == LocationPermission.denied)
-    {
+    if (_locationPermission == LocationPermission.denied) {
       _locationPermission = await Geolocator.requestPermission();
     }
   }
@@ -217,21 +210,20 @@ class _HomeTabPageState extends State<HomeTabPage> {
         desiredAccuracy: LocationAccuracy.high);
     userCurrentPosition = cPosition;
     LatLng latLngPosition =
-    LatLng(userCurrentPosition!.latitude, userCurrentPosition!.longitude);
+        LatLng(userCurrentPosition!.latitude, userCurrentPosition!.longitude);
     CameraPosition cameraPosition =
-    CameraPosition(target: latLngPosition, zoom: 19);
+        CameraPosition(target: latLngPosition, zoom: 19);
     newGoogleMapController!
         .animateCamera(CameraUpdate.newCameraPosition(cameraPosition));
     String? humanReadableAddress =
-    await AssistantMethods.searchAddressForGeographicCoOrdinates(
-        userCurrentPosition!, context);
+        await AssistantMethods.searchAddressForGeographicCoOrdinates(
+            userCurrentPosition!, context);
     print(" ///////////  this is your address  ========------>");
     print("this is your address = " + humanReadableAddress);
   }
 
   @override
-  void initState()
-  {
+  void initState() {
     super.initState();
 
     checkIfLocationPermissionAllowed();
@@ -253,11 +245,17 @@ class _HomeTabPageState extends State<HomeTabPage> {
           },
         ),
         //ui for online offline driver
-        statusText != "Now Online"? Container(
-          height: MediaQuery.of(context).size.height,
-          width: double.infinity,
-          color: Colors.black54,
-        ):Container(),
+        statusText != "Now Online"
+            ? Container(
+                height: MediaQuery.of(context).size.height,
+                width: double.infinity,
+                color: Colors.black54,
+              )
+            : Container(),
+        //button for online offline driver
+        Positioned(
+          child: Row(),
+        ),
       ],
     );
   }
