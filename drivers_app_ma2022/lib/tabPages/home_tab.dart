@@ -255,6 +255,7 @@ class _HomeTabPageState extends State<HomeTabPage> {
         //ui for online offline driver
         statusText != "Now Online"? Container(
           height: MediaQuery.of(context).size.height,
+          width: double.infinity,
         ):Container(),
       ],
     );
