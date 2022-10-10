@@ -17,7 +17,7 @@ class _HomeTabPageState extends State<HomeTabPage> {
   GoogleMapController? newGoogleMapController;
   final Completer<GoogleMapController> _controllerGoogleMap = Completer();
 
-  static final CameraPosition _kGooglePlex = CameraPosition(
+  static const CameraPosition _kGooglePlex = CameraPosition(
     target: LatLng(49.8980884, 2.2880343),
     zoom: 14.4746,
   );
@@ -195,7 +195,6 @@ class _HomeTabPageState extends State<HomeTabPage> {
                 ''');
   }
 
-
   checkIfLocationPermissionAllowed() async
   {
     _locationPermission = await Geolocator.requestPermission();
@@ -224,7 +223,7 @@ class _HomeTabPageState extends State<HomeTabPage> {
         userCurrentPosition!, context);
     print(
         " /////////////////////////////  this is your address  ========------>");
-    print("this is your address = " + humanReadableAddress!);
+    print("this is your address = " + humanReadableAddress);
 
   }
 
@@ -250,7 +249,7 @@ class _HomeTabPageState extends State<HomeTabPage> {
             blackThemeGoogleMap();
             locateDriverPosition();
           },
-        )
+        ),
       ],
     );
   }
