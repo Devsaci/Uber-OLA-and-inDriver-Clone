@@ -256,6 +256,7 @@ class _HomeTabPageState extends State<HomeTabPage> {
         statusText != "Now Online"? Container(
           height: MediaQuery.of(context).size.height,
           width: double.infinity,
+          color: Colors.black87,
         ):Container(),
       ],
     );
