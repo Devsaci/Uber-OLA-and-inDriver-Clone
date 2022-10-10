@@ -210,14 +210,14 @@ class _HomeTabPageState extends State<HomeTabPage> {
         desiredAccuracy: LocationAccuracy.high);
     userCurrentPosition = cPosition;
     LatLng latLngPosition =
-        LatLng(userCurrentPosition!.latitude, userCurrentPosition!.longitude);
+    LatLng(userCurrentPosition!.latitude, userCurrentPosition!.longitude);
     CameraPosition cameraPosition =
-        CameraPosition(target: latLngPosition, zoom: 19);
+    CameraPosition(target: latLngPosition, zoom: 19);
     newGoogleMapController!
         .animateCamera(CameraUpdate.newCameraPosition(cameraPosition));
     String? humanReadableAddress =
-        await AssistantMethods.searchAddressForGeographicCoOrdinates(
-            userCurrentPosition!, context);
+    await AssistantMethods.searchAddressForGeographicCoOrdinates(
+        userCurrentPosition!, context);
     print(" ///////////  this is your address  ========------>");
     print("this is your address = " + humanReadableAddress);
   }
@@ -233,30 +233,35 @@ class _HomeTabPageState extends State<HomeTabPage> {
   Widget build(BuildContext context) {
     return Stack(
       children: [
-        GoogleMap(
-          initialCameraPosition: _kGooglePlex,
-          mapType: MapType.normal,
-          myLocationEnabled: true,
-          onMapCreated: (GoogleMapController controller) {
-            _controllerGoogleMap.complete(controller);
-            newGoogleMapController = controller;
-            blackThemeGoogleMap();
-            locateDriverPosition();
-          },
-        ),
-        //ui for online offline driver
-        statusText != "Now Online"
-            ? Container(
-                height: MediaQuery.of(context).size.height,
-                width: double.infinity,
-                color: Colors.black54,
-              )
-            : Container(),
-        //button for online offline driver
-        Positioned(
-          child: Row(),
-        ),
-      ],
+      GoogleMap(
+      initialCameraPosition: _kGooglePlex,
+      mapType: MapType.normal,
+      myLocationEnabled: true,
+      onMapCreated: (GoogleMapController controller) {
+        _controllerGoogleMap.complete(controller);
+        newGoogleMapController = controller;
+        blackThemeGoogleMap();
+        locateDriverPosition();
+      },
+    ),
+    //ui for online offline driver
+    statusText != "Now Online"
+    ? Container(
+    height: MediaQuery
+        .of(context)
+        .size
+        .height,
+    width: double.infinity,
+    color: Colors.black54,
+    )
+        : Container(),
+    //button for online offline driver
+    Positioned(
+    top: statusText != "Now Online"
+    ? MediaQuery.of(context).size.height * 0.46 :25,
+    child: Row(),
+    ),
+    ],
     );
   }
 }
