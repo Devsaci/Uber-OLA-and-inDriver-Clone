@@ -250,6 +250,7 @@ class _HomeTabPageState extends State<HomeTabPage> {
             locateDriverPosition();
           },
         ),
+        //ui for online offline driver
       ],
     );
   }
