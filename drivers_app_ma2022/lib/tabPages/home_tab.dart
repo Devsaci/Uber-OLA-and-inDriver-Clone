@@ -23,11 +23,14 @@ class _HomeTabPageState extends State<HomeTabPage> {
   );
 
 
+
+
   // 60. Get Driver Current Location
   Position? userCurrentPosition;
   var geoLocator = Geolocator();
   LocationPermission? _locationPermission;
 
+  String statusText = "Now Offline";
 
   blackThemeGoogleMap() {
     newGoogleMapController!.setMapStyle('''
@@ -251,6 +254,7 @@ class _HomeTabPageState extends State<HomeTabPage> {
           },
         ),
         //ui for online offline driver
+
       ],
     );
   }
