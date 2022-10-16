@@ -339,5 +339,7 @@ class _HomeTabPageState extends State<HomeTabPage> {
     });
   }
 
-  driverIsOfflineNow(){}
+  driverIsOfflineNow() {
+    Geofire.removeLocation(currentFirebaseUser!.uid);
+  }
 }
