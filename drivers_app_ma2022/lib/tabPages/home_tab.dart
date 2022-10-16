@@ -304,8 +304,11 @@ class _HomeTabPageState extends State<HomeTabPage> {
     driverCurrentPosition = pos;
 
     Geofire.initialize("activeDrivers");
-    Geofire.setLocation(currentFirebaseUser!.uid,
-        driverCurrentPosition!.latitude, driverCurrentPosition!.longitude);
+    Geofire.setLocation(
+      currentFirebaseUser!.uid,
+      driverCurrentPosition!.latitude,
+      driverCurrentPosition!.longitude,
+    );
 
     DatabaseReference ref = FirebaseDatabase.instance
         .ref()
@@ -320,7 +323,13 @@ class _HomeTabPageState extends State<HomeTabPage> {
     streamSubscriptionPosition =
         Geolocator.getPositionStream().listen((Position position) {
       driverCurrentPosition = position;
-      if(isDriverActive == true){}
+      if (isDriverActive == true) {
+        Geofire.setLocation(
+          currentFirebaseUser!.uid,
+          driverCurrentPosition!.latitude,
+          driverCurrentPosition!.longitude,
+        );
+      }
     });
   }
 }
