@@ -295,7 +295,7 @@ class _HomeTabPageState extends State<HomeTabPage> {
   //62. update driver location at real time in firebase
   driverIsOnlineNow() {
     Geolocator.getCurrentPosition(
-
+      desiredAccuracy: LocationAccuracy.high,
     );
     Geofire.initialize("activeDrivers");
     Geofire.setLocation(currentFirebaseUser!.uid,
@@ -307,6 +307,6 @@ class _HomeTabPageState extends State<HomeTabPage> {
         .child(currentFirebaseUser!.uid)
         .child("newRideStatus");
     ref.set('idle'); //searching for ride request
-    ref.onValue.listen((event) { });
+    ref.onValue.listen((event) {});
   }
 }
