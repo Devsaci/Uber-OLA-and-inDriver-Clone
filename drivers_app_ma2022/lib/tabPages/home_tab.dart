@@ -338,4 +338,6 @@ class _HomeTabPageState extends State<HomeTabPage> {
       newGoogleMapController!.animateCamera(CameraUpdate.newLatLng(latLag));
     });
   }
+
+  driverIsOfflineNow(){}
 }
