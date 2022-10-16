@@ -267,6 +267,9 @@ class _HomeTabPageState extends State<HomeTabPage> {
                 style: ElevatedButton.styleFrom(
                   primary: buttonColor,
                   padding: const EdgeInsets.symmetric(horizontal: 18),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(26),
+                  ),
                 ),
                 child: statusText != "Now Online"
                     ? Text(
