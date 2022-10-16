@@ -284,6 +284,11 @@ class _HomeTabPageState extends State<HomeTabPage> {
                   } else //online
                   {
                     driverIsOfflineNow();
+                    setState(() {
+                      statusText = "Now Offline";
+                      isDriverActive = false;
+                      buttonColor = Colors.grey;
+                    });
                   }
                 },
                 style: ElevatedButton.styleFrom(
