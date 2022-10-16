@@ -375,7 +375,8 @@ class _HomeTabPageState extends State<HomeTabPage> {
       const Duration(seconds: 5),
       () {
         //SystemChannels.platform.invokeMethod("SystemNavigator.pop");
-        SystemNavigator.pop();
+        //SystemChannels.platform.invokeMethod("SystemNavigator.pop");
+        SystemNavigator.pop(); //
       },
     );
   }
