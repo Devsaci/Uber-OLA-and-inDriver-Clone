@@ -211,8 +211,8 @@ class _HomeTabPageState extends State<HomeTabPage> {
     Position cPosition = await Geolocator.getCurrentPosition(
         desiredAccuracy: LocationAccuracy.high);
     driverCurrentPosition = cPosition;
-    LatLng latLngPosition =
-        LatLng(driverCurrentPosition!.latitude, driverCurrentPosition!.longitude);
+    LatLng latLngPosition = LatLng(
+        driverCurrentPosition!.latitude, driverCurrentPosition!.longitude);
     CameraPosition cameraPosition =
         CameraPosition(target: latLngPosition, zoom: 19);
     newGoogleMapController!
@@ -295,13 +295,11 @@ class _HomeTabPageState extends State<HomeTabPage> {
   //62. update driver location at real time in firebase
   driverIsOnlineNow() {
     Geofire.initialize("activeDrivers");
-    Geofire.setLocation(
-        currentFirebaseUser!.uid,
-        driverCurrentPosition!.latitude,
-        driverCurrentPosition!.longitude
-    );
+    Geofire.setLocation(currentFirebaseUser!.uid,
+        driverCurrentPosition!.latitude, driverCurrentPosition!.longitude);
 
-    FirebaseDatabase.instance.ref()
+    DatabaseReference ref = FirebaseDatabase.instance
+        .ref()
         .child("drivers")
         .child(currentFirebaseUser!.uid)
         .child("newRideStatus");
