@@ -1,6 +1,6 @@
 import 'dart:async';
 import 'package:drivers_app_ma2022/global/global.dart';
-import 'package:flutter/cupertino.dart';
+import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_geofire/flutter_geofire.dart';
 import 'package:geolocator/geolocator.dart';
@@ -300,5 +300,10 @@ class _HomeTabPageState extends State<HomeTabPage> {
         driverCurrentPosition!.latitude,
         driverCurrentPosition!.longitude
     );
+
+    FirebaseDatabase.instance.ref()
+        .child("drivers")
+        .child(currentFirebaseUser!.uid)
+        .child("newRideStatus");
   }
 }
