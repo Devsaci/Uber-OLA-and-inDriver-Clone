@@ -275,6 +275,7 @@ class _HomeTabPageState extends State<HomeTabPage> {
                     updateDriversLocationAtRealTime();
                     setState(() {
                       statusText = "Now Online";
+                      isDriverActive = true;
                     });
                   }
                 },
