@@ -269,6 +269,7 @@ class _HomeTabPageState extends State<HomeTabPage> {
               ElevatedButton(
                 onPressed: () {
                   driverIsOnlineNow();
+                  updateDriversLocationAtRealTime();
                 },
                 style: ElevatedButton.styleFrom(
                   primary: buttonColor,
