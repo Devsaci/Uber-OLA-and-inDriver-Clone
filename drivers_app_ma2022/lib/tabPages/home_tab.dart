@@ -303,5 +303,7 @@ class _HomeTabPageState extends State<HomeTabPage> {
         .child("drivers")
         .child(currentFirebaseUser!.uid)
         .child("newRideStatus");
+    ref.set('idle'); //searching for ride request
+    ref.onValue.listen((event) { });
   }
 }
