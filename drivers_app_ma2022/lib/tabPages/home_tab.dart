@@ -320,6 +320,7 @@ class _HomeTabPageState extends State<HomeTabPage> {
     streamSubscriptionPosition =
         Geolocator.getPositionStream().listen((Position position) {
       driverCurrentPosition = position;
+      if(isDriverActive == true){}
     });
   }
 }
