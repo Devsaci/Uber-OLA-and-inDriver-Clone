@@ -316,9 +316,8 @@ class _HomeTabPageState extends State<HomeTabPage> {
     ref.onValue.listen((event) {});
   }
 
-  updateDriversLocationAtRealTime(){
-
+  updateDriversLocationAtRealTime() {
+    streamSubscriptionPosition =
+        Geolocator.getPositionStream().listen((event) {});
   }
-
-
 }
