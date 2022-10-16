@@ -33,6 +33,8 @@ class _HomeTabPageState extends State<HomeTabPage> {
   Color buttonColor = Colors.grey;
   bool isDriverActive = false;
 
+  StreamSubscription<Position>? streamSubscriptionPosition;
+
   blackThemeGoogleMap() {
     newGoogleMapController!.setMapStyle('''
                     [
@@ -314,7 +316,9 @@ class _HomeTabPageState extends State<HomeTabPage> {
     ref.onValue.listen((event) {});
   }
 
-  updateDriversLocationAtRealTime(){}
+  updateDriversLocationAtRealTime(){
+
+  }
 
 
 }
