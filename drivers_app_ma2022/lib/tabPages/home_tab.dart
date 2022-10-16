@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_geofire/flutter_geofire.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 
@@ -288,5 +289,9 @@ class _HomeTabPageState extends State<HomeTabPage> {
         ),
       ],
     );
+    //62. update driver location at real time in firebase
+    driverIsOnlineNow() {
+      Geofire.initialize("activeDrivers");
+    }
   }
 }
