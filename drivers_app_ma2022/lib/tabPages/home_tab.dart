@@ -341,7 +341,7 @@ class _HomeTabPageState extends State<HomeTabPage> {
 
   driverIsOfflineNow() {
     Geofire.removeLocation(currentFirebaseUser!.uid);
-    FirebaseDatabase.instance
+    DatabaseReference? ref = FirebaseDatabase.instance
         .ref()
         .child("drivers")
         .child(currentFirebaseUser!.uid)
