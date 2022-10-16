@@ -330,6 +330,10 @@ class _HomeTabPageState extends State<HomeTabPage> {
           driverCurrentPosition!.longitude,
         );
       }
+      LatLng latLag = LatLng(
+        driverCurrentPosition!.latitude,
+        driverCurrentPosition!.longitude,
+      );
     });
   }
 }
