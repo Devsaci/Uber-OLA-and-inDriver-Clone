@@ -35,7 +35,7 @@ class _HomeTabPageState extends State<HomeTabPage> {
   Color buttonColor = Colors.grey;
   bool isDriverActive = false;
 
-  StreamSubscription<Position>? streamSubscriptionPosition;
+
 
   blackThemeGoogleMap() {
     newGoogleMapController!.setMapStyle('''
@@ -372,7 +372,7 @@ class _HomeTabPageState extends State<HomeTabPage> {
     ref.remove();
     ref = null;
     Future.delayed(
-      const Duration(milliseconds: 2000),
+      const Duration(seconds: 5),
       () {
         SystemChannels.platform.invokeMethod("SystemNavigator.pop");
       },
