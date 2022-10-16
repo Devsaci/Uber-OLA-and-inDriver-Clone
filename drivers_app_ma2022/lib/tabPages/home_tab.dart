@@ -334,6 +334,7 @@ class _HomeTabPageState extends State<HomeTabPage> {
         driverCurrentPosition!.latitude,
         driverCurrentPosition!.longitude,
       );
+      newGoogleMapController!.animateCamera(CameraUpdate.newLatLng(latLag));
     });
   }
 }
