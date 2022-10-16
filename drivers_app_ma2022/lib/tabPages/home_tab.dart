@@ -265,7 +265,9 @@ class _HomeTabPageState extends State<HomeTabPage> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               ElevatedButton(
-                onPressed: () {},
+                onPressed: () {
+                  driverIsOnlineNow();
+                },
                 style: ElevatedButton.styleFrom(
                   primary: buttonColor,
                   padding: const EdgeInsets.symmetric(horizontal: 18),
@@ -311,4 +313,8 @@ class _HomeTabPageState extends State<HomeTabPage> {
     ref.set('idle'); //searching for ride request
     ref.onValue.listen((event) {});
   }
+
+  updateDriversLocationAtRealTime(){}
+
+
 }
