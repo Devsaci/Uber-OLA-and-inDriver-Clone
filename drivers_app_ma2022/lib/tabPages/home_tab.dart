@@ -294,6 +294,9 @@ class _HomeTabPageState extends State<HomeTabPage> {
 
   //62. update driver location at real time in firebase
   driverIsOnlineNow() {
+    Geolocator.getCurrentPosition(
+
+    );
     Geofire.initialize("activeDrivers");
     Geofire.setLocation(currentFirebaseUser!.uid,
         driverCurrentPosition!.latitude, driverCurrentPosition!.longitude);
