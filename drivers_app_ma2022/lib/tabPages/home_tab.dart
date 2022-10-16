@@ -4,6 +4,7 @@ import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_geofire/flutter_geofire.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 
@@ -278,6 +279,11 @@ class _HomeTabPageState extends State<HomeTabPage> {
                       isDriverActive = true;
                       buttonColor = Colors.transparent;
                     });
+                    //display Toast
+                    Fluttertoast.showToast(msg: "you are Online Now");
+                  }else //online
+                  {
+
                   }
                 },
                 style: ElevatedButton.styleFrom(
