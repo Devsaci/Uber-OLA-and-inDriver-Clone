@@ -276,6 +276,7 @@ class _HomeTabPageState extends State<HomeTabPage> {
                     setState(() {
                       statusText = "Now Online";
                       isDriverActive = true;
+                      buttonColor = Colors.transparent;
                     });
                   }
                 },
