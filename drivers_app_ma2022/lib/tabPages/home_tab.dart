@@ -2,6 +2,7 @@ import 'dart:async';
 import 'package:drivers_app_ma2022/global/global.dart';
 import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_geofire/flutter_geofire.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
@@ -351,7 +352,9 @@ class _HomeTabPageState extends State<HomeTabPage> {
     ref = null;
     Future.delayed(
       const Duration(milliseconds: 2000),
-          () {},
+          () {
+            SystemChannels.platform.invokeMethod("SystemNavigator.pop");
+          },
     );
   }
 }
