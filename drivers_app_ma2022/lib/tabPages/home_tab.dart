@@ -281,9 +281,9 @@ class _HomeTabPageState extends State<HomeTabPage> {
                     });
                     //display Toast
                     Fluttertoast.showToast(msg: "you are Online Now");
-                  }else //online
+                  } else //online
                   {
-
+                    driverIsOfflineNow();
                   }
                 },
                 style: ElevatedButton.styleFrom(
