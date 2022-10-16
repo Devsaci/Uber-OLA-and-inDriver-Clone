@@ -263,6 +263,9 @@ class _HomeTabPageState extends State<HomeTabPage> {
             children: [
               ElevatedButton(
                 onPressed: () {},
+                style: ElevatedButton.styleFrom(
+                  primary: buttonColor,
+                ),
                 child: statusText != "Now Online"
                     ? Text(
                         statusText,
