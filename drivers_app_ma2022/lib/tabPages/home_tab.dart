@@ -289,6 +289,8 @@ class _HomeTabPageState extends State<HomeTabPage> {
                       isDriverActive = false;
                       buttonColor = Colors.grey;
                     });
+                    //display Toast
+                    Fluttertoast.showToast(msg: "you are Offline Now");
                   }
                 },
                 style: ElevatedButton.styleFrom(
