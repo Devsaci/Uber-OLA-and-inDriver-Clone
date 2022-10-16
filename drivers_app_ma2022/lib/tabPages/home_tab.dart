@@ -273,6 +273,9 @@ class _HomeTabPageState extends State<HomeTabPage> {
                   {
                     driverIsOnlineNow();
                     updateDriversLocationAtRealTime();
+                    setState(() {
+                      statusText = "Now Online";
+                    });
                   }
                 },
                 style: ElevatedButton.styleFrom(
