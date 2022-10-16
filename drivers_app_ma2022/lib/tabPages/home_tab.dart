@@ -289,9 +289,12 @@ class _HomeTabPageState extends State<HomeTabPage> {
         ),
       ],
     );
-    //62. update driver location at real time in firebase
-    driverIsOnlineNow() {
-      Geofire.initialize("activeDrivers");
-    }
+  }
+
+
+  //62. update driver location at real time in firebase
+  driverIsOnlineNow() {
+    Geofire.initialize("activeDrivers");
+
   }
 }
