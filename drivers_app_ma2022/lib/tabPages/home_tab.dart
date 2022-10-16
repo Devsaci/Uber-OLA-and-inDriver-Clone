@@ -269,8 +269,11 @@ class _HomeTabPageState extends State<HomeTabPage> {
             children: [
               ElevatedButton(
                 onPressed: () {
-                  driverIsOnlineNow();
-                  updateDriversLocationAtRealTime();
+                  if (isDriverActive != true) //offline
+                  {
+                    driverIsOnlineNow();
+                    updateDriversLocationAtRealTime();
+                  }
                 },
                 style: ElevatedButton.styleFrom(
                   primary: buttonColor,
@@ -352,9 +355,9 @@ class _HomeTabPageState extends State<HomeTabPage> {
     ref = null;
     Future.delayed(
       const Duration(milliseconds: 2000),
-          () {
-            SystemChannels.platform.invokeMethod("SystemNavigator.pop");
-          },
+      () {
+        SystemChannels.platform.invokeMethod("SystemNavigator.pop");
+      },
     );
   }
 }
