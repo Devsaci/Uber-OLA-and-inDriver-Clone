@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'package:drivers_app_ma2022/global/global.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_geofire/flutter_geofire.dart';
@@ -24,7 +25,7 @@ class _HomeTabPageState extends State<HomeTabPage> {
   );
 
   // 60. Get Driver Current Location
-  Position? userCurrentPosition;
+  Position? driverCurrentPosition;
   var geoLocator = Geolocator();
   LocationPermission? _locationPermission;
 
@@ -209,16 +210,16 @@ class _HomeTabPageState extends State<HomeTabPage> {
   locateDriverPosition() async {
     Position cPosition = await Geolocator.getCurrentPosition(
         desiredAccuracy: LocationAccuracy.high);
-    userCurrentPosition = cPosition;
+    driverCurrentPosition = cPosition;
     LatLng latLngPosition =
-        LatLng(userCurrentPosition!.latitude, userCurrentPosition!.longitude);
+        LatLng(driverCurrentPosition!.latitude, driverCurrentPosition!.longitude);
     CameraPosition cameraPosition =
         CameraPosition(target: latLngPosition, zoom: 19);
     newGoogleMapController!
         .animateCamera(CameraUpdate.newCameraPosition(cameraPosition));
     String? humanReadableAddress =
         await AssistantMethods.searchAddressForGeographicCoOrdinates(
-            userCurrentPosition!, context);
+            driverCurrentPosition!, context);
     print(" ///////////  this is your address  ========------>");
     print("this is your address = " + humanReadableAddress);
   }
@@ -291,10 +292,13 @@ class _HomeTabPageState extends State<HomeTabPage> {
     );
   }
 
-
   //62. update driver location at real time in firebase
   driverIsOnlineNow() {
     Geofire.initialize("activeDrivers");
-
+    Geofire.setLocation(
+        currentFirebaseUser!.uid,
+        driverCurrentPosition!.latitude,
+        driverCurrentPosition!.longitude
+    );
   }
 }
