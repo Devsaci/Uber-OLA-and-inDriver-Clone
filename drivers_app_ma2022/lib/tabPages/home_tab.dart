@@ -349,6 +349,9 @@ class _HomeTabPageState extends State<HomeTabPage> {
     ref.onDisconnect();
     ref.remove();
     ref = null;
-    Future.delayed(const Duration());
+    Future.delayed(
+      const Duration(milliseconds: 2000),
+          () {},
+    );
   }
 }
