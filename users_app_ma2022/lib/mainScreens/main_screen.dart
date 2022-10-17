@@ -605,6 +605,6 @@ class _MainScreenState extends State<MainScreen> {
 
   //64. QueryAtLocation
 // [Handle GeoFire CallBacks, onKeyEntered onKeyExited onKeyMoved]
-
+  initializeGeoFireListener(){}
 
 }
