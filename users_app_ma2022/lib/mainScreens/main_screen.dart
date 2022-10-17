@@ -7,6 +7,7 @@ import 'package:geolocator/geolocator.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:provider/provider.dart';
 import 'package:users_app/assistants/assistant_methods.dart';
+import 'package:users_app/assistants/geofire_assistant.dart';
 import 'package:users_app/global/global.dart';
 import 'package:users_app/mainScreens/search_places_screen.dart';
 import 'package:users_app/widgets/my_drawer.dart';
@@ -622,6 +623,7 @@ class _MainScreenState extends State<MainScreen> {
             activeNearbyAvailableDriver.locationLatitude = map['latitude'];
             activeNearbyAvailableDriver.locationLongitude = map['longitude'];
             activeNearbyAvailableDriver.driverId = map['key'];
+            GeoFireAssistant.activeNearbyAvailableDriversList.add(activeNearbyAvailableDriver);
             break;
           case Geofire.onKeyExited:
             break;
