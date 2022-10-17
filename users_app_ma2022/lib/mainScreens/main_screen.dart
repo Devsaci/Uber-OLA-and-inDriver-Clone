@@ -617,13 +617,15 @@ class _MainScreenState extends State<MainScreen> {
       if (map != null) {
         var callBack = map['callBack'];
         switch (callBack) {
+        //whenever any driver become active/online
           case Geofire.onKeyEntered:
             ActiveNearbyAvailableDrivers activeNearbyAvailableDriver =
                 ActiveNearbyAvailableDrivers();
             activeNearbyAvailableDriver.locationLatitude = map['latitude'];
             activeNearbyAvailableDriver.locationLongitude = map['longitude'];
             activeNearbyAvailableDriver.driverId = map['key'];
-            GeoFireAssistant.activeNearbyAvailableDriversList.add(activeNearbyAvailableDriver);
+            GeoFireAssistant.activeNearbyAvailableDriversList
+                .add(activeNearbyAvailableDriver);
             break;
           case Geofire.onKeyExited:
             break;
