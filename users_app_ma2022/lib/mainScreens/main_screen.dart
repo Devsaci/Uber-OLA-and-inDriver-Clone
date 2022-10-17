@@ -629,7 +629,7 @@ class _MainScreenState extends State<MainScreen> {
             break;
         //whenever any driver become non-active/offline
           case Geofire.onKeyExited:
-
+            GeoFireAssistant.deleteOfflineDriverFromList(map['key']);
             break;
         //whenever driver moves - update driver location
           case Geofire.onKeyMoved:
