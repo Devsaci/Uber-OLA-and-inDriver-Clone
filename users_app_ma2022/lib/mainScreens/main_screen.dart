@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_geofire/flutter_geofire.dart';
 import 'package:flutter_polyline_points/flutter_polyline_points.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
@@ -605,6 +606,40 @@ class _MainScreenState extends State<MainScreen> {
 
   //64. QueryAtLocation
 // [Handle GeoFire CallBacks, onKeyEntered onKeyExited onKeyMoved]
-  initializeGeoFireListener(){}
+  initializeGeoFireListener() {
+    Geofire.initialize("activeDrivers");
+    Geofire.queryAtLocation(
+            userCurrentPosition!.latitude, userCurrentPosition!.longitude, 10)!
+        .listen((map) {
+      print(map);
+      if (map != null) {
+        var callBack = map['callBack'];
 
+        //latitude will be retrieved from map['latitude']
+        //longitude will be retrieved from map['longitude']
+
+        switch (callBack) {
+          case Geofire.onKeyEntered:
+            //keysRetrieved.add(map["key"]);
+            break;
+
+          case Geofire.onKeyExited:
+            //keysRetrieved.remove(map["key"]);
+            break;
+
+          case Geofire.onKeyMoved:
+            // Update your key's location
+            break;
+
+          case Geofire.onGeoQueryReady:
+            // All Intial Data is loaded
+            //print(map['result']);
+
+            break;
+        }
+      }
+
+      setState(() {});
+    });
+  }
 }
