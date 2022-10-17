@@ -12,6 +12,7 @@ import 'package:users_app/mainScreens/search_places_screen.dart';
 import 'package:users_app/widgets/my_drawer.dart';
 
 import '../infoHandler/app_info.dart';
+import '../models/active_nearby_available_drivers.dart';
 import '../widgets/progress_dialog.dart';
 
 class MainScreen extends StatefulWidget {
@@ -616,6 +617,11 @@ class _MainScreenState extends State<MainScreen> {
         var callBack = map['callBack'];
         switch (callBack) {
           case Geofire.onKeyEntered:
+            ActiveNearbyAvailableDrivers activeNearbyAvailableDriver =
+                ActiveNearbyAvailableDrivers();
+            activeNearbyAvailableDriver.locationLatitude = map['latitude'];
+            map['longitude'];
+            map['key'];
             break;
           case Geofire.onKeyExited:
             break;
@@ -628,6 +634,4 @@ class _MainScreenState extends State<MainScreen> {
       setState(() {});
     });
   }
-
-
 }
