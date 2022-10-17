@@ -633,6 +633,7 @@ class _MainScreenState extends State<MainScreen> {
             break;
         //whenever driver moves - update driver location
           case Geofire.onKeyMoved:
+
             break;
         //display those online/active drivers on user's map
           case Geofire.onGeoQueryReady:

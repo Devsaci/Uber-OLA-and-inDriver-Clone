@@ -11,4 +11,9 @@ class GeoFireAssistant {
         .indexWhere((element) => element.driverId == driverId);
     activeNearbyAvailableDriversList.removeAt(indexNumber);
   }
+
+//whenever driver moves - update driver location
+  static void updateActiveNearbyAvailableDriverLocation(
+      ActiveNearbyAvailableDrivers driverWhoMove) {
+  }
 }
