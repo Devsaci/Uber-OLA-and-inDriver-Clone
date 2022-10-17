@@ -602,4 +602,9 @@ class _MainScreenState extends State<MainScreen> {
       circlesSet.add(destinationCircle);
     });
   }
+
+  //64. QueryAtLocation
+// [Handle GeoFire CallBacks, onKeyEntered onKeyExited onKeyMoved]
+
+
 }
