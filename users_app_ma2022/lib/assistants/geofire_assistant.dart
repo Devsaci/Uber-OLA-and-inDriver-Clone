@@ -6,6 +6,6 @@ class GeoFireAssistant {
 
   //whenever any driver become non-active/offline
   static void deleteOfflineDriverFromList(String driverId){
-    activeNearbyAvailableDriversList.indexWhere((element) => false);
+    activeNearbyAvailableDriversList.indexWhere((element) => element.driverId == driverId);
   }
 }
