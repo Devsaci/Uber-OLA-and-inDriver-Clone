@@ -614,32 +614,20 @@ class _MainScreenState extends State<MainScreen> {
       print(map);
       if (map != null) {
         var callBack = map['callBack'];
-
-        //latitude will be retrieved from map['latitude']
-        //longitude will be retrieved from map['longitude']
-
         switch (callBack) {
           case Geofire.onKeyEntered:
-            //keysRetrieved.add(map["key"]);
             break;
-
           case Geofire.onKeyExited:
-            //keysRetrieved.remove(map["key"]);
             break;
-
           case Geofire.onKeyMoved:
-            // Update your key's location
             break;
-
           case Geofire.onGeoQueryReady:
-            // All Intial Data is loaded
-            //print(map['result']);
-
             break;
         }
       }
-
       setState(() {});
     });
   }
+
+
 }
