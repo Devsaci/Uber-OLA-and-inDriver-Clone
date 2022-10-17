@@ -629,6 +629,7 @@ class _MainScreenState extends State<MainScreen> {
             break;
         //whenever any driver become non-active/offline
           case Geofire.onKeyExited:
+
             break;
         //whenever driver moves - update driver location
           case Geofire.onKeyMoved:

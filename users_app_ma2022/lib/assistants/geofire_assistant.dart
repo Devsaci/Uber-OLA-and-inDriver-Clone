@@ -3,4 +3,7 @@ import '../models/active_nearby_available_drivers.dart';
 
 class GeoFireAssistant {
   static List<ActiveNearbyAvailableDrivers> activeNearbyAvailableDriversList = [];
+
+  //whenever any driver become non-active/offline
+  static void deleteOfflineDriverFromList(String driverId){}
 }
