@@ -617,7 +617,7 @@ class _MainScreenState extends State<MainScreen> {
       if (map != null) {
         var callBack = map['callBack'];
         switch (callBack) {
-        //whenever any driver become active/online
+          //whenever any driver become active/online
           case Geofire.onKeyEntered:
             ActiveNearbyAvailableDrivers activeNearbyAvailableDriver =
                 ActiveNearbyAvailableDrivers();
@@ -627,15 +627,21 @@ class _MainScreenState extends State<MainScreen> {
             GeoFireAssistant.activeNearbyAvailableDriversList
                 .add(activeNearbyAvailableDriver);
             break;
-        //whenever any driver become non-active/offline
+          //whenever any driver become non-active/offline
           case Geofire.onKeyExited:
             GeoFireAssistant.deleteOfflineDriverFromList(map['key']);
             break;
-        //whenever driver moves - update driver location
+          //whenever driver moves - update driver location
           case Geofire.onKeyMoved:
-
+            ActiveNearbyAvailableDrivers activeNearbyAvailableDriver =
+                ActiveNearbyAvailableDrivers();
+            activeNearbyAvailableDriver.locationLatitude = map['latitude'];
+            activeNearbyAvailableDriver.locationLongitude = map['longitude'];
+            activeNearbyAvailableDriver.driverId = map['key'];
+            GeoFireAssistant.updateActiveNearbyAvailableDriverLocation(
+                activeNearbyAvailableDriver);
             break;
-        //display those online/active drivers on user's map
+          //display those online/active drivers on user's map
           case Geofire.onGeoQueryReady:
             break;
         }
