@@ -627,6 +627,7 @@ class _MainScreenState extends State<MainScreen> {
             GeoFireAssistant.activeNearbyAvailableDriversList
                 .add(activeNearbyAvailableDriver);
             break;
+        //whenever any driver become non-active/offline
           case Geofire.onKeyExited:
             break;
           case Geofire.onKeyMoved:
