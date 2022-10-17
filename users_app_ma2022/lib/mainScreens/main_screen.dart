@@ -620,7 +620,7 @@ class _MainScreenState extends State<MainScreen> {
             ActiveNearbyAvailableDrivers activeNearbyAvailableDriver =
                 ActiveNearbyAvailableDrivers();
             activeNearbyAvailableDriver.locationLatitude = map['latitude'];
-            map['longitude'];
+            activeNearbyAvailableDriver.locationLongitude = map['longitude'];
             map['key'];
             break;
           case Geofire.onKeyExited:
