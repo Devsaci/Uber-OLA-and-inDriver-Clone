@@ -686,7 +686,12 @@ class _MainScreenState extends State<MainScreen> {
 
   createActiveNearByDriverIconMarker() {
     if (activeNearbyIcon == null) {
-      createLocalImageConfiguration(context, size: const Size(2, 2));
+      ImageConfiguration imageConfiguration =
+          createLocalImageConfiguration(context, size: const Size(2, 2));
+      BitmapDescriptor.fromAssetImage(
+        imageConfiguration,
+        "images/car.png",
+      );
     }
   }
 }
