@@ -640,6 +640,7 @@ class _MainScreenState extends State<MainScreen> {
             activeNearbyAvailableDriver.driverId = map['key'];
             GeoFireAssistant.updateActiveNearbyAvailableDriverLocation(
                 activeNearbyAvailableDriver);
+            displayActiveDriversOnUsersMap();
             break;
           //display those online/active drivers on user's map
           case Geofire.onGeoQueryReady:
