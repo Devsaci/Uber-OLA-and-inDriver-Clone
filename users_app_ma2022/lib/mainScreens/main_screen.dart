@@ -256,6 +256,8 @@ class _MainScreenState extends State<MainScreen> {
 
     userName = userModelCurrentInfo!.name!;
     userEmail = userModelCurrentInfo!.email!;
+
+    initializeGeoFireListener();
   }
 
   @override
