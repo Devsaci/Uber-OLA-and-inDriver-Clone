@@ -269,7 +269,6 @@ class _MainScreenState extends State<MainScreen> {
 
   @override
   Widget build(BuildContext context) {
-
     createActiveNearByDriverIconMarker();
 
     return Scaffold(
@@ -640,6 +639,7 @@ class _MainScreenState extends State<MainScreen> {
           //whenever any driver become non-active/offline
           case Geofire.onKeyExited:
             GeoFireAssistant.deleteOfflineDriverFromList(map['key']);
+            displayActiveDriversOnUsersMap();
             break;
           //whenever driver moves - update driver location
           case Geofire.onKeyMoved:
