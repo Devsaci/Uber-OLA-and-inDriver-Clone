@@ -668,7 +668,10 @@ class _MainScreenState extends State<MainScreen> {
               BitmapDescriptor.defaultMarkerWithHue(BitmapDescriptor.hueOrange),
           rotation: 360,
         );
+        driversMarkerSet.add(marker);
       }
     });
   }
+
+
 }
