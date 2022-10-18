@@ -58,7 +58,7 @@ class _MainScreenState extends State<MainScreen> {
 
   var openNavigationDrawer = true;
   bool activeNearbyDriverKeysLoaded = false;
-  BitmapDescriptor? activeNearbyIcon;
+  late BitmapDescriptor? activeNearbyIcon;
 
   blackThemeGoogleMap() {
     newGoogleMapController!.setMapStyle('''
@@ -675,8 +675,7 @@ class _MainScreenState extends State<MainScreen> {
         Marker marker = Marker(
           markerId: MarkerId("driver" + eachDriver.driverId!),
           position: eachDriverActivePosition,
-          icon:
-              BitmapDescriptor.defaultMarkerWithHue(BitmapDescriptor.hueOrange),
+          icon: activeNearbyIcon!,
           rotation: 360,
         );
         driversMarkerSet.add(marker);
