@@ -654,6 +654,7 @@ class _MainScreenState extends State<MainScreen> {
   displayActiveDriversOnUsersMap() {
     setState(() {
       markersSet.clear();
+      circlesSet.clear();
     });
   }
 }
