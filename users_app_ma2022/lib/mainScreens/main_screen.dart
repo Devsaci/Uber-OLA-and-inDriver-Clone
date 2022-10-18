@@ -57,6 +57,7 @@ class _MainScreenState extends State<MainScreen> {
   String userEmail = "your Email";
 
   var openNavigationDrawer = true;
+  bool activeNearbyDriverKeysLoaded = false;
 
   blackThemeGoogleMap() {
     newGoogleMapController!.setMapStyle('''
