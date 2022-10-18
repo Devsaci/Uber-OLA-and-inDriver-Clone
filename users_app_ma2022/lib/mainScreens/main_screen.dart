@@ -691,7 +691,7 @@ class _MainScreenState extends State<MainScreen> {
       BitmapDescriptor.fromAssetImage(
         imageConfiguration,
         "images/car.png",
-      );
+      ).then((value) => null);
     }
   }
 }
