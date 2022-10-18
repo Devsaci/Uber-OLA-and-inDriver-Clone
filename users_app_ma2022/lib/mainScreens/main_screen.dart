@@ -684,5 +684,7 @@ class _MainScreenState extends State<MainScreen> {
     });
   }
 
-  createActiveNearByDriverIconMarker(){}
+  createActiveNearByDriverIconMarker() {
+    if (activeNearbyIcon == null) {}
+  }
 }
