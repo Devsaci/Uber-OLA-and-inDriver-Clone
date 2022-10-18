@@ -58,7 +58,7 @@ class _MainScreenState extends State<MainScreen> {
 
   var openNavigationDrawer = true;
   bool activeNearbyDriverKeysLoaded = false;
-  late BitmapDescriptor? activeNearbyIcon;
+  BitmapDescriptor? activeNearbyIcon;
 
   blackThemeGoogleMap() {
     newGoogleMapController!.setMapStyle('''
