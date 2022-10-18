@@ -670,8 +670,9 @@ class _MainScreenState extends State<MainScreen> {
         );
         driversMarkerSet.add(marker);
       }
+      setState(() {
+        markersSet = driversMarkerSet;
+      });
     });
   }
-
-
 }
