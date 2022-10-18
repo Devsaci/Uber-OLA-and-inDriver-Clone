@@ -655,6 +655,20 @@ class _MainScreenState extends State<MainScreen> {
     setState(() {
       markersSet.clear();
       circlesSet.clear();
+
+      Set<Marker> driversMarkerSet = Set<Marker>();
+      for (ActiveNearbyAvailableDrivers eachDriver
+          in GeoFireAssistant.activeNearbyAvailableDriversList) {
+        LatLng eachDriverActivePosition =
+            LatLng(eachDriver.locationLatitude!, eachDriver.locationLongitude!);
+        Marker marker = Marker(
+          markerId: MarkerId("driver" + eachDriver.driverId!),
+          position: eachDriverActivePosition,
+          icon:
+              BitmapDescriptor.defaultMarkerWithHue(BitmapDescriptor.hueOrange),
+          rotation: 360,
+        );
+      }
     });
   }
 }
