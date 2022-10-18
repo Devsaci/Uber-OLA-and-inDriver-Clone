@@ -269,6 +269,9 @@ class _MainScreenState extends State<MainScreen> {
 
   @override
   Widget build(BuildContext context) {
+
+    createActiveNearByDriverIconMarker();
+
     return Scaffold(
       key: sKey,
       // appBar: AppBar(),
