@@ -58,6 +58,7 @@ class _MainScreenState extends State<MainScreen> {
 
   var openNavigationDrawer = true;
   bool activeNearbyDriverKeysLoaded = false;
+  BitmapDescriptor? activeNearbyIcon;
 
   blackThemeGoogleMap() {
     newGoogleMapController!.setMapStyle('''
@@ -682,4 +683,6 @@ class _MainScreenState extends State<MainScreen> {
       });
     });
   }
+
+  createActiveNearByDriverIconMarker(){}
 }
