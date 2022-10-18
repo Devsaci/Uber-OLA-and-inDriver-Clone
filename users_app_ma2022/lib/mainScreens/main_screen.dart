@@ -654,6 +654,7 @@ class _MainScreenState extends State<MainScreen> {
             break;
           //display those online/active drivers on user's map
           case Geofire.onGeoQueryReady:
+            activeNearbyDriverKeysLoaded = true;
             displayActiveDriversOnUsersMap();
             break;
         }
