@@ -275,8 +275,9 @@ class _MainScreenState extends State<MainScreen> {
   {
     //1. save the RideRequest Information
     onlineNearByAvailableDriversList = GeoFireAssistant.activeNearbyAvailableDriversList;
+    searchNearestOnlineDrivers();
   }
-
+   searchNearestOnlineDrivers() {}
 
   @override
   Widget build(BuildContext context) {
@@ -714,4 +715,6 @@ class _MainScreenState extends State<MainScreen> {
       ).then((value) => activeNearbyIcon = value);
     }
   }
+
+
 }
