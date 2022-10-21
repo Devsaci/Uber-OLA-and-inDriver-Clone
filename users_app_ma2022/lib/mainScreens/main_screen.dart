@@ -61,6 +61,9 @@ class _MainScreenState extends State<MainScreen> {
   bool activeNearbyDriverKeysLoaded = false;
   BitmapDescriptor? activeNearbyIcon;
 
+  List<ActiveNearbyAvailableDrivers> onlineNearByAvailableDriversList = [];
+
+
   blackThemeGoogleMap() {
     newGoogleMapController!.setMapStyle('''
                     [
