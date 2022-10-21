@@ -274,6 +274,7 @@ class _MainScreenState extends State<MainScreen> {
   saveRideRequestInformation()
   {
     //1. save the RideRequest Information
+    GeoFireAssistant.activeNearbyAvailableDriversList;
   }
 
 
