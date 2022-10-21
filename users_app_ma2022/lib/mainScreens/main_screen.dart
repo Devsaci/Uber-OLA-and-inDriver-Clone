@@ -283,7 +283,9 @@ class _MainScreenState extends State<MainScreen> {
      if(onlineNearByAvailableDriversList.isEmpty)
        {
          //cancel/delete the RideRequest Information
-         
+         setState(() {
+           polyLineSet.clear();
+         });
        }
    }
 
