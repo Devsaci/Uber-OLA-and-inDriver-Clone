@@ -14,6 +14,7 @@ import 'package:users_app/mainScreens/search_places_screen.dart';
 import 'package:users_app/widgets/my_drawer.dart';
 
 import '../infoHandler/app_info.dart';
+import '../main.dart';
 import '../models/active_nearby_available_drivers.dart';
 import '../widgets/progress_dialog.dart';
 
@@ -294,8 +295,8 @@ class _MainScreenState extends State<MainScreen> {
       );
 
       Future.delayed(
-        const Duration(),
-        () {},
+        const Duration(milliseconds: 4000),
+        () => MyApp.restartApp(context),
       );
       return;
     }
