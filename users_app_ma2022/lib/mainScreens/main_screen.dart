@@ -287,6 +287,7 @@ class _MainScreenState extends State<MainScreen> {
            polyLineSet.clear();
            markersSet.clear();
            circlesSet.clear();
+           pLineCoOrdinatesList.clear();
          });
        }
    }
