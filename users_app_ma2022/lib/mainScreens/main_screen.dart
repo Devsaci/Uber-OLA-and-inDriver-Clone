@@ -285,6 +285,7 @@ class _MainScreenState extends State<MainScreen> {
          //cancel/delete the RideRequest Information
          setState(() {
            polyLineSet.clear();
+           markersSet.clear();
          });
        }
    }
