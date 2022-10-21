@@ -63,7 +63,6 @@ class _MainScreenState extends State<MainScreen> {
 
   List<ActiveNearbyAvailableDrivers> onlineNearByAvailableDriversList = [];
 
-
   blackThemeGoogleMap() {
     newGoogleMapController!.setMapStyle('''
                     [
@@ -271,28 +270,32 @@ class _MainScreenState extends State<MainScreen> {
     checkIfLocationPermissionAllowed();
   }
 
-  saveRideRequestInformation()
-  {
+  saveRideRequestInformation() {
     //1. save the RideRequest Information
-    onlineNearByAvailableDriversList = GeoFireAssistant.activeNearbyAvailableDriversList;
+    onlineNearByAvailableDriversList =
+        GeoFireAssistant.activeNearbyAvailableDriversList;
     searchNearestOnlineDrivers();
   }
-   searchNearestOnlineDrivers()
-   {
-     //no active driver available
-     if(onlineNearByAvailableDriversList.isEmpty)
-       {
-         //cancel/delete the RideRequest Information
-         setState(() {
-           polyLineSet.clear();
-           markersSet.clear();
-           circlesSet.clear();
-           pLineCoOrdinatesList.clear();
-         });
 
-         return;
-       }
-   }
+  searchNearestOnlineDrivers() {
+    //no active driver available
+    if (onlineNearByAvailableDriversList.isEmpty) {
+      //cancel/delete the RideRequest Information
+      setState(() {
+        polyLineSet.clear();
+        markersSet.clear();
+        circlesSet.clear();
+        pLineCoOrdinatesList.clear();
+      });
+      Fluttertoast.showToast(
+        msg:
+            "No Online Nearest Driver Available. Search Again after some time, Restarting App Now.",
+        backgroundColor: Colors.teal,
+      );
+
+      return;
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -462,8 +465,12 @@ class _MainScreenState extends State<MainScreen> {
                                       color: Colors.grey, fontSize: 12),
                                 ),
                                 Text(
-                                  Provider.of<AppInfo>(context).userDropOffLocation != null
-                                      ? Provider.of<AppInfo>(context).userDropOffLocation!.locationName!
+                                  Provider.of<AppInfo>(context)
+                                              .userDropOffLocation !=
+                                          null
+                                      ? Provider.of<AppInfo>(context)
+                                          .userDropOffLocation!
+                                          .locationName!
                                       : "Where to go?",
                                   style: const TextStyle(
                                       color: Colors.grey, fontSize: 14),
@@ -488,14 +495,15 @@ class _MainScreenState extends State<MainScreen> {
                               fontSize: 16, fontWeight: FontWeight.bold),
                         ),
                         onPressed: () {
-                          if( Provider.of<AppInfo>(context, listen: false).userDropOffLocation != null)
-                          {
+                          if (Provider.of<AppInfo>(context, listen: false)
+                                  .userDropOffLocation !=
+                              null) {
                             saveRideRequestInformation();
-                          }else
-                          {
+                          } else {
                             Fluttertoast.showToast(
                               msg: "Please select destination location",
-                              backgroundColor: Colors.teal,);
+                              backgroundColor: Colors.teal,
+                            );
                           }
                         },
                         child: const Text(
@@ -730,6 +738,4 @@ class _MainScreenState extends State<MainScreen> {
       ).then((value) => activeNearbyIcon = value);
     }
   }
-
-
 }
