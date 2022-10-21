@@ -286,6 +286,7 @@ class _MainScreenState extends State<MainScreen> {
          setState(() {
            polyLineSet.clear();
            markersSet.clear();
+           circlesSet.clear();
          });
        }
    }
