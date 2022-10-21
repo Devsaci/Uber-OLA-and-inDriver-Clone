@@ -282,7 +282,8 @@ class _MainScreenState extends State<MainScreen> {
      //no active driver available
      if(onlineNearByAvailableDriversList.isEmpty)
        {
-
+         //cancel/delete the RideRequest Information
+         
        }
    }
 
