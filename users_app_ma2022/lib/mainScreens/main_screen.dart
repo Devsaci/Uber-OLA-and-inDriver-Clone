@@ -460,7 +460,9 @@ class _MainScreenState extends State<MainScreen> {
                           textStyle: const TextStyle(
                               fontSize: 16, fontWeight: FontWeight.bold),
                         ),
-                        onPressed: () {},
+                        onPressed: () {
+                          if( Provider.of<AppInfo>(context).userDropOffLocation != null);
+                        },
                         child: const Text(
                           "Request  a Ride",
                         ),
