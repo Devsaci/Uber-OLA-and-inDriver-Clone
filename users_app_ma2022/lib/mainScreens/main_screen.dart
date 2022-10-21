@@ -461,7 +461,10 @@ class _MainScreenState extends State<MainScreen> {
                               fontSize: 16, fontWeight: FontWeight.bold),
                         ),
                         onPressed: () {
-                          if( Provider.of<AppInfo>(context).userDropOffLocation != null);
+                          if( Provider.of<AppInfo>(context).userDropOffLocation != null)
+                          {
+                            //saveRideRequestInformation();
+                          }
                         },
                         child: const Text(
                           "Request  a Ride",
