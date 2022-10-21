@@ -464,6 +464,9 @@ class _MainScreenState extends State<MainScreen> {
                           if( Provider.of<AppInfo>(context).userDropOffLocation != null)
                           {
                             //saveRideRequestInformation();
+                          }else
+                          {
+                            //Fluttertoast.showToast(msg: "Please select destination location");
                           }
                         },
                         child: const Text(
