@@ -268,6 +268,12 @@ class _MainScreenState extends State<MainScreen> {
     checkIfLocationPermissionAllowed();
   }
 
+  saveRideRequestInformation()
+  {
+    //1. save the RideRequest Information
+  }
+
+
   @override
   Widget build(BuildContext context) {
     createActiveNearByDriverIconMarker();
@@ -462,12 +468,14 @@ class _MainScreenState extends State<MainScreen> {
                               fontSize: 16, fontWeight: FontWeight.bold),
                         ),
                         onPressed: () {
-                          if( Provider.of<AppInfo>(context).userDropOffLocation != null)
+                          if( Provider.of<AppInfo>(context, listen: false).userDropOffLocation != null)
                           {
-                            //saveRideRequestInformation();
+                            saveRideRequestInformation();
                           }else
                           {
-                            Fluttertoast.showToast(msg: "Please select destination location");
+                            Fluttertoast.showToast(
+                              msg: "Please select destination location",
+                              backgroundColor: Colors.teal,);
                           }
                         },
                         child: const Text(
