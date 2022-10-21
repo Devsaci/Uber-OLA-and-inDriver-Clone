@@ -277,7 +277,14 @@ class _MainScreenState extends State<MainScreen> {
     onlineNearByAvailableDriversList = GeoFireAssistant.activeNearbyAvailableDriversList;
     searchNearestOnlineDrivers();
   }
-   searchNearestOnlineDrivers() {}
+   searchNearestOnlineDrivers()
+   {
+     //no active driver available
+     if(onlineNearByAvailableDriversList.isEmpty)
+       {
+
+       }
+   }
 
   @override
   Widget build(BuildContext context) {
