@@ -277,7 +277,7 @@ class _MainScreenState extends State<MainScreen> {
     searchNearestOnlineDrivers();
   }
 
-  searchNearestOnlineDrivers() {
+  searchNearestOnlineDrivers() async {
     //no active driver available
     if (onlineNearByAvailableDriversList.isEmpty) {
       //cancel/delete the RideRequest Information
@@ -293,6 +293,10 @@ class _MainScreenState extends State<MainScreen> {
         backgroundColor: Colors.teal,
       );
 
+      Future.delayed(
+        const Duration(),
+        () {},
+      );
       return;
     }
   }
