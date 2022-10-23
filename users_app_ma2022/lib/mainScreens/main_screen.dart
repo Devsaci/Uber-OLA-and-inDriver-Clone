@@ -300,11 +300,13 @@ class _MainScreenState extends State<MainScreen> {
       );
       return;
     }
-  //  68. retrieve active drivers informations and their cars details
+    //  68. retrieve active drivers informations and their cars details
     //active driver available
-    retrieveOnlineDriversInformation();
-
+    retrieveOnlineDriversInformation(onlineNearByAvailableDriversList);
   }
+
+  void retrieveOnlineDriversInformation(
+      List<ActiveNearbyAvailableDrivers> onlineNearByAvailableDriversList) {}
 
   @override
   Widget build(BuildContext context) {
@@ -747,6 +749,4 @@ class _MainScreenState extends State<MainScreen> {
       ).then((value) => activeNearbyIcon = value);
     }
   }
-
-  void retrieveOnlineDriversInformation() {}
 }
