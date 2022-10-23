@@ -313,7 +313,10 @@ class _MainScreenState extends State<MainScreen> {
       await ref
           .child(onlineNearestDriversList[i].driverId.toString())
           .once()
-          .then((value) {});
+          .then((dataSnapshot) {
+        var driverKeyInfo = dataSnapshot.snapshot.value;
+        dList.add(driverKeyInfo);
+      });
     }
   }
 
