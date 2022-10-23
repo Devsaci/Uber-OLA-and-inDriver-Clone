@@ -310,7 +310,10 @@ class _MainScreenState extends State<MainScreen> {
       List<ActiveNearbyAvailableDrivers> onlineNearestDriversList) async {
     DatabaseReference ref = FirebaseDatabase.instance.ref().child("drivers");
     for (int i = 0; i < onlineNearestDriversList.length; i++) {
-      await ref.child(onlineNearestDriversList[i].driverId.toString());
+      await ref
+          .child(onlineNearestDriversList[i].driverId.toString())
+          .once()
+          .then((value) => null);
     }
   }
 
