@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_geofire/flutter_geofire.dart';
@@ -305,8 +306,13 @@ class _MainScreenState extends State<MainScreen> {
     await retrieveOnlineDriversInformation(onlineNearByAvailableDriversList);
   }
 
-   retrieveOnlineDriversInformation(
-      List<ActiveNearbyAvailableDrivers> onlineNearByAvailableDriversList) {}
+  retrieveOnlineDriversInformation(
+      List<ActiveNearbyAvailableDrivers> onlineNearestDriversList) async {
+    DatabaseReference ref = FirebaseDatabase.instance.ref().child("drivers");
+    for (int i = 0; i < onlineNearestDriversList.length; i++) {
+      await ref.child(onlineNearestDriversList[i].driverId.toString());
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
