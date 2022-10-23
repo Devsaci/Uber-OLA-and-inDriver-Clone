@@ -302,10 +302,10 @@ class _MainScreenState extends State<MainScreen> {
     }
     //  68. retrieve active drivers informations and their cars details
     //active driver available
-    retrieveOnlineDriversInformation(onlineNearByAvailableDriversList);
+    await retrieveOnlineDriversInformation(onlineNearByAvailableDriversList);
   }
 
-  void retrieveOnlineDriversInformation(
+   retrieveOnlineDriversInformation(
       List<ActiveNearbyAvailableDrivers> onlineNearByAvailableDriversList) {}
 
   @override
