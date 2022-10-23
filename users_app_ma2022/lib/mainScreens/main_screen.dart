@@ -300,6 +300,8 @@ class _MainScreenState extends State<MainScreen> {
       );
       return;
     }
+  //  68. retrieve active drivers informations and their cars details
+
   }
 
   @override
