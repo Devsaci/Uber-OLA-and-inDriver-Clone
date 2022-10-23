@@ -306,16 +306,16 @@ class _MainScreenState extends State<MainScreen> {
     await retrieveOnlineDriversInformation(onlineNearByAvailableDriversList);
   }
 
-  retrieveOnlineDriversInformation(
-      List<ActiveNearbyAvailableDrivers> onlineNearestDriversList) async {
+  retrieveOnlineDriversInformation(List onlineNearestDriversList) async {
     DatabaseReference ref = FirebaseDatabase.instance.ref().child("drivers");
     for (int i = 0; i < onlineNearestDriversList.length; i++) {
       await ref
-          .child(onlineNearestDriversList[i].driverId.toString())
+          .child(onlineNearestDriversList[i].key.toString())
           .once()
           .then((dataSnapshot) {
         var driverKeyInfo = dataSnapshot.snapshot.value;
         dList.add(driverKeyInfo);
+        print("driverkey info  =  " + dList.toString());
       });
     }
   }
