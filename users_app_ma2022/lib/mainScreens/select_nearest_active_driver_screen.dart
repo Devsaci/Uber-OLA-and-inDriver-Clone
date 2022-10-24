@@ -2,6 +2,8 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter/widgets.dart';
+import 'package:users_app/global/global.dart';
 
 class SelectNearestActiveDriversScreen extends StatefulWidget {
   const SelectNearestActiveDriversScreen({Key? key}) : super(key: key);
@@ -23,14 +25,20 @@ class _SelectNearestActiveDriversScreenState
           style: TextStyle(fontSize: 18),
         ),
         leading: IconButton(
-            onPressed: () {
-              //delete/remove the ride request from database
-              SystemNavigator.pop();
-            },
-            icon: const Icon(
-                Icons.close, color: Colors.white
-            ),
+          onPressed: () {
+            //delete/remove the ride request from database
+            SystemNavigator.pop();
+          },
+          icon: const Icon(
+              Icons.close, color: Colors.white
+          ),
         ),
+      ),
+      body: ListView.builder(
+          itemBuilder:(BuildContext context, int index){
+            return const Card();
+          },
+          itemCount: dList.length,
       ),
     );
   }
