@@ -66,7 +66,9 @@ class _SelectNearestActiveDriversScreenState
                   color: Colors.white54,
                 ),
               ),
-                  SmoothStarRating(),
+                  SmoothStarRating(
+                    allowHalfRating: true,
+                  ),
             ],
           ),)
           ,
