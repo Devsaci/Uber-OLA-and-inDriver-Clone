@@ -1,5 +1,6 @@
 // 69. display online nearest drivers and their information
 
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter/widgets.dart';
@@ -29,16 +30,27 @@ class _SelectNearestActiveDriversScreenState
             //delete/remove the ride request from database
             SystemNavigator.pop();
           },
-          icon: const Icon(
-              Icons.close, color: Colors.white
-          ),
+          icon: const Icon(Icons.close, color: Colors.white),
         ),
       ),
       body: ListView.builder(
-          itemBuilder:(BuildContext context, int index){
-            return const Card();
-          },
-          itemCount: dList.length,
+        itemBuilder: (BuildContext context, int index) {
+          return Card(
+            color: Colors.grey,
+            elevation: 3,
+            shadowColor: Colors.green,
+            margin: const EdgeInsets.all(0.8),
+            child: ListTile(
+              leading: Padding(
+                padding: const EdgeInsets.only(top: 2.0),
+                child: Image.asset("images/" +
+                    dList[index]["car_details"]["type"].toString() +
+                    ".png"),
+              ),
+            ),
+          );
+        },
+        itemCount: dList.length,
       ),
     );
   }
