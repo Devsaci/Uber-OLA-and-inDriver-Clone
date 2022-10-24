@@ -1,9 +1,12 @@
 // 69. display online nearest drivers and their information
 
+import 'dart:html';
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter/widgets.dart';
+import 'package:smooth_star_rating_nsafe/smooth_star_rating.dart';
 import 'package:users_app/global/global.dart';
 
 class SelectNearestActiveDriversScreen extends StatefulWidget {
@@ -47,7 +50,26 @@ class _SelectNearestActiveDriversScreenState
                     dList[index]["car_details"]["type"].toString() +
                     ".png"),
               ),
-            ),
+              title: Column(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+              Text(
+              dList[index]["name"],
+                style: const TextStyle(
+                  fontSize: 14,
+                  color: Colors.black54,
+                ),
+              ),
+              Text(dList[index]["car_details"]["car_model"],
+                style: const TextStyle(
+                  fontSize: 12,
+                  color: Colors.white54,
+                ),
+              ),
+                  SmoothStarRating(),
+            ],
+          ),)
+          ,
           );
         },
         itemCount: dList.length,
