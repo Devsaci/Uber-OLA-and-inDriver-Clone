@@ -53,25 +53,32 @@ class _SelectNearestActiveDriversScreenState
               title: Column(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
-              Text(
-              dList[index]["name"],
-                style: const TextStyle(
-                  fontSize: 14,
-                  color: Colors.black54,
-                ),
-              ),
-              Text(dList[index]["car_details"]["car_model"],
-                style: const TextStyle(
-                  fontSize: 12,
-                  color: Colors.white54,
-                ),
-              ),
-                  SmoothStarRating(
-                    allowHalfRating: true,
+                  Text(
+                    dList[index]["name"],
+                    style: const TextStyle(
+                      fontSize: 14,
+                      color: Colors.black54,
+                    ),
                   ),
-            ],
-          ),)
-          ,
+                  Text(
+                    dList[index]["car_details"]["car_model"],
+                    style: const TextStyle(
+                      fontSize: 12,
+                      color: Colors.white54,
+                    ),
+                  ),
+                  SmoothStarRating(
+                    rating: 3.5,
+                    color: Colors.black,
+                    borderColor: Colors.black,
+                    allowHalfRating: true,
+                    starCount: 5,
+                    size: 15,
+                  ),
+                ],
+              ),
+              trailing: Column(),
+            ),
           );
         },
         itemCount: dList.length,
