@@ -12,6 +12,7 @@ import 'package:users_app/assistants/assistant_methods.dart';
 import 'package:users_app/assistants/geofire_assistant.dart';
 import 'package:users_app/global/global.dart';
 import 'package:users_app/mainScreens/search_places_screen.dart';
+import 'package:users_app/mainScreens/select_nearest_active_driver_screen.dart';
 import 'package:users_app/widgets/my_drawer.dart';
 
 import '../infoHandler/app_info.dart';
@@ -304,6 +305,13 @@ class _MainScreenState extends State<MainScreen> {
     //  68. retrieve active drivers informations and their cars details
     //active driver available
     await retrieveOnlineDriversInformation(onlineNearByAvailableDriversList);
+    // 69. display online nearest drivers and their information
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (c)=> SelectNearestActiveDriversScreen(),
+      ),
+    );
   }
 
   retrieveOnlineDriversInformation(
