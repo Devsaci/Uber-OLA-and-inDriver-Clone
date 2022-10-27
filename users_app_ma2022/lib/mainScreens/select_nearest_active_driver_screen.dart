@@ -26,6 +26,10 @@ class _SelectNearestActiveDriversScreenState
       {
 
       }
+      if(dList[index]["car_details"]["type"].toString() == "uber-x")
+      {
+
+      }
     }
   }
 
