@@ -76,4 +76,7 @@ class AssistantMethods {
         responseDirectionApi["routes"][0]["legs"][0]["duration"]["value"];
     return directionDetailsInfo;
   }
+
+  // 71. calculate fare amount from origin to destination - per minutes & per kilometer
+
 }
