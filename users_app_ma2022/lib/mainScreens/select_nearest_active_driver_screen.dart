@@ -112,7 +112,7 @@ class _SelectNearestActiveDriversScreenState
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text(
-                  getFareAmountAccordingToVehicleType(index),
+                    "\$ " + getFareAmountAccordingToVehicleType(index),
               style: const TextStyle(
                       fontWeight: FontWeight.bold,
                     ),
