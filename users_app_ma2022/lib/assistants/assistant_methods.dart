@@ -85,6 +85,7 @@ class AssistantMethods {
         (directionDetailsInfo.duration_value! / 60) * 0.1;
     double distanceTraveledFareAmountPerKilometer =
         (directionDetailsInfo.duration_value! / 1000) * 0.1;
+    timeTraveledFareAmountPerMinute + distanceTraveledFareAmountPerKilometer;
     return double;
   }
 }
