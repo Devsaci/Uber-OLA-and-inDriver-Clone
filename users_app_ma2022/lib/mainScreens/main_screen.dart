@@ -13,6 +13,7 @@ import 'package:users_app/assistants/geofire_assistant.dart';
 import 'package:users_app/global/global.dart';
 import 'package:users_app/mainScreens/search_places_screen.dart';
 import 'package:users_app/mainScreens/select_nearest_active_driver_screen.dart';
+import 'package:users_app/models/direction_details_info.dart';
 import 'package:users_app/widgets/my_drawer.dart';
 
 import '../infoHandler/app_info.dart';
@@ -65,6 +66,8 @@ class _MainScreenState extends State<MainScreen> {
   BitmapDescriptor? activeNearbyIcon;
 
   List<ActiveNearbyAvailableDrivers> onlineNearByAvailableDriversList = [];
+
+
 
   blackThemeGoogleMap() {
     newGoogleMapController!.setMapStyle('''
@@ -576,6 +579,9 @@ class _MainScreenState extends State<MainScreen> {
         await AssistantMethods.obtainOriginToDestinationDirectionDetails(
             originLatLng, destinationLatLng);
 
+    setState(() {
+      directionDetailsInfo = tripDirectionDetailInfo;
+    });
     Navigator.pop(context);
 
     print(
@@ -584,7 +590,7 @@ class _MainScreenState extends State<MainScreen> {
 
     PolylinePoints pPoints = PolylinePoints();
     List<PointLatLng> decodedPolyLinePointsResultList =
-        pPoints.decodePolyline(directionDetailsInfo.e_points!);
+        pPoints.decodePolyline(directionDetailsInfo!.e_points!);
 
     pLineCoOrdinatesList.clear();
 
