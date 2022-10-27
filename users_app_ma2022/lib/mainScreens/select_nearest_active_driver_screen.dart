@@ -24,11 +24,11 @@ class _SelectNearestActiveDriversScreenState
           style: TextStyle(fontSize: 18),
         ),
         leading: IconButton(
+          icon: const Icon(Icons.close, color: Colors.white),
           onPressed: () {
             //delete/remove the ride request from database
             SystemNavigator.pop();
           },
-          icon: const Icon(Icons.close, color: Colors.white),
         ),
       ),
       body: ListView.builder(
