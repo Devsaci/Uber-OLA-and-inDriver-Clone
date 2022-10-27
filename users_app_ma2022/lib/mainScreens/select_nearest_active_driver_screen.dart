@@ -20,7 +20,13 @@ class _SelectNearestActiveDriversScreenState
   String fareAmount = "";
   getFareAmountAccordingToVehicleType(int index)
   {
-    if(tripDirectionDetailsInfo != null){}
+    if(tripDirectionDetailsInfo != null)
+    {
+      if(dList[index]["car_details"]["type"].toString() == "bike")
+      {
+
+      }
+    }
   }
 
   @override
