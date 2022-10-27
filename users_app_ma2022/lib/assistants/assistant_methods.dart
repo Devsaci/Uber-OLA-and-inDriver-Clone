@@ -1,4 +1,5 @@
 //30. Read and Display Current Online user info from Database
+
 import 'package:firebase_database/firebase_database.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
@@ -79,7 +80,7 @@ class AssistantMethods {
   }
 
   // 71. calculate fare amount from origin to destination - per minutes & per kilometer
-  static Type calculateFareAmountFromOriginToDestination(
+  static double calculateFareAmountFromOriginToDestination(
       DirectionDetailsInfo directionDetailsInfo) {
     double timeTraveledFareAmountPerMinute =
         (directionDetailsInfo.duration_value! / 60) * 0.1;
@@ -87,6 +88,7 @@ class AssistantMethods {
         (directionDetailsInfo.duration_value! / 1000) * 0.1;
     double totalFareAmount = timeTraveledFareAmountPerMinute +
         distanceTraveledFareAmountPerKilometer;
-    return double;
+
+    return totalFareAmount;
   }
 }
