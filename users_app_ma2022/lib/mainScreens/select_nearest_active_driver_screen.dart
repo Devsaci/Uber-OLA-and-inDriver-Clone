@@ -1,11 +1,6 @@
 // 69. display online nearest drivers and their information
-
-import 'dart:html';
-
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter/widgets.dart';
 import 'package:smooth_star_rating_nsafe/smooth_star_rating.dart';
 import 'package:users_app/global/global.dart';
 
@@ -37,18 +32,22 @@ class _SelectNearestActiveDriversScreenState
         ),
       ),
       body: ListView.builder(
-        itemBuilder: (BuildContext context, int index) {
+        itemCount: dList.length,
+        itemBuilder: (BuildContext context, int index)
+        {
+          // 69. display online nearest drivers and their information
           return Card(
             color: Colors.grey,
             elevation: 3,
             shadowColor: Colors.green,
-            margin: const EdgeInsets.all(0.8),
+            margin: const EdgeInsets.all(8),
             child: ListTile(
               leading: Padding(
                 padding: const EdgeInsets.only(top: 2.0),
-                child: Image.asset("images/" +
-                    dList[index]["car_details"]["type"].toString() +
-                    ".png"),
+                child: Image.asset(
+                  "images/" + dList[index]["car_details"]["type"].toString() + ".png",
+                  width: 70,
+                ),
               ),
               title: Column(
                 mainAxisAlignment: MainAxisAlignment.start,
@@ -77,11 +76,29 @@ class _SelectNearestActiveDriversScreenState
                   ),
                 ],
               ),
-              trailing: Column(),
+              trailing: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(
+                    "3",
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  const SizedBox(height: 2,),
+                  Text(
+                    "13 km",
+                    style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        color: Colors.black54,
+                        fontSize: 12
+                    ),
+                  ),
+                ],
+              ),
             ),
           );
         },
-        itemCount: dList.length,
       ),
     );
   }
