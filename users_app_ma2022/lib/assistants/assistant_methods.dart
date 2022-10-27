@@ -78,6 +78,7 @@ class AssistantMethods {
   }
 
   // 71. calculate fare amount from origin to destination - per minutes & per kilometer
-  calculateFareAmountFromOriginToDestination(DirectionDetailsInfo directionDetailsInfo){
+  static Type calculateFareAmountFromOriginToDestination(DirectionDetailsInfo directionDetailsInfo){
+    return double ;
   }
 }
