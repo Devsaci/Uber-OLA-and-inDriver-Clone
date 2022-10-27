@@ -129,6 +129,18 @@ class _SelectNearestActiveDriversScreenState
                         color: Colors.black54,
                         fontSize: 12),
                   ),
+                  const SizedBox(
+                    height: 2,
+                  ),
+                  Text(
+                    tripDirectionDetailsInfo != null
+                        ? tripDirectionDetailsInfo!.distance_text!
+                        : "",
+                    style: const TextStyle(
+                        fontWeight: FontWeight.bold,
+                        color: Colors.black54,
+                        fontSize: 12),
+                  ),
                 ],
               ),
             ),
