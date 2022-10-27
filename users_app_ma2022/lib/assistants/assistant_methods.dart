@@ -55,8 +55,9 @@ class AssistantMethods {
 // API Library : Direction API Enable
 //https://console.cloud.google.com/apis/library/browse?project=uber-ola-and-indriver-cl-8fe3d&q=direction%20API
 
-  static Future<DirectionDetailsInfo?> obtainOriginToDestinationDirectionDetails(
-      LatLng origionPosition, LatLng destinationPosition) async {
+  static Future<DirectionDetailsInfo?>
+      obtainOriginToDestinationDirectionDetails(
+          LatLng origionPosition, LatLng destinationPosition) async {
     String urlOriginToDestinationDirectionDetails =
         'https://maps.googleapis.com/maps/api/directions/json?origin=${origionPosition.latitude},${origionPosition.longitude}&destination=${destinationPosition.latitude},${destinationPosition.longitude}&key=$mapKey';
     var responseDirectionApi = await RequestAssistant.receiveRequest(
@@ -78,7 +79,10 @@ class AssistantMethods {
   }
 
   // 71. calculate fare amount from origin to destination - per minutes & per kilometer
-  static Type calculateFareAmountFromOriginToDestination(DirectionDetailsInfo directionDetailsInfo){
-    return double ;
+  static Type calculateFareAmountFromOriginToDestination(
+      DirectionDetailsInfo directionDetailsInfo) {
+    (directionDetailsInfo.duration_value! / 60) * 0.1;
+
+    return double;
   }
 }
