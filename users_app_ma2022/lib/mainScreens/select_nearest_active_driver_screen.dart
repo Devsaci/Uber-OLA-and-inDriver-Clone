@@ -15,25 +15,20 @@ class SelectNearestActiveDriversScreen extends StatefulWidget {
 
 class _SelectNearestActiveDriversScreenState
     extends State<SelectNearestActiveDriversScreen> {
-
   // 72. calculate fare amount from origin to destination on basis of vehicle type
   String fareAmount = "";
-  getFareAmountAccordingToVehicleType(int index)
-  {
-    if(tripDirectionDetailsInfo != null)
-    {
-      if(dList[index]["car_details"]["type"].toString() == "bike")
-      {
 
+  getFareAmountAccordingToVehicleType(int index) {
+    if (tripDirectionDetailsInfo != null) {
+      if (dList[index]["car_details"]["type"].toString() == "bike") {
+        fareAmount =
+            (AssistantMethods.calculateFareAmountFromOriginToDestination(
+                        tripDirectionDetailsInfo!) /
+                    2)
+                .toStringAsFixed(1);
       }
-      if(dList[index]["car_details"]["type"].toString() == "uber-x")
-      {
-
-      }
-      if(dList[index]["car_details"]["type"].toString() == "uber-go")
-      {
-
-      }
+      if (dList[index]["car_details"]["type"].toString() == "uber-x") {}
+      if (dList[index]["car_details"]["type"].toString() == "uber-go") {}
     }
   }
 
