@@ -2,6 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:smooth_star_rating_nsafe/smooth_star_rating.dart';
+import 'package:users_app/assistants/assistant_methods.dart';
 import 'package:users_app/global/global.dart';
 
 class SelectNearestActiveDriversScreen extends StatefulWidget {
@@ -34,8 +35,8 @@ class _SelectNearestActiveDriversScreenState
       ),
       body: ListView.builder(
         itemCount: dList.length,
-        itemBuilder: (BuildContext context,
-            int index) { // 69. display online nearest drivers and their information
+        itemBuilder: (BuildContext context, int index) {
+          // 69. display online nearest drivers and their information
           return Card(
             color: Colors.grey,
             elevation: 3,
@@ -45,7 +46,8 @@ class _SelectNearestActiveDriversScreenState
               leading: Padding(
                 padding: const EdgeInsets.only(top: 2.0),
                 child: Image.asset(
-                  "images/" + dList[index]["car_details"]["type"].toString() +
+                  "images/" +
+                      dList[index]["car_details"]["type"].toString() +
                       ".png",
                   width: 70,
                 ),
@@ -81,21 +83,24 @@ class _SelectNearestActiveDriversScreenState
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text(
-                    "3",
-                    style: TextStyle(
+                    AssistantMethods.calculateFareAmountFromOriginToDestination(
+                            tripDirectionDetailInfo!)
+                        .toString(),
+                    style: const TextStyle(
                       fontWeight: FontWeight.bold,
                     ),
                   ),
-                  SizedBox(height: 2,),
+                  const SizedBox(
+                    height: 2,
+                  ),
                   Text(
                     tripDirectionDetailInfo != null
                         ? tripDirectionDetailInfo!.duration_text!
                         : "",
-                    style: TextStyle(
+                    style: const TextStyle(
                         fontWeight: FontWeight.bold,
                         color: Colors.black54,
-                        fontSize: 12
-                    ),
+                        fontSize: 12),
                   ),
                 ],
               ),
