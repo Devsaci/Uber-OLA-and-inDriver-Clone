@@ -113,7 +113,7 @@ class _SelectNearestActiveDriversScreenState
                 children: [
                   Text(
                     "\$ " + getFareAmountAccordingToVehicleType(index),
-              style: const TextStyle(
+                    style: const TextStyle(
                       fontWeight: FontWeight.bold,
                     ),
                   ),
