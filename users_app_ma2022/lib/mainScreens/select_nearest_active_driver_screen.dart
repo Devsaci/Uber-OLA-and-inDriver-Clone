@@ -34,8 +34,7 @@ class _SelectNearestActiveDriversScreenState
       body: ListView.builder(
         itemCount: dList.length,
         itemBuilder: (BuildContext context, int index)
-        {
-          // 69. display online nearest drivers and their information
+        {// 69. display online nearest drivers and their information
           return Card(
             color: Colors.grey,
             elevation: 3,
