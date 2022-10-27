@@ -17,6 +17,7 @@ class _SelectNearestActiveDriversScreenState
     extends State<SelectNearestActiveDriversScreen> {
 
   // 72. calculate fare amount from origin to destination on basis of vehicle type
+  String fareAmount = "";
   getFareAmountAccordingToVehicleType(int index)
   {
   }
