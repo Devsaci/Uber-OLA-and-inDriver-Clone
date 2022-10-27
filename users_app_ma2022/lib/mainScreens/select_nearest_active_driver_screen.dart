@@ -20,6 +20,7 @@ class _SelectNearestActiveDriversScreenState
   String fareAmount = "";
   getFareAmountAccordingToVehicleType(int index)
   {
+    if(tripDirectionDetailsInfo != null){}
   }
 
   @override
@@ -91,7 +92,7 @@ class _SelectNearestActiveDriversScreenState
                 children: [
                   Text(
                     AssistantMethods.calculateFareAmountFromOriginToDestination(
-                            tripDirectionDetailInfo!)
+                            tripDirectionDetailsInfo!)
                         .toString(),
                     style: const TextStyle(
                       fontWeight: FontWeight.bold,
@@ -101,8 +102,8 @@ class _SelectNearestActiveDriversScreenState
                     height: 2,
                   ),
                   Text(
-                    tripDirectionDetailInfo != null
-                        ? tripDirectionDetailInfo!.duration_text!
+                    tripDirectionDetailsInfo != null
+                        ? tripDirectionDetailsInfo!.duration_text!
                         : "",
                     style: const TextStyle(
                         fontWeight: FontWeight.bold,

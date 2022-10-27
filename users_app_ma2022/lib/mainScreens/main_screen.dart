@@ -13,9 +13,7 @@ import 'package:users_app/assistants/geofire_assistant.dart';
 import 'package:users_app/global/global.dart';
 import 'package:users_app/mainScreens/search_places_screen.dart';
 import 'package:users_app/mainScreens/select_nearest_active_driver_screen.dart';
-import 'package:users_app/models/direction_details_info.dart';
 import 'package:users_app/widgets/my_drawer.dart';
-
 import '../infoHandler/app_info.dart';
 import '../main.dart';
 import '../models/active_nearby_available_drivers.dart';
@@ -580,7 +578,7 @@ class _MainScreenState extends State<MainScreen> {
             originLatLng, destinationLatLng);
 
     setState(() {
-      directionDetailsInfo = tripDirectionDetailInfo;
+      directionDetailsInfo = tripDirectionDetailsInfo;
     });
     Navigator.pop(context);
 
