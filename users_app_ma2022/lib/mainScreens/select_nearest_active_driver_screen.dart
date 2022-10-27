@@ -41,6 +41,7 @@ class _SelectNearestActiveDriversScreenState
                 .toString();
       }
     }
+    return fareAmount;
   }
 
   @override
