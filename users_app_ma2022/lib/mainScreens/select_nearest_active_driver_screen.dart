@@ -78,7 +78,7 @@ class _SelectNearestActiveDriversScreenState
               ),
               trailing: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
-                children: const [
+                children:  [
                   Text(
                     "3",
                     style: TextStyle(
@@ -87,7 +87,7 @@ class _SelectNearestActiveDriversScreenState
                   ),
                   SizedBox(height: 2,),
                   Text(
-                    "13 km",
+                    tripDirectionDetailInfo!.duration_text!,
                     style: TextStyle(
                         fontWeight: FontWeight.bold,
                         color: Colors.black54,
