@@ -34,7 +34,12 @@ class _SelectNearestActiveDriversScreenState
                     2)
                 .toStringAsFixed(1);
       }
-      if (dList[index]["car_details"]["type"].toString() == "uber-go") {}
+      if (dList[index]["car_details"]["type"].toString() == "uber-go") {
+        fareAmount =
+            (AssistantMethods.calculateFareAmountFromOriginToDestination(
+                    tripDirectionDetailsInfo!))
+                .toString();
+      }
     }
   }
 
