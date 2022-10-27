@@ -81,8 +81,8 @@ class AssistantMethods {
   // 71. calculate fare amount from origin to destination - per minutes & per kilometer
   static Type calculateFareAmountFromOriginToDestination(
       DirectionDetailsInfo directionDetailsInfo) {
-    (directionDetailsInfo.duration_value! / 60) * 0.1;
-
+    double timeTraveledFareAmountPerMinute =
+        (directionDetailsInfo.duration_value! / 60) * 0.1;
     return double;
   }
 }
