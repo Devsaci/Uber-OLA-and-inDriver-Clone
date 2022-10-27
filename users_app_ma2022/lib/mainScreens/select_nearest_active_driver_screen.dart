@@ -15,6 +15,9 @@ class SelectNearestActiveDriversScreen extends StatefulWidget {
 
 class _SelectNearestActiveDriversScreenState
     extends State<SelectNearestActiveDriversScreen> {
+
+  // 72. calculate fare amount from origin to destination on basis of vehicle type
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
