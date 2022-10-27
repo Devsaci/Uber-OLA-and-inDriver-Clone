@@ -112,10 +112,8 @@ class _SelectNearestActiveDriversScreenState
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text(
-                    AssistantMethods.calculateFareAmountFromOriginToDestination(
-                            tripDirectionDetailsInfo!)
-                        .toString(),
-                    style: const TextStyle(
+                  getFareAmountAccordingToVehicleType(index),
+              style: const TextStyle(
                       fontWeight: FontWeight.bold,
                     ),
                   ),
