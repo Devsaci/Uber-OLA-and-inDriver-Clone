@@ -17,6 +17,7 @@ class _SelectNearestActiveDriversScreenState
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.black12,
       appBar: AppBar(
         backgroundColor: Colors.black,
         title: const Text(
@@ -77,14 +78,14 @@ class _SelectNearestActiveDriversScreenState
               ),
               trailing: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
-                children: [
+                children: const [
                   Text(
                     "3",
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
                     ),
                   ),
-                  const SizedBox(height: 2,),
+                  SizedBox(height: 2,),
                   Text(
                     "13 km",
                     style: TextStyle(
