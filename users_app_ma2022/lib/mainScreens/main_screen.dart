@@ -286,7 +286,10 @@ class _MainScreenState extends State<MainScreen> {
     var destinationLocation =
         Provider.of<AppInfo>(context, listen: false).userDropOffLocation;
 
-    Map originLocationMap = {};
+    Map originLocationMap = {
+      "latitude": originLocation!.locationLatitude.toString(),
+      "longitude": originLocation!.locationLongitude.toString(),
+    };
 
     onlineNearByAvailableDriversList =
         GeoFireAssistant.activeNearbyAvailableDriversList;
