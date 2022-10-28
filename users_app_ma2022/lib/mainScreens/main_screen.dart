@@ -295,6 +295,8 @@ class _MainScreenState extends State<MainScreen> {
       "longitude": destinationLocation!.locationLongitude.toString(),
     };
 
+    Map userInformationMap = {};
+
     onlineNearByAvailableDriversList =
         GeoFireAssistant.activeNearbyAvailableDriversList;
     searchNearestOnlineDrivers();
