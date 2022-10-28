@@ -292,6 +292,7 @@ class _MainScreenState extends State<MainScreen> {
     };
     Map destinationLocationMap = {
       "latitude": destinationLocation!.locationLatitude.toString(),
+      "longitude": destinationLocation!.locationLongitude.toString(),
     };
 
     onlineNearByAvailableDriversList =
