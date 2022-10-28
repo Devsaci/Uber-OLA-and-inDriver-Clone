@@ -278,7 +278,8 @@ class _MainScreenState extends State<MainScreen> {
   saveRideRequestInformation() {
     //1. save the RideRequest Information
     // 74. save ride request to database and remove ride request from database
-    referenceRideRequest = FirebaseDatabase.instance.ref().child("All Ride Request");
+    referenceRideRequest =
+        FirebaseDatabase.instance.ref().child("All Ride Request").push();
 
     onlineNearByAvailableDriversList =
         GeoFireAssistant.activeNearbyAvailableDriversList;
