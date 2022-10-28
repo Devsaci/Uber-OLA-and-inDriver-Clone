@@ -281,7 +281,7 @@ class _MainScreenState extends State<MainScreen> {
     referenceRideRequest =
         FirebaseDatabase.instance.ref().child("All Ride Request").push();
 
-    var origineLocation =
+    var originLocation =
         Provider.of<AppInfo>(context, listen: false).userPickUpLocation;
     var destinationLocation =
         Provider.of<AppInfo>(context, listen: false).userDropOffLocation;
