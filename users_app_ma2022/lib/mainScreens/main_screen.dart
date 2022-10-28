@@ -65,6 +65,8 @@ class _MainScreenState extends State<MainScreen> {
 
   List<ActiveNearbyAvailableDrivers> onlineNearByAvailableDriversList = [];
 
+  //74. save ride request to database and remove ride request from database
+
 
 
   blackThemeGoogleMap() {
@@ -310,7 +312,7 @@ class _MainScreenState extends State<MainScreen> {
     Navigator.push(
       context,
       MaterialPageRoute(
-        builder: (c)=> SelectNearestActiveDriversScreen(),
+        builder: (c) => SelectNearestActiveDriversScreen(),
       ),
     );
   }
