@@ -281,7 +281,10 @@ class _MainScreenState extends State<MainScreen> {
     referenceRideRequest =
         FirebaseDatabase.instance.ref().child("All Ride Request").push();
 
-    Provider.of<AppInfo>(context, listen: false).userPickUpLocation;
+    var origineLocation =
+        Provider.of<AppInfo>(context, listen: false).userPickUpLocation;
+    var destinationLocation =
+        Provider.of<AppInfo>(context, listen: false).userDropOffLocation;
 
     onlineNearByAvailableDriversList =
         GeoFireAssistant.activeNearbyAvailableDriversList;
