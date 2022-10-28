@@ -286,6 +286,8 @@ class _MainScreenState extends State<MainScreen> {
     var destinationLocation =
         Provider.of<AppInfo>(context, listen: false).userDropOffLocation;
 
+    Map originLocationMap = {};
+
     onlineNearByAvailableDriversList =
         GeoFireAssistant.activeNearbyAvailableDriversList;
     searchNearestOnlineDrivers();
